@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="exerciciosSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- SIMPLE TYPES -->
+
+  <xs:simpleType name="activityType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="metType">
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="caloriesType">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  
+  <!-- COMPLEX TYPES -->
+
+  <xs:complexType name="exerciseType">
+    <xs:sequence>
+      <xs:element name="activity" type="activityType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="met" type="metType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- ROOT -->
+
+  <xs:element name="exercise" type="exerciseType"/>
+
+</xs:schema>

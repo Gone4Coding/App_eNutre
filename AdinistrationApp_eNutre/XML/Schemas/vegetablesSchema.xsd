@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="exerciciosSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- SIMPLE TYPES -->
+
+  <xs:simpleType name="vegetableType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="extraInfoType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="quantityType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="caloriesType">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  
+  <!-- COMPLEX TYPES -->
+
+  <xs:complexType name="foodType">
+    <xs:sequence>
+      <xs:element name="vegetable" type="vegetableType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="extraInfo" type="extraInfoType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="quantity" type="quantityType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ROOT -->
+
+  <xs:element name="food" type="foodType"/>
+  
+</xs:schema>

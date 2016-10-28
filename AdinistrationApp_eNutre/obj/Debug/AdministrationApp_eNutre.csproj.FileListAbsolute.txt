@@ -1,0 +1,10 @@
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe.config
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.pdb
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csprojResolveAssemblyReference.cache
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.Forms.FormAdministration.resources
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.Forms.FormMain.resources
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Properties.Resources.resources
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csproj.GenerateResource.Cache
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.exe
+C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.pdb
