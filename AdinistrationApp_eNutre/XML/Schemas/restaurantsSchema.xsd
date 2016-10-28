@@ -30,9 +30,15 @@
       <xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:complexType name="foodsType">
+    <xs:sequence>
+      <xs:element name="food" type="foodType"/>
+    </xs:sequence>
+  </xs:complexType>
   
   <!-- ROOT -->
 
-  <xs:element name="food" type="foodType"/>
+  <xs:element name="foods" type="foodsType"/>
   
 </xs:schema>

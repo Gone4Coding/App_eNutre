@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <activity>Dormir</activity>
+    <met>0,9</met>
+    <calories>66</calories>
+  </exercise>
+  <exercise>
+    <activity>Descansar</activity>
+    <met>1</met>
+    <calories>74</calories>
+  </exercise>
+  <exercise>
+    <activity>Estar Sentado</activity>
+    <met>1,4</met>
+    <calories>103</calories>
+  </exercise>
+  <exercise>
+    <activity>Trabalho de Escritório</activity>
+    <met>1,5</met>
+    <calories>110</calories>
+  </exercise>
+  <exercise>
+    <activity>Conduzir</activity>
+    <met>1,6</met>
+    <calories>118</calories>
+  </exercise>
+  <exercise>
+    <activity>Massagem</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Tocar um Instrumento Musical</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Spa</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Estudar</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Golfe (de Carrinho)</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Trabalho</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Tomando Banho</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Karaoke</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Leitura</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Caminhar (Lento) - 3/kph</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Cantar</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Assistir TV</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>em Pé</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Amamentar</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Chuveiro</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Ensino</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Cozinhar</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Costura</activity>
+    <met>2</met>
+    <calories>147</calories>
+  </exercise>
+  <exercise>
+    <activity>Ir às Compras</activity>
+    <met>2,3</met>
+    <calories>169</calories>
+  </exercise>
+  <exercise>
+    <activity>Trabalho Doméstico</activity>
+    <met>2,5</met>
+    <calories>184</calories>
+  </exercise>
+  <exercise>
+    <activity>Alongar (Yoga)</activity>
+    <met>2,5</met>
+    <calories>184</calories>
+  </exercise>
+  <exercise>
+    <activity>Lavar Loiça</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Yoga</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Compras de Supermercado</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Lavar Roupa</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Sauna</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Scooter</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Motociclistas</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Passar a Ferro</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Pescar</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Limpeza</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Reparação</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Surf</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Velejar</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Wii Fit</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Andar de Barco ou Canoagem</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Aspiração</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Lavagem de Carro</activity>
+    <met>3</met>
+    <calories>220</calories>
+  </exercise>
+  <exercise>
+    <activity>Pilates</activity>
+    <met>3,1</met>
+    <calories>228</calories>
+  </exercise>
+  <exercise>
+    <activity>Caminhar (Moderado) - 5/kph</activity>
+    <met>3,3</met>
+    <calories>243</calories>
+  </exercise>
+  <exercise>
+    <activity>Ginástica (Leve, p.e. Exercícios em Casa)</activity>
+    <met>3,5</met>
+    <calories>257</calories>
+  </exercise>
+  <exercise>
+    <activity>Caminhar (Rápido) - 5,5/kph</activity>
+    <met>3,8</met>
+    <calories>279</calories>
+  </exercise>
+  <exercise>
+    <activity>Andar a Cavalo</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Jardinagem</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Ténis de Mesa</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Golfe (a Pé)</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Voleibol</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Nadar (Lento)</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Tiro com Arco</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Varrer</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Motor-Cross</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Bowling</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Dançar (Passo Lento)</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr na Água</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Bikram Yoga</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Ciclismo (Passeio) - &lt;16/kph</activity>
+    <met>4</met>
+    <calories>294</calories>
+  </exercise>
+  <exercise>
+    <activity>Trabalhos Pesados</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Caminhar (Rápido) - 6,5/kph</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Pintura</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Roçada do Gramado</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Caiaque</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Softball</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Skating - 16/kph</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Badminton</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Hula Hoop</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Dançar (Dança Popular)</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Cricket</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Caçar</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Baseball</activity>
+    <met>5</met>
+    <calories>368</calories>
+  </exercise>
+  <exercise>
+    <activity>Exercícios de Manutenção (Health Club ou Ginásio) </activity>
+    <met>5,5</met>
+    <calories>404</calories>
+  </exercise>
+  <exercise>
+    <activity>Treino em Circuito</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Basquetebol</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Arvorismo</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Esqui Aquático</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Jump</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Máquina de Exercício (Lento)</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Mergulho</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Floorball</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Gym (Ginásio)</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Dançar (Passo Rápido, Aeróbio)</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Ciclismo (Lento) - 18/kph</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Caminhada</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Pole dance</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Power Walking</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Musculação (Moderado)</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Netball</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Pá de Neve</activity>
+    <met>6</met>
+    <calories>441</calories>
+  </exercise>
+  <exercise>
+    <activity>Crossfit</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Cross Training</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>CX</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Curves</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Pedalar</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>RPM</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Snowboard</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Power Jump</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Kangoo</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>P90X</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Insanity</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Kickboxing</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Judô</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Jiu-jitsu</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>HIIT</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Fitness (Treino)</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Nadar (Moderado)</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>GRIT</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Muay Thai</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Cardio</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>T25</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Tae Bo</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Aeróbica de Água</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Body Attack</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Ballet</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>VTT</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>TRX</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>XCO</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Taekwondo</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Artes Marciais</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Subir Escadas</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Zumba</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Caratê (Karaté)</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Aeróbica</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Body Balance</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Body Combat</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Body Pump</activity>
+    <met>7</met>
+    <calories>514</calories>
+  </exercise>
+  <exercise>
+    <activity>Lacrosse</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Kettlebell</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Abdominais</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Remo</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Máquina de Exercício (Moderado)</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Plataforma Vibratória</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Passadeira</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Squash ou Andebol</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Spinning</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Pádel</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Musculação</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Ténis</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Step</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Nordic Walking</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Agachamento</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Ciclismo (Moderado) - 21/kph</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr (Jogging) - 8/kph</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Elíptica</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Corrida</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Bicicleta de Montanha (Mountain Bike)</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Andebol (Handebol)</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Air Climber</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Aparelho de Musculação</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Bicicleta (Cycling)</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Arc Trainer</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Endurance</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Futebol Americano</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Hóquei no Gelo</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Hóquei</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Ginástica (Pesada, p.e. Flexões)</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Futebol</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Jumping Jacks</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Esqui (Downhill)</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Escalada</activity>
+    <met>8</met>
+    <calories>588</calories>
+  </exercise>
+  <exercise>
+    <activity>Ciclismo (Rápido) - 24/kph</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Máquina de Exercício (Rápido)</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Andar de Patins</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Nadar (Rápido)</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Racquetball</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr - 10/kph</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Saltar à Corda</activity>
+    <met>10</met>
+    <calories>735</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr - 11/kph</activity>
+    <met>11,5</met>
+    <calories>845</calories>
+  </exercise>
+  <exercise>
+    <activity>Esqui (Cross Country)</activity>
+    <met>12</met>
+    <calories>882</calories>
+  </exercise>
+  <exercise>
+    <activity>Ciclismo (Muito Rápido) - 28/kph</activity>
+    <met>12</met>
+    <calories>882</calories>
+  </exercise>
+  <exercise>
+    <activity>Boxe</activity>
+    <met>12</met>
+    <calories>882</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr - 13/kph</activity>
+    <met>13,5</met>
+    <calories>992</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr - 14,5/kph</activity>
+    <met>15</met>
+    <calories>1102</calories>
+  </exercise>
+  <exercise>
+    <activity>Correr - 16/kph</activity>
+    <met>16</met>
+    <calories>1176</calories>
+  </exercise>
+</exercises>
