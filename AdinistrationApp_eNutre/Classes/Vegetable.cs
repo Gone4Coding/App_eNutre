@@ -17,18 +17,18 @@ namespace AdministrationApp_eNutre.Classes
 
         public Vegetable(string name, string quantity, string calories)
         {
-             
-            this.name = vegetaisHandler.devolveNome();
-            this.quantity = vegetaisHandler.devolveQuantidade();
-            this.calories = vegetaisHandler.devolveCalorias();
+
+            this.name = name;
+            this.quantity = quantity;
+            this.calories = calories;
         }
 
         public Vegetable(string name, string extraInfo, string quantity, string calories)
         {
-            this.name = vegetaisHandler.devolveNome();
-            this.quantity = vegetaisHandler.devolveQuantidade();
-            this.calories = vegetaisHandler.devolveCalorias();
-            this.extraInfo = extraInfo; 
+            this.name = name;
+            this.quantity = quantity;
+            this.calories = calories;
+            this.extraInfo = extraInfo;
         }
 
         public string getName()

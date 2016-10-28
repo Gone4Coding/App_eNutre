@@ -13,8 +13,8 @@ namespace AdinistrationApp_eNutre.Classes
        // private List<string> vegetal;
         private string[] vegetalSplit;
         private string[] vegetalSplitP;
-        private string[] vegetalSplitComma;
         private string[] vegetables;
+        private List<string> listVeg;
 
         public void carregarTXT()
         {
@@ -23,95 +23,62 @@ namespace AdinistrationApp_eNutre.Classes
                     @"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais.txt");
 
             vegetables = ficheiroTXT.Split('\n');
-            // Vegetable vegetable = new Vegetable(vegetables); 
-            for (int i = 0; i < vegetables.Length; i++)
-            {
-                vegetalSplit = vegetables[i].Split(' ');
-                vegetalSplitP = vegetables[i].Split('(');
-            }
+            listVeg = new List<string>(vegetables);
+            createXml(listVeg);
 
         }
 
-        public string devolveNome()
-        {
-            return vegetalSplit[4];
-        }
-
-        public string devolveCalorias()
-        {
-            return vegetalSplit[1];
-        }
-        
-        public string devolveQuantidade()
-        {
-           // int a = vegetalSplitP.Count();
-            if (vegetalSplitP.Count() == 2)
-            {
-                return vegetalSplitP[1];
-            }
-            else if (vegetalSplitP.Count() == 3)
-            {
-                return vegetalSplitP[2];
-            }
-            else
-            {
-                return vegetalSplitP[3];
-            }
-            
-        }
-
-        public string devolveExtaInfo()
-        {
-            if (vegetalSplitP.Count() == 2)
-            {
-                return "";
-            }
-            else
-            {
-                return vegetalSplitP[1];
-            }  
-        }
-
-        private static void createXml(string[] vegetables, string[] vegetableSplitP, string[] vegetableSplitComma)
+        private void createXml(List<string> listVeg)
         {
 
             XmlDocument doc = new XmlDocument();
 
-            XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", null, null);
+            XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
             doc.AppendChild(dec);
 
             // ROOT
             XmlElement root = doc.CreateElement("foods");
             doc.AppendChild(root);
-            
-           
 
-            for (int i = 0; i < vegetables.Length ; i++)
+            foreach (string veg in listVeg)
             {
+                string[] porEspaco = veg.Split(' ');
+                string[] porP = veg.Split('(');
+                int ultimo = porP.Count() - 1;
+
                 XmlElement food = doc.CreateElement("food");
                 XmlElement vegetable = doc.CreateElement("vegetable");
-                //food.InnerText = 
                 XmlElement name = doc.CreateElement("name");
+                name.InnerText = porEspaco[4];
                 XmlElement extraInfo = doc.CreateElement("extraInfo");
+                if (porP.Count() == 2)
+                {
+                    extraInfo.InnerText = "";
+                }
+                else
+                {
+                    extraInfo.InnerText = tiraParentesis(porP[1],2);
+                }
                 XmlElement quantity = doc.CreateElement("quantity");
+                quantity.InnerText = tiraParentesis(porP[ultimo],4);
                 XmlElement calories = doc.CreateElement("calories");
-
-
-                //activity.InnerText = act.Nome;
-
-                // met.InnerText = act.Met.ToString();
-
-                // calories.InnerText = act.Calorias.ToString();
-
-                /*
-                exercise.AppendChild(activity);
-                exercise.AppendChild(met);
-                exercise.AppendChild(calories);
-                root.AppendChild(exercise);*/
+                calories.InnerText = porEspaco[1];
+                food.AppendChild(vegetable);
+                vegetable.AppendChild(name);
+                vegetable.AppendChild(extraInfo);
+                vegetable.AppendChild(quantity);
+                vegetable.AppendChild(calories);
+                root.AppendChild(food);
             }
             doc.Save(@"..\\..\\XML\\Xml_Files\\vegetables.xml");
         }
 
-
+        public string tiraParentesis(string str,int ultimosChars)
+        {
+            int startIndex = 0;
+            int parentesis = str.Length - ultimosChars;
+            string substring = str.Substring(startIndex, parentesis);
+            return substring;
+        }
     }
 }

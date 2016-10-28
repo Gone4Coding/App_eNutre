@@ -20,10 +20,10 @@ namespace AdministrationApp_eNutre
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new JsonHandler.dese);
+            Application.Run(new FormMain());
 
             //JsonHandler.deserialize(@"C:\Git\App_eNutre\AdinistrationApp_eNutre\Info\calorias_exercicios.js");
-            ExcelHandler.createXml(@"C:\Git\App_eNutre\AdinistrationApp_eNutre\Info\calorias_restaurantes.xls");
+           // ExcelHandler.createXml(@"C:\Git\App_eNutre\AdinistrationApp_eNutre\Info\calorias_restaurantes.xls");
         }
     }
 }

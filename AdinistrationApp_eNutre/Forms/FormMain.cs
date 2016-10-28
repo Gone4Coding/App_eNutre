@@ -50,8 +50,7 @@ namespace AdministrationApp_eNutre.Forms
         {
             formatForMenu("Foods");
             createListView();
-            txt.devolveCalorias();
-
+            
         }
 
         private void menu_plans_Click(object sender, EventArgs e)
