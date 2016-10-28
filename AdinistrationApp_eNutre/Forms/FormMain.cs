@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdinistrationApp_eNutre.Classes;
 using AdministrationApp_eNutre.Classes;
 
 namespace AdministrationApp_eNutre.Forms
@@ -16,10 +17,13 @@ namespace AdministrationApp_eNutre.Forms
     {
 
         private String menuType;
+        private TxtHandler txt = new TxtHandler();
+        
 
         public FormMain()
         {
             InitializeComponent();
+            txt.carregarTXT();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -46,22 +50,7 @@ namespace AdministrationApp_eNutre.Forms
         {
             formatForMenu("Foods");
             createListView();
-
-            string ficheiroTXT = System.IO.File.ReadAllText(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais.txt");
-
-            string[] vegetables = ficheiroTXT.Split('\n');
-           // Vegetable vegetable = new Vegetable(vegetables); 
-
-            for (int i = 0; i < vegetables.Length; i++)
-            {
-                string[] vegetal = vegetables[i].Split(' ');
-            }
-            
-
-            /*Console.WriteLine(vegatl[]);
-            Console.ReadLine();*/
-
-
+            txt.devolveCalorias();
 
         }
 

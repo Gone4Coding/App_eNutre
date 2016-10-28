@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AdinistrationApp_eNutre.Classes;
 
 namespace AdministrationApp_eNutre.Classes
 {
     class Vegetable
     {
+        private TxtHandler vegetaisHandler = new TxtHandler();
         private string name;
         private string extraInfo;
         private string quantity;
-        private int calories;
-        private string[] vegetais;
+        private string calories;
 
-        public Vegetable(string[] vegetables)
+        public Vegetable(string name, string quantity, string calories)
         {
              
-            this.name = name;
-            this.quantity = quantity;
-            this.calories = calories;
+            this.name = vegetaisHandler.devolveNome();
+            this.quantity = vegetaisHandler.devolveQuantidade();
+            this.calories = vegetaisHandler.devolveCalorias();
         }
 
-        public Vegetable(string name, string extraInfo, string quantity, int calories)
+        public Vegetable(string name, string extraInfo, string quantity, string calories)
         {
-            this.name = name;
-            this.extraInfo = extraInfo;
-            this.quantity = quantity;
-            this.calories = calories;
+            this.name = vegetaisHandler.devolveNome();
+            this.quantity = vegetaisHandler.devolveQuantidade();
+            this.calories = vegetaisHandler.devolveCalorias();
+            this.extraInfo = extraInfo; 
         }
 
         public string getName()
@@ -45,7 +46,7 @@ namespace AdministrationApp_eNutre.Classes
             return quantity;
         }
 
-        public int getCalories()
+        public string getCalories()
         {
             return calories;
         }
