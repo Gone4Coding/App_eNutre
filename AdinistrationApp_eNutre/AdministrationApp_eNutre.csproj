@@ -49,12 +49,6 @@
     <Compile Include="Classes\Activity.cs" />
     <Compile Include="Classes\Restaurant.cs" />
     <Compile Include="Classes\Vegetable.cs" />
-    <Compile Include="Forms\FormAdministration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormAdministration.Designer.cs">
-      <DependentUpon>FormAdministration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,9 +57,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FormAdministration.resx">
-      <DependentUpon>FormAdministration.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

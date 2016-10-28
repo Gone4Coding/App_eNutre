@@ -204,6 +204,7 @@
             this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.bt_adminstration);
             this.Controls.Add(this.menuPrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
             this.Text = "Administration App";
             this.Load += new System.EventHandler(this.FormMain_Load);
