@@ -54,6 +54,7 @@
     <Compile Include="Classes\ExcelHandler.cs" />
     <Compile Include="Classes\JsonHandler.cs" />
     <Compile Include="Classes\Restaurant.cs" />
+    <Compile Include="Classes\TxtHandler.cs" />
     <Compile Include="Classes\Vegetable.cs" />
     <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
