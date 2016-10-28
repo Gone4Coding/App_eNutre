@@ -28,3 +28,5 @@ C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe
 C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.pdb
 C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.dll
 C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.xml
+C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.dll
+C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.xml

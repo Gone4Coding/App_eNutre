@@ -50,10 +50,16 @@ namespace AdministrationApp_eNutre.Forms
             string ficheiroTXT = System.IO.File.ReadAllText(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais.txt");
 
             string[] vegetables = ficheiroTXT.Split('\n');
-            //Vegetable vegetable = new Vegetable(vegetables); 
+           // Vegetable vegetable = new Vegetable(vegetables); 
 
-            Console.WriteLine(vegetables);
-            Console.ReadLine();
+            for (int i = 0; i < vegetables.Length; i++)
+            {
+                string[] vegetal = vegetables[i].Split(' ');
+            }
+            
+
+            /*Console.WriteLine(vegatl[]);
+            Console.ReadLine();*/
 
 
 
