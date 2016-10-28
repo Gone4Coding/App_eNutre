@@ -120,8 +120,6 @@ namespace AdministrationApp_eNutre.Forms
         private void bt_adminstration_Click(object sender, EventArgs e)
         {
             //verify users
-            FormAdministration formAdm = new FormAdministration();
-            formAdm.Show();
         }
 
         private void bt_new_Click(object sender, EventArgs e)
