@@ -8,3 +8,6 @@ C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutr
 C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csproj.GenerateResource.Cache
 C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.exe
 C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.pdb
+C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe.config
+C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.exe
+C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.pdb
