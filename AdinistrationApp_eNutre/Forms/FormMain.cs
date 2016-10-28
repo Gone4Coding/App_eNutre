@@ -129,7 +129,10 @@ namespace AdministrationApp_eNutre.Forms
 
         // BUTTONS
 
-       
+        private void bt_adminstration_Click(object sender, EventArgs e)
+        {
+            //verify users
+        }
 
         private void bt_new_Click(object sender, EventArgs e)
         {

@@ -20,3 +20,11 @@ C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\Adminis
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.Forms.FormMain.resources
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Properties.Resources.resources
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csproj.GenerateResource.Cache
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csprojResolveAssemblyReference.cache
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.Forms.FormMain.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Properties.Resources.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csproj.GenerateResource.Cache
+C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe
+C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.pdb
+C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.dll
+C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.xml

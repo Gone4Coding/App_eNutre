@@ -8,30 +8,38 @@ namespace AdministrationApp_eNutre.Classes
 {
     class Activity
     {
-        private string exercise;
+        private string nome;
         private double met;
-        private int calorieComsuption;
+        private int calorias;
 
-        public Activity(string exercise, double met, int calorieComsuption)
+        public Activity(string nome, double met, int calorias)
         {
-            this.exercise = exercise;
+            this.nome = nome;
             this.met = met;
-            this.calorieComsuption = calorieComsuption;
+            this.calorias = calorias;
         }
 
-        public string getExercise()
+        public string Nome
         {
-            return exercise;
+            get { return nome; }
+            set { nome = value; }
         }
 
-        public double getMet()
+        public double Met
         {
-            return met;
+            get { return met; }
+            set { met = value; }
         }
 
-        public int getCaloriesComsuption()
+        public int Calorias
         {
-            return calorieComsuption;
+            get { return calorias; }
+            set { calorias = value; }
+        }
+
+        public override string ToString()
+        {
+            return "Activity: " + nome + "; MET: " + met + "; Cals/h: " + calorias;
         }
     }
 }

@@ -21,24 +21,33 @@ namespace AdministrationApp_eNutre.Classes
             this.calories = calories;
         }
 
-        public string getName()
+        public string Name
         {
-            return name;
+            get { return name; }
+            set { name = value; }
         }
 
-        public string getItem()
+        public string Item
         {
-            return item;
+            get { return item; }
+            set { item = value; }
         }
 
-        public string getQuantity()
+        public string Quantity
         {
-            return quantity;
+            get { return quantity; }
+            set { quantity = value; }
         }
 
-        public int getCalories()
+        public int Calories
         {
-            return calories;
+            get { return calories; }
+            set { calories = value; }
+        }
+
+        public override string ToString()
+        {
+            return "Name: " + name + "; Item: " + item + "; Quantity: " + quantity + "; Calories: " + calories;
         }
     }
 }
