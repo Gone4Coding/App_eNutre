@@ -11,3 +11,6 @@ C:\Users\FearlessJr\Documents\Visual Studio 2015\Projects\AdinistrationApp_eNutr
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe.config
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.exe
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.pdb
+C:\Git\App_eNutre\AdinistrationApp_eNutre\bin\Debug\AdinistrationApp_eNutre.exe.config
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.exe
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.pdb
