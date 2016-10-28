@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdministrationApp_eNutre.Classes;
 
 namespace AdministrationApp_eNutre.Forms
 {
@@ -45,6 +46,17 @@ namespace AdministrationApp_eNutre.Forms
         {
             formatForMenu("Foods");
             createListView();
+
+            string ficheiroTXT = System.IO.File.ReadAllText(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais.txt");
+
+            string[] vegetables = ficheiroTXT.Split('\n');
+            //Vegetable vegetable = new Vegetable(vegetables); 
+
+            Console.WriteLine(vegetables);
+            Console.ReadLine();
+
+
+
         }
 
         private void menu_plans_Click(object sender, EventArgs e)
@@ -117,12 +129,7 @@ namespace AdministrationApp_eNutre.Forms
 
         // BUTTONS
 
-        private void bt_adminstration_Click(object sender, EventArgs e)
-        {
-            //verify users
-            FormAdministration formAdm = new FormAdministration();
-            formAdm.Show();
-        }
+       
 
         private void bt_new_Click(object sender, EventArgs e)
         {

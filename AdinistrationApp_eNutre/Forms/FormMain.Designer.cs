@@ -120,7 +120,7 @@
             this.bt_adminstration.TabIndex = 1;
             this.bt_adminstration.Text = "Administration";
             this.bt_adminstration.UseVisualStyleBackColor = true;
-            this.bt_adminstration.Click += new System.EventHandler(this.bt_adminstration_Click);
+  
             // 
             // lb_welcome
             // 

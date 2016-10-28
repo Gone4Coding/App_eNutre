@@ -13,7 +13,7 @@ namespace AdministrationApp_eNutre.Classes
         private string quantity;
         private int calories;
 
-        public Vegetable(string name, string quantity, int calories)
+        public Vegetable(string[] vegetable)
         {
             this.name = name;
             this.quantity = quantity;
