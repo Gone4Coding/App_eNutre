@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.Classes;
+using AdinistrationApp_eNutre.Forms;
 using AdministrationApp_eNutre.Classes;
 
 namespace AdministrationApp_eNutre.Forms
@@ -23,7 +24,7 @@ namespace AdministrationApp_eNutre.Forms
         public FormMain()
         {
             InitializeComponent();
-            txt.carregarTXT();
+            //txt.carregarTXT();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -122,12 +123,7 @@ namespace AdministrationApp_eNutre.Forms
         // END FUNCTIONS
 
         // BUTTONS
-
-        private void bt_adminstration_Click(object sender, EventArgs e)
-        {
-            //verify users
-        }
-
+        
         private void bt_new_Click(object sender, EventArgs e)
         {
 
@@ -141,8 +137,14 @@ namespace AdministrationApp_eNutre.Forms
         private void bt_delete_Click(object sender, EventArgs e)
         {
 
-        }        
-        
+        }
+
+        private void bt_adminstration_Click(object sender, EventArgs e)
+        {
+            FormAdministration formAdm = new FormAdministration();
+            formAdm.Show();
+        }
+
         // END BUTTONS
     }
 }

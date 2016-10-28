@@ -12,14 +12,16 @@ namespace AdinistrationApp_eNutre.Classes
 {
     public static class JsonHandler
     {
-        public static void deserialize(string path)
+        public static int deserialize(string path)
         {
             List<Activity> activitiesList = new List<Activity>();
             activitiesList = JsonConvert.DeserializeObject<List<Activity>>(path);
-            createXml(activitiesList);
+            int res = createXml(activitiesList);
+
+            return res;
         }
 
-        private static void createXml(List<Activity> list)
+        private static int createXml(List<Activity> list)
         {
             XmlDocument doc = new XmlDocument();
 
@@ -47,6 +49,8 @@ namespace AdinistrationApp_eNutre.Classes
                 root.AppendChild(exercise);
             }
             doc.Save(@"..\\..\\XML\\Xml_Files\\exercises.xml");
+
+            return 1;
         }
     }
 }

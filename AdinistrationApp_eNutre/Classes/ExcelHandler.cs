@@ -11,7 +11,7 @@ namespace AdinistrationApp_eNutre.Classes
 {
     public static class ExcelHandler
     {
-        public static void createXml(string path)
+        public static int createXml(string path)
         {
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.Visible = false;
@@ -51,6 +51,8 @@ namespace AdinistrationApp_eNutre.Classes
 
             workBook.Close();
             excelApplication.Quit();
+
+            return 1;
         }
 
     }
