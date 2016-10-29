@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 using AdministrationApp_eNutre.Classes;
 
@@ -10,18 +12,27 @@ namespace AdinistrationApp_eNutre.Classes
 {
     class TxtHandler
     {
-       // private List<string> vegetal;
+        // private List<string> vegetal;
         private string[] vegetalSplit;
         private string[] vegetalSplitP;
         private string[] vegetables;
-        
-        
+
+
         public void carregarTXT(string path)
         {
-            string ficheiroTXT = System.IO.File.ReadAllText(path);
-            vegetables = ficheiroTXT.Split('\n');
-            List<string> listVeg = new List<string>(vegetables);
-            createXml(listVeg);
+            try
+            {
+                string ficheiroTXT = System.IO.File.ReadAllText(path);
+                vegetables = ficheiroTXT.Split('\n');
+                List<string> listVeg = new List<string>(vegetables);
+                createXml(listVeg);
+            }
+            catch (FileNotFoundException)
+            {
+
+                MessageBox.Show("Ficheiro texto nao encontrado", "Aviso", MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Warning);
+            }//criar para xml mal criado
         }
 
         private void createXml(List<string> listVeg)
