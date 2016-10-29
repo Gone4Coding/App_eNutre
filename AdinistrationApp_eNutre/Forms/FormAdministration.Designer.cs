@@ -149,7 +149,7 @@
             this.lb_infoVeggie.Name = "lb_infoVeggie";
             this.lb_infoVeggie.Size = new System.Drawing.Size(186, 60);
             this.lb_infoVeggie.TabIndex = 3;
-            this.lb_infoVeggie.Text = "Info:\r\nTo enter a file, it must be \r\nin text file format (txt) ";
+            this.lb_infoVeggie.Text = "Info:\r\nTo enter a file, it must be \r\nin Text file format (txt) ";
             // 
             // bt_addFileVeggie
             // 
@@ -205,7 +205,7 @@
             this.lb_infoRestaurant.Name = "lb_infoRestaurant";
             this.lb_infoRestaurant.Size = new System.Drawing.Size(186, 60);
             this.lb_infoRestaurant.TabIndex = 3;
-            this.lb_infoRestaurant.Text = "Info:\r\nTo enter a file, it must be \r\nin excel file format (xlsx) ";
+            this.lb_infoRestaurant.Text = "Info:\r\nTo enter a file, it must be \r\nin Excel file format (xlsx) ";
             // 
             // bt_addFileRestaurants
             // 
@@ -254,7 +254,7 @@
             this.lb_infoActivities.Name = "lb_infoActivities";
             this.lb_infoActivities.Size = new System.Drawing.Size(186, 60);
             this.lb_infoActivities.TabIndex = 3;
-            this.lb_infoActivities.Text = "Info:\r\nTo enter a file, it must be \r\nin json file format (json) ";
+            this.lb_infoActivities.Text = "Info:\r\nTo enter a file, it must be \r\nin Json file format (js) ";
             // 
             // bt_addFileActivities
             // 
@@ -291,6 +291,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAdministration";
             this.Text = "FormAdministration";
+            this.Load += new System.EventHandler(this.FormAdministration_Load);
             this.tab_all.ResumeLayout(false);
             this.tabPage_vegetables.ResumeLayout(false);
             this.tabPage_vegetables.PerformLayout();

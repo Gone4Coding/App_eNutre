@@ -16,16 +16,13 @@ namespace AdinistrationApp_eNutre.Classes
         private string[] vegetables;
         private List<string> listVeg;
 
-        public void carregarTXT()
+        public void carregarTXT(string path)
         {
-            string ficheiroTXT =
-                System.IO.File.ReadAllText(
-                    @"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais.txt");
+            string ficheiroTXT = System.IO.File.ReadAllText(path);
 
             vegetables = ficheiroTXT.Split('\n');
             listVeg = new List<string>(vegetables);
             createXml(listVeg);
-
         }
 
         private void createXml(List<string> listVeg)
