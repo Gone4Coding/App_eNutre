@@ -14,57 +14,84 @@ namespace AdinistrationApp_eNutre.Classes
         private string[] vegetalSplit;
         private string[] vegetalSplitP;
         private string[] vegetables;
-        private List<string> listVeg;
-
+        
+        
         public void carregarTXT(string path)
         {
             string ficheiroTXT = System.IO.File.ReadAllText(path);
-
             vegetables = ficheiroTXT.Split('\n');
-            listVeg = new List<string>(vegetables);
+            List<string> listVeg = new List<string>(vegetables);
             createXml(listVeg);
         }
 
         private void createXml(List<string> listVeg)
         {
-
+            int conta = 0;
             XmlDocument doc = new XmlDocument();
-
             XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
             doc.AppendChild(dec);
-
             // ROOT
             XmlElement root = doc.CreateElement("foods");
             doc.AppendChild(root);
 
             foreach (string veg in listVeg)
             {
+                conta++;
+                int nomeIndex;
                 string[] porEspaco = veg.Split(' ');
                 string[] porP = veg.Split('(');
                 int ultimo = porP.Count() - 1;
 
                 XmlElement food = doc.CreateElement("food");
                 XmlElement vegetable = doc.CreateElement("vegetable");
+                food.AppendChild(vegetable);
                 XmlElement name = doc.CreateElement("name");
-                name.InnerText = porEspaco[4];
-                XmlElement extraInfo = doc.CreateElement("extraInfo");
-                if (porP.Count() == 2)
+                vegetable.AppendChild(name);
+
+                for (nomeIndex = 4; nomeIndex < porEspaco.Length; nomeIndex++)
                 {
-                    extraInfo.InnerText = "";
+                    if (porEspaco[nomeIndex].StartsWith("("))
+                    {
+                        for (int x = 4; x < nomeIndex; x++)
+                        {
+                            if (x == nomeIndex - 1)
+                            {
+                                name.InnerText += porEspaco[x];
+                            }
+                            else
+                            {
+                                name.InnerText += porEspaco[x] + " ";
+                            }
+                        }
+                        break;
+                    }
+                }
+
+                if (porP.Count() > 2)
+                {
+                    for (int extraIndex = 1; extraIndex < porP.Length - 1; extraIndex++)
+                    {
+                        XmlElement extraInfo = doc.CreateElement("extraInfo");
+                        extraInfo.InnerText = tiraParentesis(porP[extraIndex], 2);
+                        vegetable.AppendChild(extraInfo);
+                    }
+                }
+
+                XmlElement quantity = doc.CreateElement("quantity");
+                if (listVeg.Count() == conta)
+                {
+                    quantity.InnerText = tiraParentesis(porP[ultimo],3);
                 }
                 else
                 {
-                    extraInfo.InnerText = tiraParentesis(porP[1],2);
+                    quantity.InnerText = tiraParentesis(porP[ultimo],4);
                 }
-                XmlElement quantity = doc.CreateElement("quantity");
-                quantity.InnerText = tiraParentesis(porP[ultimo],4);
+                vegetable.AppendChild(quantity);
+
                 XmlElement calories = doc.CreateElement("calories");
                 calories.InnerText = porEspaco[1];
-                food.AppendChild(vegetable);
-                vegetable.AppendChild(name);
-                vegetable.AppendChild(extraInfo);
-                vegetable.AppendChild(quantity);
                 vegetable.AppendChild(calories);
+
                 root.AppendChild(food);
             }
             doc.Save(@"..\\..\\XML\\Xml_Files\\vegetables.xml");

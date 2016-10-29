@@ -24,7 +24,7 @@ namespace AdministrationApp_eNutre.Forms
         public FormMain()
         {
             InitializeComponent();
-            //txt.carregarTXT();
+           // txt.carregarTXT(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais.txt");
         }
 
         private void FormMain_Load(object sender, EventArgs e)
