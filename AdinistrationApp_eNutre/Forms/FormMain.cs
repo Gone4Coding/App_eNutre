@@ -18,13 +18,13 @@ namespace AdministrationApp_eNutre.Forms
     {
 
         private String menuType;
-        private TxtHandler txt = new TxtHandler();
+       
         
 
         public FormMain()
         {
             InitializeComponent();
-            txt.carregarTXT(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais");
+            //txt.carregarTXT(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais");
         }
 
         private void FormMain_Load(object sender, EventArgs e)

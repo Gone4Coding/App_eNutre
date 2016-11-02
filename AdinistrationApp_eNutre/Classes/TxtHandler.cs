@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using AdinistrationApp_eNutre.Forms;
 using AdministrationApp_eNutre.Classes;
 
 namespace AdinistrationApp_eNutre.Classes
@@ -16,16 +17,24 @@ namespace AdinistrationApp_eNutre.Classes
         private string[] vegetalSplit;
         private string[] vegetalSplitP;
         private string[] vegetables;
+        private string msg1;
+        private string msg2;
+        private string msg3;
+        private bool isValid = true;
+        private static string filenameXML = @"..\\..\\XML\\Xml_Files\\vegetables.xml";
+        //private FormAdministration formAdministration = new FormAdministration();
 
 
-        public void carregarTXT(string path)
+        public int carregarTXT(string path, string label)
         {
             try
             {
                 string ficheiroTXT = System.IO.File.ReadAllText(path);
                 vegetables = ficheiroTXT.Split('\n');
                 List<string> listVeg = new List<string>(vegetables);
-                createXml(listVeg);
+                createXml(listVeg, label);
+                
+
             }
             catch (FileNotFoundException)
             {
@@ -33,9 +42,10 @@ namespace AdinistrationApp_eNutre.Classes
                 MessageBox.Show("Ficheiro texto nao encontrado", "Aviso", MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Warning);
             }//criar para xml mal criado
+            return 1;
         }
 
-        private void createXml(List<string> listVeg)
+        private void createXml(List<string> listVeg, string label)
         {
             int conta = 0;
             XmlDocument doc = new XmlDocument();
@@ -105,15 +115,53 @@ namespace AdinistrationApp_eNutre.Classes
 
                 root.AppendChild(food);
             }
-            doc.Save(@"..\\..\\XML\\Xml_Files\\vegetables.xml");
+            
+            doc.Save(filenameXML);
+            
+            MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Validator validator = new Validator();
+            //validator.validaVegetables(filenameXML);
+            XmlReaderSettings xsdReader = new XmlReaderSettings();
+            string vegetablesXsd = @"..\\..\\XML\\Schemas\\vegetablesSchema.xsd";
+            try
+            {
+                xsdReader.Schemas.Add(null, vegetablesXsd);
+                xsdReader.ValidationType = ValidationType.Schema;
+
+                XmlReader reader = XmlReader.Create(filenameXML, xsdReader);
+                doc.Load(reader);
+
+            }
+            catch (Exception msg)
+            {
+                isValid = false;
+               
+                msg1 = msg.Message;
+                msg2 = Environment.NewLine;
+                
+            }
+            finally
+            {
+                //label += isValid ? "O doc é valido!" : "O doc é invalido...";
+                //formAdministration.label(isValid ? "O doc é valido!" : "O doc é invalido...","ola");
+                // validaMsg(validacao, 1);
+                MessageBox.Show(isValid ? "O doc é valido!" : "O doc é invalido...");
+                msg3 = isValid ? "O doc é valido!" : "O doc é invalido...";
+            }
         }
 
-        public string tiraParentesis(string str,int ultimosChars)
+        private string tiraParentesis(string str,int ultimosChars)
         {
             int startIndex = 0;
             int parentesis = str.Length - ultimosChars;
             string substring = str.Substring(startIndex, parentesis);
             return substring;
+        }
+
+        public string[] label()
+        {
+            string[] labelStrings = {msg1, msg2, msg3};
+            return labelStrings;
         }
     }
 }
