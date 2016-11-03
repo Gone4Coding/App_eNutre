@@ -13,7 +13,7 @@ namespace AdinistrationApp_eNutre.Classes
 {
     class TxtHandler
     {
-        // private List<string> vegetal;
+        
         private string[] vegetalSplit;
         private string[] vegetalSplitP;
         private string[] vegetables;
@@ -22,7 +22,7 @@ namespace AdinistrationApp_eNutre.Classes
         private string msg3;
         private bool isValid = true;
         private static string filenameXML = @"..\\..\\XML\\Xml_Files\\vegetables.xml";
-        //private FormAdministration formAdministration = new FormAdministration();
+       
 
 
         public int carregarTXT(string path, string label)
@@ -119,8 +119,7 @@ namespace AdinistrationApp_eNutre.Classes
             doc.Save(filenameXML);
             
             MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //Validator validator = new Validator();
-            //validator.validaVegetables(filenameXML);
+           
             XmlReaderSettings xsdReader = new XmlReaderSettings();
             string vegetablesXsd = @"..\\..\\XML\\Schemas\\vegetablesSchema.xsd";
             try
@@ -142,9 +141,6 @@ namespace AdinistrationApp_eNutre.Classes
             }
             finally
             {
-                //label += isValid ? "O doc é valido!" : "O doc é invalido...";
-                //formAdministration.label(isValid ? "O doc é valido!" : "O doc é invalido...","ola");
-                // validaMsg(validacao, 1);
                 MessageBox.Show(isValid ? "O doc é valido!" : "O doc é invalido...");
                 msg3 = isValid ? "O doc é valido!" : "O doc é invalido...";
             }

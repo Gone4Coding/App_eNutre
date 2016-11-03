@@ -30,6 +30,7 @@
         {
             this.tab_all = new System.Windows.Forms.TabControl();
             this.tabPage_vegetables = new System.Windows.Forms.TabPage();
+            this.lb_validacao = new System.Windows.Forms.Label();
             this.lb_resultVegetable = new System.Windows.Forms.Label();
             this.bt_addFileVeggie = new System.Windows.Forms.Button();
             this.lb_infoVeggie = new System.Windows.Forms.Label();
@@ -50,7 +51,8 @@
             this.lb_addFileActivity = new System.Windows.Forms.Label();
             this.bt_searchFileActivity = new System.Windows.Forms.Button();
             this.bt_addFileActivities = new System.Windows.Forms.Button();
-            this.lb_validacao = new System.Windows.Forms.Label();
+            this.lb_validacaoRestaurant = new System.Windows.Forms.Label();
+            this.lb_validacaoActivities = new System.Windows.Forms.Label();
             this.tab_all.SuspendLayout();
             this.tabPage_vegetables.SuspendLayout();
             this.tabPage_restaurants.SuspendLayout();
@@ -84,6 +86,16 @@
             this.tabPage_vegetables.TabIndex = 0;
             this.tabPage_vegetables.Text = "Vegetables";
             this.tabPage_vegetables.UseVisualStyleBackColor = true;
+            // 
+            // lb_validacao
+            // 
+            this.lb_validacao.AutoSize = true;
+            this.lb_validacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_validacao.ForeColor = System.Drawing.Color.Red;
+            this.lb_validacao.Location = new System.Drawing.Point(181, 131);
+            this.lb_validacao.Name = "lb_validacao";
+            this.lb_validacao.Size = new System.Drawing.Size(0, 13);
+            this.lb_validacao.TabIndex = 6;
             // 
             // lb_resultVegetable
             // 
@@ -143,6 +155,7 @@
             // 
             // tabPage_restaurants
             // 
+            this.tabPage_restaurants.Controls.Add(this.lb_validacaoRestaurant);
             this.tabPage_restaurants.Controls.Add(this.lb_resultRestaurants);
             this.tabPage_restaurants.Controls.Add(this.tb_filePathRestaurant);
             this.tabPage_restaurants.Controls.Add(this.bt_addFileRestaurants);
@@ -152,7 +165,7 @@
             this.tabPage_restaurants.Location = new System.Drawing.Point(4, 22);
             this.tabPage_restaurants.Name = "tabPage_restaurants";
             this.tabPage_restaurants.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_restaurants.Size = new System.Drawing.Size(409, 194);
+            this.tabPage_restaurants.Size = new System.Drawing.Size(857, 203);
             this.tabPage_restaurants.TabIndex = 1;
             this.tabPage_restaurants.Text = "Restaurants";
             this.tabPage_restaurants.UseVisualStyleBackColor = true;
@@ -170,7 +183,7 @@
             // 
             this.tb_filePathRestaurant.Location = new System.Drawing.Point(71, 28);
             this.tb_filePathRestaurant.Name = "tb_filePathRestaurant";
-            this.tb_filePathRestaurant.Size = new System.Drawing.Size(211, 20);
+            this.tb_filePathRestaurant.Size = new System.Drawing.Size(699, 20);
             this.tb_filePathRestaurant.TabIndex = 1;
             // 
             // bt_addFileRestaurants
@@ -185,7 +198,7 @@
             // 
             // bt_searchFileRestaurant
             // 
-            this.bt_searchFileRestaurant.Location = new System.Drawing.Point(288, 26);
+            this.bt_searchFileRestaurant.Location = new System.Drawing.Point(776, 25);
             this.bt_searchFileRestaurant.Name = "bt_searchFileRestaurant";
             this.bt_searchFileRestaurant.Size = new System.Drawing.Size(75, 23);
             this.bt_searchFileRestaurant.TabIndex = 2;
@@ -215,6 +228,7 @@
             // 
             // tabPage_activities
             // 
+            this.tabPage_activities.Controls.Add(this.lb_validacaoActivities);
             this.tabPage_activities.Controls.Add(this.lb_resultActivities);
             this.tabPage_activities.Controls.Add(this.lb_infoActivities);
             this.tabPage_activities.Controls.Add(this.tb_filePathActivity);
@@ -223,7 +237,7 @@
             this.tabPage_activities.Controls.Add(this.bt_addFileActivities);
             this.tabPage_activities.Location = new System.Drawing.Point(4, 22);
             this.tabPage_activities.Name = "tabPage_activities";
-            this.tabPage_activities.Size = new System.Drawing.Size(409, 194);
+            this.tabPage_activities.Size = new System.Drawing.Size(857, 203);
             this.tabPage_activities.TabIndex = 2;
             this.tabPage_activities.Text = "Activities";
             this.tabPage_activities.UseVisualStyleBackColor = true;
@@ -252,7 +266,7 @@
             // 
             this.tb_filePathActivity.Location = new System.Drawing.Point(71, 28);
             this.tb_filePathActivity.Name = "tb_filePathActivity";
-            this.tb_filePathActivity.Size = new System.Drawing.Size(211, 20);
+            this.tb_filePathActivity.Size = new System.Drawing.Size(676, 20);
             this.tb_filePathActivity.TabIndex = 1;
             // 
             // lb_addFileActivity
@@ -266,7 +280,7 @@
             // 
             // bt_searchFileActivity
             // 
-            this.bt_searchFileActivity.Location = new System.Drawing.Point(288, 26);
+            this.bt_searchFileActivity.Location = new System.Drawing.Point(763, 28);
             this.bt_searchFileActivity.Name = "bt_searchFileActivity";
             this.bt_searchFileActivity.Size = new System.Drawing.Size(75, 23);
             this.bt_searchFileActivity.TabIndex = 2;
@@ -284,15 +298,25 @@
             this.bt_addFileActivities.UseVisualStyleBackColor = true;
             this.bt_addFileActivities.Click += new System.EventHandler(this.bt_addFileActivities_Click);
             // 
-            // lb_validacao
+            // lb_validacaoRestaurant
             // 
-            this.lb_validacao.AutoSize = true;
-            this.lb_validacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_validacao.ForeColor = System.Drawing.Color.Red;
-            this.lb_validacao.Location = new System.Drawing.Point(181, 131);
-            this.lb_validacao.Name = "lb_validacao";
-            this.lb_validacao.Size = new System.Drawing.Size(0, 13);
-            this.lb_validacao.TabIndex = 6;
+            this.lb_validacaoRestaurant.AutoSize = true;
+            this.lb_validacaoRestaurant.ForeColor = System.Drawing.Color.Red;
+            this.lb_validacaoRestaurant.Location = new System.Drawing.Point(215, 127);
+            this.lb_validacaoRestaurant.Name = "lb_validacaoRestaurant";
+            this.lb_validacaoRestaurant.Size = new System.Drawing.Size(35, 13);
+            this.lb_validacaoRestaurant.TabIndex = 6;
+            this.lb_validacaoRestaurant.Text = "label1";
+            // 
+            // lb_validacaoActivities
+            // 
+            this.lb_validacaoActivities.AutoSize = true;
+            this.lb_validacaoActivities.ForeColor = System.Drawing.Color.Red;
+            this.lb_validacaoActivities.Location = new System.Drawing.Point(212, 132);
+            this.lb_validacaoActivities.Name = "lb_validacaoActivities";
+            this.lb_validacaoActivities.Size = new System.Drawing.Size(35, 13);
+            this.lb_validacaoActivities.TabIndex = 6;
+            this.lb_validacaoActivities.Text = "label1";
             // 
             // FormAdministration
             // 
@@ -340,5 +364,7 @@
         private System.Windows.Forms.Button bt_searchFileActivity;
         private System.Windows.Forms.Button bt_addFileActivities;
         private System.Windows.Forms.Label lb_validacao;
+        private System.Windows.Forms.Label lb_validacaoRestaurant;
+        private System.Windows.Forms.Label lb_validacaoActivities;
     }
 }
