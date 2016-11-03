@@ -21,6 +21,7 @@ namespace AdinistrationApp_eNutre.Forms
         private void FormAdministration_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
+            //463; 283
         }
 
         // TABING VEGETABLS
@@ -45,7 +46,29 @@ namespace AdinistrationApp_eNutre.Forms
 
         private void bt_addFileVeggie_Click(object sender, EventArgs e)
         {
+            lb_validacao.Text = "";
+            TxtHandler txtHandler = new TxtHandler();
+            
+           if (!tb_filePathVeggie.Text.Equals(""))
+            {
+                string path = tb_filePathVeggie.Text;
+                int res = txtHandler.carregarTXT(tb_filePathVeggie.Text, lb_resultVegetable.Text);
 
+                if (res == 0)
+                {
+                    lb_resultVegetable.Text = "Error in File. Check Format";
+                }
+                else
+                {
+                    lb_resultVegetable.Text = "File Added";
+                    string[] msgsLabel = txtHandler.label();
+                    lb_validacao.Text += msgsLabel[0] + msgsLabel[1] + msgsLabel[2];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Choose a file first");
+            }
         }
 
         // END TABING VEGETABLS
@@ -54,7 +77,7 @@ namespace AdinistrationApp_eNutre.Forms
         private void bt_searchFileRestaurant_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileRestaurant = new OpenFileDialog();
-            fileRestaurant.Filter = "XLSX files (*.xlsx)|*.xlsx";
+            fileRestaurant.Filter = "XLS files (*.xls)|*.xls";
 
             // ADD EXCEPTION
             if (fileRestaurant.ShowDialog() == DialogResult.OK)
@@ -75,7 +98,7 @@ namespace AdinistrationApp_eNutre.Forms
             if (!tb_filePathRestaurant.Text.Equals(""))
             {
                 string path = tb_filePathRestaurant.Text;
-                int res = JsonHandler.deserialize(path);
+                int res = ExcelHandler.createXml(path);
 
                 if (res == 0)
                 {
@@ -105,7 +128,7 @@ namespace AdinistrationApp_eNutre.Forms
             {
                 try
                 {
-                    tb_filePathVeggie.Text = fileActivity.InitialDirectory + fileActivity.FileName;
+                    tb_filePathActivity.Text = fileActivity.InitialDirectory + fileActivity.FileName;
                 }
                 catch (ArgumentException ex)
                 {
@@ -119,7 +142,7 @@ namespace AdinistrationApp_eNutre.Forms
             if (!tb_filePathActivity.Text.Equals(""))
             {
                 string path = tb_filePathActivity.Text;
-                int res = ExcelHandler.createXml(path);
+                int res = JsonHandler.deserialize(path);
 
                 if (res == 0)
                 {
@@ -128,6 +151,7 @@ namespace AdinistrationApp_eNutre.Forms
                 else
                 {
                     lb_resultActivities.Text = "File Added";
+                   
                 }
             }
             else
