@@ -18,7 +18,7 @@ namespace AdministrationApp_eNutre.Forms
     {
 
         private String menuType;
-        private TxtHandler txt = new TxtHandler();
+        //private TxtHandler txt = new TxtHandler();
         
 
         public FormMain()
