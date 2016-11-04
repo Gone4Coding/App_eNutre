@@ -14,8 +14,12 @@ namespace AdinistrationApp_eNutre.Classes
 {
     public static class JsonHandler
     {
-        public static void createXml(string path)
+        public static string createXml(string path)
         {
+            bool isValid = true;
+            string msg1 = "";
+            string msg2;
+            string msg3 = "";
             try
             {
                 XmlDocument doc = new XmlDocument();
@@ -60,9 +64,21 @@ namespace AdinistrationApp_eNutre.Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                isValid = false;
+               MessageBox.Show(ex.Message);
             }
+            finally
+            {
+
+                msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
+                msg3 = msg1 + "\n" + msg2;
+            }
+            return msg3;
         }
 
     }
 }
+
+
+
+

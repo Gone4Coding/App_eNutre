@@ -38,6 +38,7 @@
             this.tb_filePathVeggie = new System.Windows.Forms.TextBox();
             this.lb_addFileVeggie = new System.Windows.Forms.Label();
             this.tabPage_restaurants = new System.Windows.Forms.TabPage();
+            this.lb_validacaoRestaurant = new System.Windows.Forms.Label();
             this.lb_resultRestaurants = new System.Windows.Forms.Label();
             this.tb_filePathRestaurant = new System.Windows.Forms.TextBox();
             this.bt_addFileRestaurants = new System.Windows.Forms.Button();
@@ -45,14 +46,13 @@
             this.lb_addFileResturant = new System.Windows.Forms.Label();
             this.lb_infoRestaurant = new System.Windows.Forms.Label();
             this.tabPage_activities = new System.Windows.Forms.TabPage();
+            this.lb_validacaoActivities = new System.Windows.Forms.Label();
             this.lb_resultActivities = new System.Windows.Forms.Label();
             this.lb_infoActivities = new System.Windows.Forms.Label();
             this.tb_filePathActivity = new System.Windows.Forms.TextBox();
             this.lb_addFileActivity = new System.Windows.Forms.Label();
             this.bt_searchFileActivity = new System.Windows.Forms.Button();
             this.bt_addFileActivities = new System.Windows.Forms.Button();
-            this.lb_validacaoRestaurant = new System.Windows.Forms.Label();
-            this.lb_validacaoActivities = new System.Windows.Forms.Label();
             this.tab_all.SuspendLayout();
             this.tabPage_vegetables.SuspendLayout();
             this.tabPage_restaurants.SuspendLayout();
@@ -170,6 +170,15 @@
             this.tabPage_restaurants.Text = "Restaurants";
             this.tabPage_restaurants.UseVisualStyleBackColor = true;
             // 
+            // lb_validacaoRestaurant
+            // 
+            this.lb_validacaoRestaurant.AutoSize = true;
+            this.lb_validacaoRestaurant.ForeColor = System.Drawing.Color.Red;
+            this.lb_validacaoRestaurant.Location = new System.Drawing.Point(215, 127);
+            this.lb_validacaoRestaurant.Name = "lb_validacaoRestaurant";
+            this.lb_validacaoRestaurant.Size = new System.Drawing.Size(0, 13);
+            this.lb_validacaoRestaurant.TabIndex = 6;
+            // 
             // lb_resultRestaurants
             // 
             this.lb_resultRestaurants.AutoSize = true;
@@ -242,6 +251,15 @@
             this.tabPage_activities.Text = "Activities";
             this.tabPage_activities.UseVisualStyleBackColor = true;
             // 
+            // lb_validacaoActivities
+            // 
+            this.lb_validacaoActivities.AutoSize = true;
+            this.lb_validacaoActivities.ForeColor = System.Drawing.Color.Red;
+            this.lb_validacaoActivities.Location = new System.Drawing.Point(212, 132);
+            this.lb_validacaoActivities.Name = "lb_validacaoActivities";
+            this.lb_validacaoActivities.Size = new System.Drawing.Size(0, 13);
+            this.lb_validacaoActivities.TabIndex = 6;
+            // 
             // lb_resultActivities
             // 
             this.lb_resultActivities.AutoSize = true;
@@ -297,26 +315,6 @@
             this.bt_addFileActivities.Text = "Add File";
             this.bt_addFileActivities.UseVisualStyleBackColor = true;
             this.bt_addFileActivities.Click += new System.EventHandler(this.bt_addFileActivities_Click);
-            // 
-            // lb_validacaoRestaurant
-            // 
-            this.lb_validacaoRestaurant.AutoSize = true;
-            this.lb_validacaoRestaurant.ForeColor = System.Drawing.Color.Red;
-            this.lb_validacaoRestaurant.Location = new System.Drawing.Point(215, 127);
-            this.lb_validacaoRestaurant.Name = "lb_validacaoRestaurant";
-            this.lb_validacaoRestaurant.Size = new System.Drawing.Size(35, 13);
-            this.lb_validacaoRestaurant.TabIndex = 6;
-            this.lb_validacaoRestaurant.Text = "label1";
-            // 
-            // lb_validacaoActivities
-            // 
-            this.lb_validacaoActivities.AutoSize = true;
-            this.lb_validacaoActivities.ForeColor = System.Drawing.Color.Red;
-            this.lb_validacaoActivities.Location = new System.Drawing.Point(212, 132);
-            this.lb_validacaoActivities.Name = "lb_validacaoActivities";
-            this.lb_validacaoActivities.Size = new System.Drawing.Size(35, 13);
-            this.lb_validacaoActivities.TabIndex = 6;
-            this.lb_validacaoActivities.Text = "label1";
             // 
             // FormAdministration
             // 

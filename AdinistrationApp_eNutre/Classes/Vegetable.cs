@@ -9,7 +9,7 @@ namespace AdministrationApp_eNutre.Classes
 {
     class Vegetable
     {
-        private TxtHandler vegetaisHandler = new TxtHandler();
+      
         private string name;
         private string extraInfo;
         private string quantity;
