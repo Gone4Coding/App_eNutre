@@ -65,9 +65,9 @@ namespace AdinistrationApp_eNutre.Classes
 
                 XmlElement food = doc.CreateElement("food");
                 XmlElement vegetable = doc.CreateElement("vegetable");
+               // food.AppendChild(vegetable);
+               // XmlElement name = doc.CreateElement("name");
                 food.AppendChild(vegetable);
-                XmlElement name = doc.CreateElement("name");
-                vegetable.AppendChild(name);
 
                 for (nomeIndex = 4; nomeIndex < porEspaco.Length; nomeIndex++)
                 {
@@ -77,11 +77,11 @@ namespace AdinistrationApp_eNutre.Classes
                         {
                             if (x == nomeIndex - 1)
                             {
-                                name.InnerText += porEspaco[x];
+                                vegetable.InnerText += porEspaco[x];
                             }
                             else
                             {
-                                name.InnerText += porEspaco[x] + " ";
+                                vegetable.InnerText += porEspaco[x] + " ";
                             }
                         }
                         break;
@@ -94,7 +94,7 @@ namespace AdinistrationApp_eNutre.Classes
                     {
                         XmlElement extraInfo = doc.CreateElement("extraInfo");
                         extraInfo.InnerText = tiraParentesis(porP[extraIndex], 2);
-                        vegetable.AppendChild(extraInfo);
+                        food.AppendChild(extraInfo);
                     }
                 }
 
@@ -107,11 +107,11 @@ namespace AdinistrationApp_eNutre.Classes
                 {
                     quantity.InnerText = tiraParentesis(porP[ultimo],4);
                 }
-                vegetable.AppendChild(quantity);
+                food.AppendChild(quantity);
 
                 XmlElement calories = doc.CreateElement("calories");
                 calories.InnerText = porEspaco[1];
-                vegetable.AppendChild(calories);
+                food.AppendChild(calories);
 
                 root.AppendChild(food);
             }
