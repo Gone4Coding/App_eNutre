@@ -9,10 +9,10 @@ namespace AdministrationApp_eNutre.Classes
     class Activity
     {
         private string nome;
-        private double met;
         private int calorias;
+        private string met;
 
-        public Activity(string nome, double met, int calorias)
+        public Activity(string nome, int calorias, string met)
         {
             this.nome = nome;
             this.met = met;
@@ -25,16 +25,16 @@ namespace AdministrationApp_eNutre.Classes
             set { nome = value; }
         }
 
-        public double Met
-        {
-            get { return met; }
-            set { met = value; }
-        }
-
         public int Calorias
         {
             get { return calorias; }
             set { calorias = value; }
+        }
+
+        public string Met
+        {
+            get { return met; }
+            set { met = value; }
         }
 
         public override string ToString()

@@ -98,16 +98,7 @@ namespace AdinistrationApp_eNutre.Forms
             if (!tb_filePathRestaurant.Text.Equals(""))
             {
                 string path = tb_filePathRestaurant.Text;
-                int res = ExcelHandler.createXml(path);
-
-                if (res == 0)
-                {
-                    lb_resultRestaurants.Text = "Error in File. Check Format";
-                }
-                else
-                {
-                    lb_resultRestaurants.Text = "File Added";
-                }
+                ExcelHandler.createXml(path);
             }
             else
             {
@@ -142,17 +133,7 @@ namespace AdinistrationApp_eNutre.Forms
             if (!tb_filePathActivity.Text.Equals(""))
             {
                 string path = tb_filePathActivity.Text;
-                int res = JsonHandler.deserialize(path);
-
-                if (res == 0)
-                {
-                    lb_resultActivities.Text = "Error in File. Check Format";
-                }
-                else
-                {
-                    lb_resultActivities.Text = "File Added";
-                   
-                }
+                JsonHandler.createXml(path);
             }
             else
             {

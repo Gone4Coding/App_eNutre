@@ -17,7 +17,7 @@
 
   <xs:complexType name="foodsType">
     <xs:sequence>
-      <xs:element name="food" type="foodType"/>
+      <xs:element name="food" type="foodType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   
