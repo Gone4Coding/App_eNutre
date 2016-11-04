@@ -24,16 +24,16 @@
 
   <xs:complexType name="foodType">
     <xs:sequence>
-      <xs:element name="vegetable" type="vegetableType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="extraInfo" type="extraInfoType" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="quantity" type="quantityType" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="vegetable" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="extraInfo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="calories" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="foodsType">
     <xs:sequence>
-      <xs:element name="food" type="foodType"/>
+      <xs:element name="food" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
