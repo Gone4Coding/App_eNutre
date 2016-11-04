@@ -32,4 +32,4 @@ C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtons
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\bin\Debug\Newtonsoft.Json.xml
 C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csproj.ResolveComReference.cache
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdministrationApp_eNutre.csproj.ResolveComReference.cache
-C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormAdministration.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormAdministration.resources
