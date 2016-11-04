@@ -1,39 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="exerciciosSchema"
+<xs:schema id="vegetablesSchema"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- SIMPLE TYPES -->
 
-  <xs:simpleType name="vegetableType">
-    <xs:restriction base="xs:string"/>
-  </xs:simpleType>
-
-  <xs:simpleType name="extraInfoType">
-    <xs:restriction base="xs:string"/>
-  </xs:simpleType>
-
-  <xs:simpleType name="quantityType">
-    <xs:restriction base="xs:string"/>
-  </xs:simpleType>
-
-  <xs:simpleType name="caloriesType">
-    <xs:restriction base="xs:integer"/>
-  </xs:simpleType>
   
   <!-- COMPLEX TYPES -->
 
   <xs:complexType name="foodType">
     <xs:sequence>
-      <xs:element name="vegetable" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="vegetable" type="xs:string" maxOccurs="unbounded"/>
       <xs:element name="extraInfo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="calories" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="quantity" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="calories" type="xs:integer" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="foodsType">
     <xs:sequence>
-      <xs:element name="food" type="xs:string"/>
+      <xs:element name="food" type="foodType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
