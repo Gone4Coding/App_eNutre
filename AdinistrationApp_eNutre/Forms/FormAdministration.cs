@@ -94,10 +94,24 @@ namespace AdinistrationApp_eNutre.Forms
 
         private void bt_addFileRestaurants_Click(object sender, EventArgs e)
         {
+            lb_validacaoRestaurant.Text = "";
             if (!tb_filePathRestaurant.Text.Equals(""))
             {
                 string path = tb_filePathRestaurant.Text;
-                ExcelHandler.createXml(path);
+                string msg = ExcelHandler.createXml(path);
+
+                if (msg.Equals(""))
+                {
+                    lb_resultRestaurants.Text = "Error in File. Check Format";
+                }
+                else
+                {
+                    lb_resultRestaurants.Text = "File Added";
+
+                    lb_validacaoRestaurant.Text = msg;
+                }
+
+
             }
             else
             {

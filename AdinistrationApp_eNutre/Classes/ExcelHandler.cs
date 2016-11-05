@@ -14,8 +14,13 @@ namespace AdinistrationApp_eNutre.Classes
 {
     public static class ExcelHandler
     {
-        public static void createXml(string path)
+        public static string createXml(string path)
         {
+            bool isValid = true;
+            string msg1 = "";
+            string msg2;
+            string msg3 = "";
+
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.Visible = false;
 
@@ -72,9 +77,19 @@ namespace AdinistrationApp_eNutre.Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Algo aconteceu a criar o documento XML\n" + ex.Message);
+                isValid = false;
+                msg1 = ex.Message;
             }
+            finally
+            {
+
+                msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
+                msg3 = msg1 + "\n" + msg2;
+
+            }
+            return msg3;
         }
+
 
     }
 }

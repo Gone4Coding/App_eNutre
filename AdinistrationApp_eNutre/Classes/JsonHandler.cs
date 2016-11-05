@@ -65,7 +65,7 @@ namespace AdinistrationApp_eNutre.Classes
             catch (Exception ex)
             {
                 isValid = false;
-               MessageBox.Show(ex.Message);
+                msg1 = ex.Message;
             }
             finally
             {
