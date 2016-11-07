@@ -19,7 +19,6 @@ namespace AdinistrationApp_eNutre.Classes
             bool isValid = true;
             string msg1 = "";
             string msg2;
-            string msg3 = "";
             try
             {
                 XmlDocument doc = new XmlDocument();
@@ -60,20 +59,18 @@ namespace AdinistrationApp_eNutre.Classes
                 XmlReader reader = XmlReader.Create(@"..\\..\\XML\\Xml_Files\\exercises.xml",settings);
                 doc.Load(reader);
 
-                MessageBox.Show("XML criado com sucesso");
+                MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 isValid = false;
-                msg1 = ex.Message;
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-
                 msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
-                msg3 = msg1 + "\n" + msg2;
             }
-            return msg3;
+            return msg2;
         }
 
     }

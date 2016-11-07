@@ -102,9 +102,8 @@
             this.lb_resultVegetable.AutoSize = true;
             this.lb_resultVegetable.Location = new System.Drawing.Point(104, 156);
             this.lb_resultVegetable.Name = "lb_resultVegetable";
-            this.lb_resultVegetable.Size = new System.Drawing.Size(56, 13);
+            this.lb_resultVegetable.Size = new System.Drawing.Size(0, 13);
             this.lb_resultVegetable.TabIndex = 5;
-            this.lb_resultVegetable.Text = "(RESULT)";
             // 
             // bt_addFileVeggie
             // 
@@ -184,9 +183,8 @@
             this.lb_resultRestaurants.AutoSize = true;
             this.lb_resultRestaurants.Location = new System.Drawing.Point(104, 156);
             this.lb_resultRestaurants.Name = "lb_resultRestaurants";
-            this.lb_resultRestaurants.Size = new System.Drawing.Size(56, 13);
+            this.lb_resultRestaurants.Size = new System.Drawing.Size(0, 13);
             this.lb_resultRestaurants.TabIndex = 5;
-            this.lb_resultRestaurants.Text = "(RESULT)";
             // 
             // tb_filePathRestaurant
             // 
@@ -265,9 +263,8 @@
             this.lb_resultActivities.AutoSize = true;
             this.lb_resultActivities.Location = new System.Drawing.Point(104, 156);
             this.lb_resultActivities.Name = "lb_resultActivities";
-            this.lb_resultActivities.Size = new System.Drawing.Size(56, 13);
+            this.lb_resultActivities.Size = new System.Drawing.Size(0, 13);
             this.lb_resultActivities.TabIndex = 5;
-            this.lb_resultActivities.Text = "(RESULT)";
             // 
             // lb_infoActivities
             // 

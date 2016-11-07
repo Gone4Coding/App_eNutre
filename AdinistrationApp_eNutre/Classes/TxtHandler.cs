@@ -20,7 +20,7 @@ namespace AdinistrationApp_eNutre.Classes
         {
             string msg1 = "";
             string msg2;
-            string msg3 = "";
+           
             bool isValid = true;
             string filenameXML = @"..\\..\\XML\\Xml_Files\\vegetables.xml";
 
@@ -104,34 +104,26 @@ namespace AdinistrationApp_eNutre.Classes
 
                 XmlReaderSettings xsdReader = new XmlReaderSettings();
                 string vegetablesXsd = @"..\\..\\XML\\Schemas\\vegetablesSchema.xsd";
-                try
-                {
-                    xsdReader.Schemas.Add(null, vegetablesXsd);
-                    xsdReader.ValidationType = ValidationType.Schema;
 
-                    XmlReader reader = XmlReader.Create(filenameXML, xsdReader);
-                    doc.Load(reader);
+                xsdReader.Schemas.Add(null, vegetablesXsd);
+                xsdReader.ValidationType = ValidationType.Schema;
 
-                }
-                catch (Exception msg)
-                {
-                    isValid = false;
-                    msg1 = msg.Message;
-                }
-                finally
-                {
-                   
-                    msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
-                    msg3 = msg1 + "\n" + msg2;
-                }
+                XmlReader reader = XmlReader.Create(filenameXML, xsdReader);
+                doc.Load(reader);
+
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                MessageBox.Show("Ficheiro texto nao encontrado", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                isValid = false;
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            finally
+            {
+                msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
+            }
 
-            return msg3;
+
+            return msg2;
         }
 
         private static string tiraParentesis(string str, int ultimosChars)
@@ -139,6 +131,7 @@ namespace AdinistrationApp_eNutre.Classes
             int startIndex = 0;
             int parentesis = str.Length - ultimosChars;
             string substring = str.Substring(startIndex, parentesis);
+
             return substring;
         }
 
