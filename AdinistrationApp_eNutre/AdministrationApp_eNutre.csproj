@@ -116,6 +116,9 @@
   <ItemGroup>
     <Content Include="Info\calorias_exercicios.js" />
     <Content Include="Info\calorias_vegetais.txt" />
+    <Content Include="XML\Xml_Files\exercises.xml" />
+    <Content Include="XML\Xml_Files\restaurants.xml" />
+    <Content Include="XML\Xml_Files\vegetables.xml" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
@@ -146,9 +149,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="XML\Xml_Files\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
