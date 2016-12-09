@@ -5,46 +5,33 @@
   <!-- SIMPLE TYPES -->
   
   <xs:simpleType name="restaurantNameType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="itemType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="valueType">
-	<xs:element>
 		<xs:restriction base="xs:integer"/>
-	</xs:element>
   </xs:simpleType>
     
   <xs:simpleType name="valueQuantityType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="dosageType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="unitiesType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="caloriesUnitiesType">
-	<xs:element>
-		<xs:restriction base="xs:string"/>
-		<xs:pattern value="cal|kcal"/>
-	</xs:element>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="cal|kcal"/>
+    </xs:restriction>
   </xs:simpleType>
   
   <!-- COMPLEX TYPES -->

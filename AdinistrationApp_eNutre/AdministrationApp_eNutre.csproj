@@ -106,9 +106,6 @@
     <None Include="XML\Schemas\restaurantsSchema.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="XML\Schemas\usersSchema.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="XML\Schemas\vegetablesSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -119,9 +116,6 @@
   <ItemGroup>
     <Content Include="Info\calorias_exercicios.js" />
     <Content Include="Info\calorias_vegetais.txt" />
-    <Content Include="XML\Xml_Files\users.xml">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
@@ -151,6 +145,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XML\Xml_Files\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

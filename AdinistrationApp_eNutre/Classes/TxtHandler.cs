@@ -34,6 +34,7 @@ namespace AdinistrationApp_eNutre.Classes
                 XmlDocument doc = new XmlDocument();
                 XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(dec);
+
                 // ROOT
                 XmlElement root = doc.CreateElement("foods");
                 doc.AppendChild(root);

@@ -33,21 +33,43 @@ namespace AdinistrationApp_eNutre.Classes
                 XmlElement root = doc.CreateElement("exercises");
                 doc.AppendChild(root);
 
+                int id = 1;
+
                 foreach (Activity act in activitiesList)
                 {
-                    XmlElement exercise = doc.CreateElement("exercise");
+                    XmlElement exerciseNode = doc.CreateElement("exercise");
+                    exerciseNode.SetAttribute("id", id.ToString());
 
-                    XmlElement activity = doc.CreateElement("activity");
-                    activity.InnerText = act.Nome;
-                    XmlElement met = doc.CreateElement("met");
-                    met.InnerText = act.Met;
-                    XmlElement calories = doc.CreateElement("calories");
-                    calories.InnerText = act.Calorias.ToString();
+                    XmlElement activityNode = doc.CreateElement("activity");
+                    activityNode.InnerText = act.Nome;
 
-                    exercise.AppendChild(activity);
-                    exercise.AppendChild(met);
-                    exercise.AppendChild(calories);
-                    root.AppendChild(exercise);
+                    XmlElement metNode = doc.CreateElement("met");
+
+                    XmlElement metNodeName = doc.CreateElement("name");
+                    metNodeName.InnerText = "Metabolic Equivalent";
+                    metNode.AppendChild(metNodeName);
+
+                    XmlElement metNodeValue = doc.CreateElement("value");
+                    metNodeValue.InnerText = act.Met.ToString();
+                    metNode.AppendChild(metNodeValue);
+
+                    XmlElement caloriesNode = doc.CreateElement("calories");
+
+                    XmlElement caloriesNodeValue = doc.CreateElement("value");
+                    caloriesNodeValue.InnerText = act.Calorias.ToString();
+                    caloriesNode.AppendChild(caloriesNodeValue);
+
+                    XmlElement caloriesNodeUnity = doc.CreateElement("unity");
+                    caloriesNodeUnity.InnerText = "kcal";
+                    caloriesNode.AppendChild(caloriesNodeUnity);
+                    
+
+                    exerciseNode.AppendChild(activityNode);
+                    exerciseNode.AppendChild(metNode);
+                    exerciseNode.AppendChild(caloriesNode);
+                    root.AppendChild(exerciseNode);
+
+                    id++;
                 }
                 
                 doc.Save(@"..\\..\\XML\\Xml_Files\\exercises.xml");

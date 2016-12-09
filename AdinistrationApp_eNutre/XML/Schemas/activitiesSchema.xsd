@@ -5,37 +5,32 @@
   <!-- SIMPLE TYPES -->
   
   <xs:simpleType name="activityType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="metValueType">
-	<xs:element>
 		<xs:restriction base="xs.decimal">
 			<xs:totalDigits  value="3"/>
 			<xs:fractionDigits value="1"/>
 		</xs:restriction>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="metNameType">
-	<xs:element>
 		<xs:restriction base="xs:string"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="valueType">
-	<xs:element>
 		<xs:restriction base="xs:integer"/>
-	</xs:element>
   </xs:simpleType>
   
   <xs:simpleType name="caloriesUnitiesType">
-	<xs:element>
-		<xs:restriction base="xs:string"/>
-		<xs:pattern value="cal|kcal"/>
-	</xs:element>
+		<xs:restriction base="xs:string">
+		  <xs:pattern value="cal|kcal"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idType">
+    <xs:restriction base="xs:integer"/>
   </xs:simpleType>
   
   <!-- COMPLEX TYPES -->
@@ -60,6 +55,7 @@
       <xs:element name="met" type="metType" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
+    <xs:attribute name="id" type="idType"/>
   </xs:complexType>
 
   <xs:complexType name="exercisesType">
