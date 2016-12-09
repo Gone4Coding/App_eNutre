@@ -18,6 +18,18 @@
   
   <xs:simpleType name="valueType">
 	<xs:element>
+		<xs:restriction base="xs:integer"/>
+	</xs:element>
+  </xs:simpleType>
+    
+  <xs:simpleType name="valueQuantityType">
+	<xs:element>
+		<xs:restriction base="xs:string"/>
+	</xs:element>
+  </xs:simpleType>
+  
+  <xs:simpleType name="dosageType">
+	<xs:element>
 		<xs:restriction base="xs:string"/>
 	</xs:element>
   </xs:simpleType>
@@ -39,8 +51,9 @@
   
   <xs:complexType name="quantityType">
 	<xs:sequence>
-		<xs:element name="value" type="valueType"/>
-		<xs:element name="unity" type="unitiesType"/>
+		<xs:element name="value" type="valueQuantityType"/>
+		<xs:element name="dosage" type="dosageType"/>
+		<xs:element name="extraDosage" type="dosageType"/>
 	</xs:sequence>
   </xs:complexType>
   
@@ -51,24 +64,24 @@
 	</xs:sequence>
   </xs:complexType>
   
-  <xs:complexType name="restaurantType">
+  <xs:complexType name="plateType">
 	<xs:sequence>
 		<xs:element name="item" type="itemType" minOccurs="1" maxOccurs="unbounded"/>
 		<xs:element name="quantity" type="quantityType" minOccurs="1" maxOccurs="unbounded"/>
 		<xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
 	</xs:sequence>
-	<xs:attribute name="name" type="restaurantNameType"/>
   </xs:complexType>
-
-  <xs:complexType name="foodType">
-    <xs:sequence>
-      <xs:element name="restaurant" type="restaurantType" minOccurs="1" maxOccurs="unbounded"/>      
-    </xs:sequence>
+  
+  <xs:complexType name="restaurantType">
+	<xs:sequence>
+		<xs:element name="plate" type="plateType" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="name" type="restaurantNameType"/>
   </xs:complexType>
 
   <xs:complexType name="foodsType">
     <xs:sequence>
-      <xs:element name="food" type="foodType" maxOccurs="unbounded"/>
+      <xs:element name="restaurant" type="restaurantType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   
