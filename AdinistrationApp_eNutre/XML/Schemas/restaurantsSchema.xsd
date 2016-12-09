@@ -4,14 +4,65 @@
 
   <!-- SIMPLE TYPES -->
   
+  <xs:simpleType name="restaurantNameType">
+	<xs:element>
+		<xs:restriction base="xs:string"/>
+	</xs:element>
+  </xs:simpleType>
+  
+  <xs:simpleType name="itemType">
+	<xs:element>
+		<xs:restriction base="xs:string"/>
+	</xs:element>
+  </xs:simpleType>
+  
+  <xs:simpleType name="valueType">
+	<xs:element>
+		<xs:restriction base="xs:string"/>
+	</xs:element>
+  </xs:simpleType>
+  
+  <xs:simpleType name="unitiesType">
+	<xs:element>
+		<xs:restriction base="xs:string"/>
+	</xs:element>
+  </xs:simpleType>
+  
+  <xs:simpleType name="caloriesUnitiesType">
+	<xs:element>
+		<xs:restriction base="xs:string"/>
+		<xs:pattern value="cal|kcal"/>
+	</xs:element>
+  </xs:simpleType>
+  
   <!-- COMPLEX TYPES -->
+  
+  <xs:complexType name="quantityType">
+	<xs:sequence>
+		<xs:element name="value" type="valueType"/>
+		<xs:element name="unity" type="unitiesType"/>
+	</xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="caloriesType">
+	<xs:sequence>
+		<xs:element name="value" type="valueType"/>
+		<xs:element name="unity" type="caloriesUnitiesType"/>
+	</xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="restaurantType">
+	<xs:sequence>
+		<xs:element name="item" type="itemType" minOccurs="1" maxOccurs="unbounded"/>
+		<xs:element name="quantity" type="quantityType" minOccurs="1" maxOccurs="unbounded"/>
+		<xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="name" type="restaurantNameType"/>
+  </xs:complexType>
 
   <xs:complexType name="foodType">
     <xs:sequence>
-      <xs:element name="restaurant" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="item" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-      <xs:element name="calories" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="restaurant" type="restaurantType" minOccurs="1" maxOccurs="unbounded"/>      
     </xs:sequence>
   </xs:complexType>
 
