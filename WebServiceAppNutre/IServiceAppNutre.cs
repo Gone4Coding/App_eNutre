@@ -12,36 +12,128 @@ namespace WebServiceAppNutre
     [ServiceContract]
     public interface IServiceAppNutre
     {
+        [OperationContract]
+        void addActivity(Activity activity, string token);
 
         [OperationContract]
-        string GetData(int value);
+        void addRestaurant(Restaurant restaurant, string token);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        void addVegetable(Vegetable vegetable, string token);
 
-        // TODO: Add your service operations here
+
     }
 
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    public class CompositeType
+    public class Activity
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        private string nome;
+        private int calorias;
+        private decimal met;
 
-        [DataMember]
-        public bool BoolValue
+        public Activity(string nome, int calorias, decimal met)
         {
-            get { return boolValue; }
-            set { boolValue = value; }
+            this.nome = nome;
+            this.met = met;
+            this.calorias = calorias;
         }
 
-        [DataMember]
-        public string StringValue
+        public string Nome
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public int Calorias
+        {
+            get { return calorias; }
+            set { calorias = value; }
+        }
+
+        public decimal Met
+        {
+            get { return met; }
+            set { met = value; }
+        }
+    }
+
+    public class Restaurant
+    {
+        private string name;
+        private string item;
+        private string quantity;
+        private int calories;
+
+        public Restaurant(string name, string item, string quantity, int calories)
+        {
+            this.name = name;
+            this.item = item;
+            this.quantity = quantity;
+            this.calories = calories;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Item
+        {
+            get { return item; }
+            set { item = value; }
+        }
+
+        public string Quantity
+        {
+            get { return quantity; }
+            set { quantity = value; }
+        }
+
+        public int Calories
+        {
+            get { return calories; }
+            set { calories = value; }
+        }
+    }
+
+    public class Vegetable
+    {
+        private string name;
+        private string extraInfo;
+        private string quantity;
+        private string calories;
+
+        public Vegetable(string name, string quantity, string calories)
+        {
+            this.name = name;
+            this.quantity = quantity;
+            this.calories = calories;
+        }
+
+        public Vegetable(string name, string extraInfo, string quantity, string calories)
+        {
+            this.name = name;
+            this.quantity = quantity;
+            this.calories = calories;
+            this.extraInfo = extraInfo;
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public string getExtraInfo()
+        {
+            return extraInfo;
+        }
+
+        public string getQuantity()
+        {
+            return quantity;
         }
     }
 }

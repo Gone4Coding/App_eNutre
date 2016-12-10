@@ -9,7 +9,6 @@ namespace AdministrationApp_eNutre.Classes
 {
     class Vegetable
     {
-      
         private string name;
         private string extraInfo;
         private string quantity;
