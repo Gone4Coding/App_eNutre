@@ -286,7 +286,6 @@
             this.tb_activityMet.Name = "tb_activityMet";
             this.tb_activityMet.Size = new System.Drawing.Size(39, 20);
             this.tb_activityMet.TabIndex = 1;
-            this.tb_activityMet.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // lb_activityMet
             // 
@@ -319,7 +318,6 @@
             this.tb_activityName.Name = "tb_activityName";
             this.tb_activityName.Size = new System.Drawing.Size(100, 20);
             this.tb_activityName.TabIndex = 1;
-            this.tb_activityName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lb_activityName
             // 
