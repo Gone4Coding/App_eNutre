@@ -82,15 +82,39 @@ namespace AdinistrationApp_eNutre.Classes
                     }
 
                     XmlElement quantity = doc.CreateElement("quantity");
+                    food.AppendChild(quantity);
+                    XmlElement value = doc.CreateElement("value");
+                    XmlElement unity = doc.CreateElement("unity");
+
+                    string[] a = porP[ultimo].Split(' ');
+                    int last = a.Count() - 1;
+
+                    value.InnerText = a[0];
                     if (listVeg.Count() == conta)
                     {
-                        quantity.InnerText = tiraParentesis(porP[ultimo], 3);
+                        for(int x = 1; x < last; x++)
+                        {
+                            unity.InnerText += a[x];
+                        }
                     }
                     else
                     {
-                        quantity.InnerText = tiraParentesis(porP[ultimo], 4);
+                        for (int x = 1; x < last; x++)
+                        {
+                            if (x == last-1)
+                            {
+                                unity.InnerText += tiraParentesis(a[x],3);
+                            }
+                            else
+                            {
+                                unity.InnerText += tiraParentesis(a[x], 4);
+                            }
+                        }
                     }
-                    food.AppendChild(quantity);
+                   
+                    quantity.AppendChild(value);
+                    quantity.AppendChild(unity);
+                    
 
                     XmlElement calories = doc.CreateElement("calories");
                     calories.InnerText = porEspaco[1];

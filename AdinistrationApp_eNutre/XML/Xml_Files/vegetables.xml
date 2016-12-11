@@ -2,767 +2,1190 @@
 <foods>
   <food>
     <vegetable>Abóbora</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>30</calories>
   </food>
   <food>
     <vegetable>Abóbora</vegetable>
     <extraInfo>sem Sal, Enlatado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>83</calories>
   </food>
   <food>
     <vegetable>Abóbora Cozida</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>46</calories>
   </food>
   <food>
     <vegetable>Aipo</vegetable>
-    <quantity>1 talo, médio</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>talo,médio).</unity>
+    </quantity>
     <calories>6</calories>
   </food>
   <food>
     <vegetable>Aipo Cozido</vegetable>
-    <quantity>1 chávena, cortado em cubos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortadoemcubos).</unity>
+    </quantity>
     <calories>60</calories>
   </food>
   <food>
     <vegetable>Alcachofras</vegetable>
     <extraInfo>Cabeça ou Francês</extraInfo>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>60</calories>
   </food>
   <food>
     <vegetable>Alcachofra Cozida</vegetable>
     <extraInfo>de Alcachofra Fresca</extraInfo>
-    <quantity>1 cabeça média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>cabeçamédia).</unity>
+    </quantity>
     <calories>84</calories>
   </food>
   <food>
     <vegetable>Alcachofra Cozida</vegetable>
     <extraInfo>Enlatado</extraInfo>
-    <quantity>1 chávena, corações</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,corações).</unity>
+    </quantity>
     <calories>116</calories>
   </food>
   <food>
     <vegetable>Corações de Alcachofras em Óleo</vegetable>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>33</calories>
   </food>
   <food>
     <vegetable>Alface</vegetable>
-    <quantity>1 chávena, desfiada ou cortada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,desfiadaoucortada).</unity>
+    </quantity>
     <calories>8</calories>
   </food>
   <food>
     <vegetable>Alface de Folha Verde</vegetable>
-    <quantity>1 chávena, desfiada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,desfiada).</unity>
+    </quantity>
     <calories>5</calories>
   </food>
   <food>
     <vegetable>Salada Verde Mista</vegetable>
-    <quantity>1 chávena, desfiada ou cortada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,desfiadaoucortada).</unity>
+    </quantity>
     <calories>9</calories>
   </food>
   <food>
     <vegetable>Alface Romana</vegetable>
-    <quantity>1 chávena, desfiada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,desfiada).</unity>
+    </quantity>
     <calories>8</calories>
   </food>
   <food>
     <vegetable>Alface Rúcula</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>5</calories>
   </food>
   <food>
     <vegetable>Alho</vegetable>
-    <quantity>1 dente</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>dente).</unity>
+    </quantity>
     <calories>4</calories>
   </food>
   <food>
     <vegetable>Alho Picado</vegetable>
-    <quantity>1 colher de chá</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>colherdechá).</unity>
+    </quantity>
     <calories>5</calories>
   </food>
   <food>
     <vegetable>Alho Cozido</vegetable>
-    <quantity>1 dente</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>dente).</unity>
+    </quantity>
     <calories>3</calories>
   </food>
   <food>
     <vegetable>Alho em Pó</vegetable>
-    <quantity>1 colher de chá</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>colherdechá).</unity>
+    </quantity>
     <calories>9</calories>
   </food>
   <food>
     <vegetable>Alhos Franceses</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>54</calories>
   </food>
   <food>
     <vegetable>Alho Françês Cozido</vegetable>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>79</calories>
   </food>
   <food>
     <vegetable>Azeitonas</vegetable>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>5</calories>
   </food>
   <food>
     <vegetable>Azeitonas Pretas</vegetable>
-    <quantity>1 dose de 10 pequenas</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>dosede10pequenas).</unity>
+    </quantity>
     <calories>36</calories>
   </food>
   <food>
     <vegetable>Azeitonas Verdes</vegetable>
-    <quantity>1 dose de 10 pequenas</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>dosede10pequenas).</unity>
+    </quantity>
     <calories>42</calories>
   </food>
   <food>
     <vegetable>Azeitonas Verdes Recheadas</vegetable>
-    <quantity>1 dose de 10 pequenas</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>dosede10pequenas).</unity>
+    </quantity>
     <calories>44</calories>
   </food>
   <food>
     <vegetable>Azeitonas Verdes</vegetable>
     <extraInfo>Conserva, Enlatado ou Engarrafado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>145</calories>
   </food>
   <food>
     <vegetable>Batata Doce</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>86</calories>
   </food>
   <food>
     <vegetable>Batata-Doce</vegetable>
     <extraInfo>sem Casca, Cozido, Fervido</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>76</calories>
   </food>
   <food>
     <vegetable>Batata-Doce</vegetable>
     <extraInfo>sem Sal, no Forno com Casca, Cozido</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>90</calories>
   </food>
   <food>
     <vegetable>Batata-Doce</vegetable>
     <extraInfo>Puré, Enlatado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>258</calories>
   </food>
   <food>
     <vegetable>Batatas Brancas</vegetable>
     <extraInfo>com Casca</extraInfo>
-    <quantity>1 pequena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>pequena).</unity>
+    </quantity>
     <calories>119</calories>
   </food>
   <food>
     <vegetable>Batatas Brancas</vegetable>
     <extraInfo>com Casca, no Forno</extraInfo>
-    <quantity>1 pequena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>pequena).</unity>
+    </quantity>
     <calories>130</calories>
   </food>
   <food>
     <vegetable>Puré de Batata</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>210</calories>
   </food>
   <food>
     <vegetable>Batata Assada</vegetable>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>203</calories>
   </food>
   <food>
     <vegetable>Batatas</vegetable>
     <extraInfo>sem Casca, com Sal, Cozido</extraInfo>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>118</calories>
   </food>
   <food>
     <vegetable>Batata no Forno</vegetable>
     <extraInfo>Casca Consumida</extraInfo>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>194</calories>
   </food>
   <food>
     <vegetable>Batata no Forno</vegetable>
     <extraInfo>Casca Não Consumida</extraInfo>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>121</calories>
   </food>
   <food>
     <vegetable>Batata no Forno Recheada com Creme Azedo</vegetable>
     <extraInfo>Casca Consumida</extraInfo>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>316</calories>
   </food>
   <food>
     <vegetable>Batata no Forno Recheada com Bacon e Queijo</vegetable>
     <extraInfo>Casca Consumida</extraInfo>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>322</calories>
   </food>
   <food>
     <vegetable>Batata no Forno Recheada com Queijo</vegetable>
     <extraInfo>Casca Consumida</extraInfo>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>288</calories>
   </food>
   <food>
     <vegetable>Beringela</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>24</calories>
   </food>
   <food>
     <vegetable>Beringela Cozida</vegetable>
-    <quantity>1 chávena, em cubos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,emcubos).</unity>
+    </quantity>
     <calories>66</calories>
   </food>
   <food>
     <vegetable>Panado de Beringela</vegetable>
-    <quantity>1 fatia</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>fatia).</unity>
+    </quantity>
     <calories>74</calories>
   </food>
   <food>
     <vegetable>Ratatouille</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>154</calories>
   </food>
   <food>
     <vegetable>Beterrabas</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>43</calories>
   </food>
   <food>
     <vegetable>Beterrabas em Conserva</vegetable>
     <extraInfo>Sólido e Líquido, Enlatado</extraInfo>
-    <quantity>1 chávena, fatias</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fatias).</unity>
+    </quantity>
     <calories>148</calories>
   </food>
   <food>
     <vegetable>Beterraba</vegetable>
     <extraInfo>Sólidos Escorridos, Enlatado</extraInfo>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>7</calories>
   </food>
   <food>
     <vegetable>Beterrabas Cozidas</vegetable>
     <extraInfo>de Beterrabas Frescas</extraInfo>
-    <quantity>1 chávena, cortadas em cubos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortadasemcubos).</unity>
+    </quantity>
     <calories>99</calories>
   </food>
   <food>
     <vegetable>Brócolos</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>34</calories>
   </food>
   <food>
     <vegetable>Brócolos Cozidos</vegetable>
     <extraInfo>Cozinhado sem Gordura Adicionada</extraInfo>
-    <quantity>1 chávena, ramos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,ramos).</unity>
+    </quantity>
     <calories>34</calories>
   </food>
   <food>
     <vegetable>Grelos</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>22</calories>
   </food>
   <food>
     <vegetable>Brócolos Chineses</vegetable>
     <extraInfo>Cozido</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>19</calories>
   </food>
   <food>
     <vegetable>Brócolos</vegetable>
     <extraInfo>Inteiro, Congeladas</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>29</calories>
   </food>
   <food>
     <vegetable>Cebolas</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>42</calories>
   </food>
   <food>
     <vegetable>Cebolas Vermelhas</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>42</calories>
   </food>
   <food>
     <vegetable>Cebolinho</vegetable>
-    <quantity>1 chávena, cortado</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortado).</unity>
+    </quantity>
     <calories>32</calories>
   </food>
   <food>
     <vegetable>Cebolas Doces</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>32</calories>
   </food>
   <food>
     <vegetable>Cebolinho Verde</vegetable>
-    <quantity>1 colher de sopa</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>colherdesopa).</unity>
+    </quantity>
     <calories>2</calories>
   </food>
   <food>
     <vegetable>Cenouras</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>41</calories>
   </food>
   <food>
     <vegetable>Cenouras Bebé</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>35</calories>
   </food>
   <food>
     <vegetable>Cenouras Cozidas</vegetable>
-    <quantity>1 chávena, fatiadas</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fatiadas).</unity>
+    </quantity>
     <calories>82</calories>
   </food>
   <food>
     <vegetable>Cenouras</vegetable>
     <extraInfo>Sólido e Líquido, Enlatado</extraInfo>
-    <quantity>1/2 chávena, fatias</quantity>
+    <quantity>
+      <value>1/2</value>
+      <unity>chávena,fatias).</unity>
+    </quantity>
     <calories>28</calories>
   </food>
   <food>
     <vegetable>Cogumelos</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>22</calories>
   </food>
   <food>
     <vegetable>Cogumelos</vegetable>
     <extraInfo>Sólidos Escorridos, Enlatado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>25</calories>
   </food>
   <food>
     <vegetable>Cogumelos Portobello</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>26</calories>
   </food>
   <food>
     <vegetable>Cogumelo Ostra</vegetable>
-    <quantity>1 grande</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>grande).</unity>
+    </quantity>
     <calories>52</calories>
   </food>
   <food>
     <vegetable>Cogumelos Cozidos</vegetable>
     <extraInfo>Cozinhado sem Gordura Adicionada</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>44</calories>
   </food>
   <food>
     <vegetable>Courgete Cozida</vegetable>
-    <quantity>1 chávena, fatias</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fatias).</unity>
+    </quantity>
     <calories>68</calories>
   </food>
   <food>
     <vegetable>Courgete Amarela</vegetable>
-    <quantity>1 chávena, fatiada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fatiada).</unity>
+    </quantity>
     <calories>18</calories>
   </food>
   <food>
     <vegetable>Repolho</vegetable>
-    <quantity>1 chávena, cortado</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortado).</unity>
+    </quantity>
     <calories>21</calories>
   </food>
   <food>
     <vegetable>Repolho-Roxo</vegetable>
-    <quantity>1 chávena, cortado</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortado).</unity>
+    </quantity>
     <calories>28</calories>
   </food>
   <food>
     <vegetable>Repolho Verde</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>24</calories>
   </food>
   <food>
     <vegetable>Couve Lombarda</vegetable>
-    <quantity>1 chávena, desfiada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,desfiada).</unity>
+    </quantity>
     <calories>19</calories>
   </food>
   <food>
     <vegetable>Repolho Chinês</vegetable>
-    <quantity>1 dose</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>dose).</unity>
+    </quantity>
     <calories>5</calories>
   </food>
   <food>
     <vegetable>Couves de Bruxelas</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>38</calories>
   </food>
   <food>
     <vegetable>Couves de Bruxelas</vegetable>
     <extraInfo>Congelado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>41</calories>
   </food>
   <food>
     <vegetable>Couves de Bruxelas Cozidas</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>88</calories>
   </food>
   <food>
     <vegetable>Couve-de-Folhas</vegetable>
-    <quantity>1 chávena, cortada</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortada).</unity>
+    </quantity>
     <calories>34</calories>
   </food>
   <food>
     <vegetable>Couve-de-Folhas Cozida</vegetable>
     <extraInfo>de Couve Fresca</extraInfo>
-    <quantity>1 chávena, fresca</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fresca).</unity>
+    </quantity>
     <calories>69</calories>
   </food>
   <food>
     <vegetable>Couve-Flor</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>25</calories>
   </food>
   <food>
     <vegetable>Couve-Flor</vegetable>
     <extraInfo>Congelado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>24</calories>
   </food>
   <food>
     <vegetable>Couve-Flor Cozida</vegetable>
     <extraInfo>Cozinhado sem Gordura Adicionada</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>40</calories>
   </food>
   <food>
     <vegetable>Couve-Flor Cozida</vegetable>
     <extraInfo>de Couve-Flor Congelada, Cozinhado sem Gordura Adicionada</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>34</calories>
   </food>
   <food>
     <vegetable>Couve-Flor Cozida</vegetable>
     <extraInfo>de Couve-Flor Fresca, Cozinhado sem Gordura Adicionada</extraInfo>
-    <quantity>1 chávena, pedaços</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,pedaços).</unity>
+    </quantity>
     <calories>29</calories>
   </food>
   <food>
     <vegetable>Courgette</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>16</calories>
   </food>
   <food>
     <vegetable>Courgette Bebé</vegetable>
-    <quantity>1 média</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>média).</unity>
+    </quantity>
     <calories>2</calories>
   </food>
   <food>
     <vegetable>Courgette</vegetable>
     <extraInfo>com Sal, Escorrido, Cozido</extraInfo>
-    <quantity>1/2 chávena, fatias</quantity>
+    <quantity>
+      <value>1/2</value>
+      <unity>chávena,fatias).</unity>
+    </quantity>
     <calories>14</calories>
   </food>
   <food>
     <vegetable>Courgete Cozida</vegetable>
     <extraInfo>de Courgete Fresca</extraInfo>
-    <quantity>1 chávena, fatias</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fatias).</unity>
+    </quantity>
     <calories>68</calories>
   </food>
   <food>
     <vegetable>Ervilhas</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>117</calories>
   </food>
   <food>
     <vegetable>Vagem</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>42</calories>
   </food>
   <food>
     <vegetable>Ervilhas</vegetable>
     <extraInfo>Congelado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>77</calories>
   </food>
   <food>
     <vegetable>Ervilhas Cozidas</vegetable>
     <extraInfo>Enlatado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>86</calories>
   </food>
   <food>
     <vegetable>Espargos</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>27</calories>
   </food>
   <food>
     <vegetable>Espargos Cozidos</vegetable>
     <extraInfo>de Espargos Frescos</extraInfo>
-    <quantity>1 rebento médio</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>rebentomédio).</unity>
+    </quantity>
     <calories>6</calories>
   </food>
   <food>
     <vegetable>Espargos</vegetable>
     <extraInfo>Sólidos Escorridos, Enlatado</extraInfo>
-    <quantity>1 rebento</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>rebento).</unity>
+    </quantity>
     <calories>3</calories>
   </food>
   <food>
     <vegetable>Espargos</vegetable>
     <extraInfo>sem Preparação, Congelado</extraInfo>
-    <quantity>4 rebentos</quantity>
+    <quantity>
+      <value>4</value>
+      <unity>rebentos).</unity>
+    </quantity>
     <calories>14</calories>
   </food>
   <food>
     <vegetable>Espinafre</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>7</calories>
   </food>
   <food>
     <vegetable>Espinafre</vegetable>
     <extraInfo>Folha ou Cortado, Congelado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>48</calories>
   </food>
   <food>
     <vegetable>Espinafre Bébe</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>7</calories>
   </food>
   <food>
     <vegetable>Espinafre</vegetable>
     <extraInfo>Sólidos Escorridos, Enlatado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>49</calories>
   </food>
   <food>
     <vegetable>Espinafre Cozido</vegetable>
     <extraInfo>de Espinafre Fresco</extraInfo>
-    <quantity>1 chávena, fresco</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,fresco).</unity>
+    </quantity>
     <calories>74</calories>
   </food>
   <food>
     <vegetable>Inhame</vegetable>
-    <quantity>1 chávena, em cubos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,emcubos).</unity>
+    </quantity>
     <calories>177</calories>
   </food>
   <food>
     <vegetable>Inhame</vegetable>
     <extraInfo>com Sal, Escorrido, Cozido, Fervido</extraInfo>
-    <quantity>1 chávena, em cubos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,emcubos).</unity>
+    </quantity>
     <calories>158</calories>
   </food>
   <food>
     <vegetable>Inhame</vegetable>
     <extraInfo>sem Sal, Escorrido, Cozido, Fervido, no Forno</extraInfo>
-    <quantity>1 chávena, em cubos</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,emcubos).</unity>
+    </quantity>
     <calories>158</calories>
   </food>
   <food>
     <vegetable>Milho</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>86</calories>
   </food>
   <food>
     <vegetable>Milho Doce Amarelo</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>86</calories>
   </food>
   <food>
     <vegetable>Milho Bébe</vegetable>
-    <quantity>1 espiga</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>espiga).</unity>
+    </quantity>
     <calories>6</calories>
   </food>
   <food>
     <vegetable>Milho Doce Amarelo</vegetable>
     <extraInfo>Miolo Inteiro, Sólidos Escorridos, Enlatado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>81</calories>
   </food>
   <food>
     <vegetable>Milho em Espiga com Manteiga</vegetable>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>155</calories>
   </food>
   <food>
     <vegetable>Nabos</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>28</calories>
   </food>
   <food>
     <vegetable>Nabo Cozido</vegetable>
-    <quantity>1 chávena, pedaços</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,pedaços).</unity>
+    </quantity>
     <calories>67</calories>
   </food>
   <food>
     <vegetable>Pepino</vegetable>
     <extraInfo>com Casca</extraInfo>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>45</calories>
   </food>
   <food>
     <vegetable>Pepino</vegetable>
     <extraInfo>Descascado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>12</calories>
   </food>
   <food>
     <vegetable>Picles de Pepino Doce</vegetable>
-    <quantity>1 chávena, cortados</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortados).</unity>
+    </quantity>
     <calories>187</calories>
   </food>
   <food>
     <vegetable>Picles de Pepino Azedo</vegetable>
-    <quantity>1 rebento</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>rebento).</unity>
+    </quantity>
     <calories>3</calories>
   </food>
   <food>
     <vegetable>Picles de Pepino com Endro</vegetable>
-    <quantity>1 médio</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>médio).</unity>
+    </quantity>
     <calories>12</calories>
   </food>
   <food>
     <vegetable>Picles</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>18</calories>
   </food>
   <food>
     <vegetable>Picles de Pepino com Endro</vegetable>
     <extraInfo>Baixo Teor de Sódio</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>18</calories>
   </food>
   <food>
     <vegetable>Pimentões Vermelhos</vegetable>
-    <quantity>1 chávena, cortados</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena,cortados).</unity>
+    </quantity>
     <calories>39</calories>
   </food>
   <food>
     <vegetable>Pimentos Verdes</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>20</calories>
   </food>
   <food>
     <vegetable>Pimentão Amarelo</vegetable>
-    <quantity>10 tiras</quantity>
+    <quantity>
+      <value>10</value>
+      <unity>tiras).</unity>
+    </quantity>
     <calories>14</calories>
   </food>
   <food>
     <vegetable>Pimentos</vegetable>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>26</calories>
   </food>
   <food>
     <vegetable>Pimentas Jalapeno</vegetable>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>4</calories>
   </food>
   <food>
     <vegetable>Puré de Batata</vegetable>
     <extraInfo>de Batata Fresca</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>256</calories>
   </food>
   <food>
     <vegetable>Puré de Batata</vegetable>
     <extraInfo>de Batata Seca</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>220</calories>
   </food>
   <food>
     <vegetable>Puré de Batatas</vegetable>
     <extraInfo>com Leite Integral</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>174</calories>
   </food>
   <food>
     <vegetable>Puré de Batatas</vegetable>
     <extraInfo>com Leite Integral e Manteiga</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>237</calories>
   </food>
   <food>
     <vegetable>Quiabo</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>31</calories>
   </food>
   <food>
     <vegetable>Quiabo Cozido</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>81</calories>
   </food>
   <food>
     <vegetable>Panados de Quiabo</vegetable>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>173</calories>
   </food>
   <food>
     <vegetable>Quiabo</vegetable>
     <extraInfo>Congelado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>30</calories>
   </food>
   <food>
     <vegetable>Rabanetes</vegetable>
-    <quantity>1 médio</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>médio).</unity>
+    </quantity>
     <calories>1</calories>
   </food>
   <food>
     <vegetable>Tomates</vegetable>
-    <quantity>1 médio e inteiro</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>médioeinteiro).</unity>
+    </quantity>
     <calories>22</calories>
   </food>
   <food>
     <vegetable>Tomates Vermelhos</vegetable>
-    <quantity>1 médio e inteiro</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>médioeinteiro).</unity>
+    </quantity>
     <calories>22</calories>
   </food>
   <food>
     <vegetable>Tomates Vermelhos</vegetable>
     <extraInfo>Enlatado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>17</calories>
   </food>
   <food>
     <vegetable>Tomates Esmagados</vegetable>
     <extraInfo>Enlatado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>32</calories>
   </food>
   <food>
     <vegetable>Tomates Cereja</vegetable>
-    <quantity>1 </quantity>
+    <quantity>
+      <value>1</value>
+      <unity>).</unity>
+    </quantity>
     <calories>3</calories>
   </food>
   <food>
     <vegetable>Mistura de Vegetais</vegetable>
     <extraInfo>Sólido e Líquido, Enlatado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>88</calories>
   </food>
   <food>
     <vegetable>Mistura de Vegetais</vegetable>
     <extraInfo>Sólidos Escorridos, Enlatado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>80</calories>
   </food>
   <food>
     <vegetable>Mistura de Vegetais</vegetable>
     <extraInfo>Congelado</extraInfo>
-    <quantity>100 g</quantity>
+    <quantity>
+      <value>100</value>
+      <unity>g).</unity>
+    </quantity>
     <calories>64</calories>
   </food>
   <food>
     <vegetable>Mistura de Vegetais Cozidos</vegetable>
     <extraInfo>Milho, Ervilhas, Feijão Verde e Cenouras</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>151</calories>
   </food>
   <food>
     <vegetable>Mistura de Vegetais</vegetable>
     <extraInfo>Milho, Feijão Verde, Ervilhas, Cenouras</extraInfo>
     <extraInfo>sem Sal, Enlatado</extraInfo>
-    <quantity>1 chávena</quantity>
+    <quantity>
+      <value>1</value>
+      <unity>chávena).</unity>
+    </quantity>
     <calories>67</calories>
   </food>
 </foods>
