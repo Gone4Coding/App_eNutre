@@ -90,26 +90,24 @@ namespace AdinistrationApp_eNutre.Classes
                     int last = a.Count() - 1;
 
                     value.InnerText = a[0];
+
+                   /* XmlElement quantity = doc.CreateElement("quantity");
                     if (listVeg.Count() == conta)
                     {
-                        for(int x = 1; x < last; x++)
-                        {
-                            unity.InnerText += a[x];
-                        }
+                        quantity.InnerText = tiraParentesis(porP[ultimo], 3);
                     }
                     else
                     {
-                        for (int x = 1; x < last; x++)
-                        {
-                            if (x == last-1)
-                            {
-                                unity.InnerText += tiraParentesis(a[x],3);
-                            }
-                            else
-                            {
-                                unity.InnerText += tiraParentesis(a[x], 4);
-                            }
-                        }
+                        quantity.InnerText = tiraParentesis(porP[ultimo], 4);
+                    }
+                    food.AppendChild(quantity);*/
+                    if (listVeg.Count() == conta)
+                    {
+                            unity.InnerText= tiraParentesis(a[last-1], 2);
+                    }
+                    else
+                    {
+                            unity.InnerText = tiraParentesis(a[last-1], 2);
                     }
                    
                     quantity.AppendChild(value);
@@ -117,8 +115,23 @@ namespace AdinistrationApp_eNutre.Classes
                     
 
                     XmlElement calories = doc.CreateElement("calories");
-                    calories.InnerText = porEspaco[1];
                     food.AppendChild(calories);
+                    XmlElement caloriesValue = doc.CreateElement("value");
+                    XmlElement caloriesUnity = doc.CreateElement("unity");
+
+                   
+                    caloriesValue.InnerText = porEspaco[1];
+                    if (porEspaco[2].Equals("calorias"))
+                    {
+                        caloriesUnity.InnerText = "cal";
+                    }
+                    else
+                    {
+                        caloriesUnity.InnerText = "kcal";
+                    }
+                    calories.AppendChild(caloriesValue);
+                    calories.AppendChild(caloriesUnity);
+                   
 
                     root.AppendChild(food);
                 }
