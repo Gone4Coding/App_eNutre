@@ -165,6 +165,18 @@ namespace AdinistrationApp_eNutre.Forms
                 MessageBox.Show("Choose a file first");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+
         // END TABING ACTIVITIES
     }
 }
