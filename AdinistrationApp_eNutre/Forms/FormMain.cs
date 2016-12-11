@@ -90,7 +90,7 @@ namespace AdministrationApp_eNutre.Forms
                     break;
 
                 case "Restaurants":
-                    addColumns(new string[] { "Restaurant", "Item", "Quantity", "Calories" }, 121);
+                    addColumns(new string[] { "Plate", "Item", "Quantity", "Calories" }, 121);
                     AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Restaurants";
                     break;
                     

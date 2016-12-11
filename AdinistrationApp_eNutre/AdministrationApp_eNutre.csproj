@@ -53,7 +53,7 @@
     <Compile Include="Classes\Activity.cs" />
     <Compile Include="Classes\ExcelHandler.cs" />
     <Compile Include="Classes\JsonHandler.cs" />
-    <Compile Include="Classes\Restaurant.cs" />
+    <Compile Include="Classes\Plate.cs" />
     <Compile Include="Classes\TxtHandler.cs" />
     <Compile Include="Classes\Vegetable.cs" />
     <Compile Include="Forms\FormAdministration.cs">

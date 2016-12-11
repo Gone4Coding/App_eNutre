@@ -88,6 +88,7 @@ namespace AdinistrationApp_eNutre.Classes
             return msg2;
         }
 
+        private static int id = 1;
         private static XmlElement getPlate(int line, string path)
         {
             Excel.Application excelApplication = new Excel.Application();
@@ -98,6 +99,7 @@ namespace AdinistrationApp_eNutre.Classes
 
             XmlDocument doc = new XmlDocument();
             XmlElement plateNode = doc.CreateElement("plate");
+            plateNode.SetAttribute("id", id.ToString());
 
             XmlElement itemNode = doc.CreateElement("item");
             itemNode.InnerText = workSheet.Cells[line, 2].Value;
@@ -142,6 +144,8 @@ namespace AdinistrationApp_eNutre.Classes
             plateNode.AppendChild(itemNode);
             plateNode.AppendChild(quantityNode);
             plateNode.AppendChild(caloriesNode);
+
+            id++;
 
             return plateNode;
         }

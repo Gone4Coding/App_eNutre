@@ -33,37 +33,42 @@
       <xs:pattern value="cal|kcal"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="idType">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
   
   <!-- COMPLEX TYPES -->
   
   <xs:complexType name="quantityType">
-	<xs:sequence>
-		<xs:element name="value" type="valueQuantityType"/>
-		<xs:element name="dosage" type="dosageType"/>
-		<xs:element name="extraDosage" type="dosageType"/>
-	</xs:sequence>
+	  <xs:sequence>
+		  <xs:element name="value" type="valueQuantityType"/>
+		  <xs:element name="dosage" type="dosageType"/>
+		  <xs:element name="extraDosage" type="dosageType"/>
+	  </xs:sequence>
   </xs:complexType>
   
   <xs:complexType name="caloriesType">
-	<xs:sequence>
-		<xs:element name="value" type="valueType"/>
-		<xs:element name="unity" type="caloriesUnitiesType"/>
-	</xs:sequence>
+	  <xs:sequence>
+		  <xs:element name="value" type="valueType"/>
+		  <xs:element name="unity" type="caloriesUnitiesType"/>
+	  </xs:sequence>
   </xs:complexType>
   
   <xs:complexType name="plateType">
-	<xs:sequence>
-		<xs:element name="item" type="itemType" minOccurs="1" maxOccurs="unbounded"/>
-		<xs:element name="quantity" type="quantityType" minOccurs="1" maxOccurs="unbounded"/>
-		<xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
-	</xs:sequence>
+	  <xs:sequence>
+		  <xs:element name="item" type="itemType" minOccurs="1" maxOccurs="unbounded"/>
+		  <xs:element name="quantity" type="quantityType" minOccurs="1" maxOccurs="unbounded"/>
+		  <xs:element name="calories" type="caloriesType" minOccurs="1" maxOccurs="unbounded"/>
+	  </xs:sequence>
+    <xs:attribute name="id" type="idType" use="required"/>
   </xs:complexType>
   
   <xs:complexType name="restaurantType">
-	<xs:sequence>
-		<xs:element name="plate" type="plateType" maxOccurs="unbounded"/>
-	</xs:sequence>
-	<xs:attribute name="name" type="restaurantNameType"/>
+	  <xs:sequence>
+		  <xs:element name="plate" type="plateType" maxOccurs="unbounded"/>
+	  </xs:sequence>
+	  <xs:attribute name="name" type="restaurantNameType"/>
   </xs:complexType>
 
   <xs:complexType name="foodsType">
