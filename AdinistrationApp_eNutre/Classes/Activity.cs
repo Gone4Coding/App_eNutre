@@ -10,9 +10,9 @@ namespace AdministrationApp_eNutre.Classes
     {
         private string nome;
         private int calorias;
-        private decimal met;
+        private double met;
 
-        public Activity(string nome, int calorias, decimal met)
+        public Activity(string nome, int calorias, double met)
         {
             this.nome = nome;
             this.met = met;
@@ -31,7 +31,7 @@ namespace AdministrationApp_eNutre.Classes
             set { calorias = value; }
         }
 
-        public decimal Met
+        public double Met
         {
             get { return met; }
             set { met = value; }

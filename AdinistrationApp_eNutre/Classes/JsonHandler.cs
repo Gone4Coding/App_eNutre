@@ -50,7 +50,7 @@ namespace AdinistrationApp_eNutre.Classes
                     metNode.AppendChild(metNodeName);
 
                     XmlElement metNodeValue = doc.CreateElement("value");
-                    metNodeValue.InnerText = act.Met.ToString();
+                    metNodeValue.InnerText = act.Met.ToString().Replace(',', '.');
                     metNode.AppendChild(metNodeValue);
 
                     XmlElement caloriesNode = doc.CreateElement("calories");
