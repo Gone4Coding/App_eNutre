@@ -13,7 +13,7 @@
   </xs:simpleType>
   
    <xs:simpleType name="valueType">
-		<xs:restriction base="xs:integer"/>
+		<xs:restriction base="xs:string"/>
   </xs:simpleType>
   
   <xs:simpleType name="unitiesType">
@@ -24,6 +24,10 @@
 		<xs:restriction base="xs:string">
 		  <xs:pattern value="cal|kcal"/>
     </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idType">
+    <xs:restriction base="xs:integer"/>
   </xs:simpleType>
   
   <!-- COMPLEX TYPES -->
@@ -49,6 +53,7 @@
       <xs:element name="quantity" type="quantityType" maxOccurs="unbounded"/>
       <xs:element name="calories" type="caloriesType" maxOccurs="unbounded"/>
     </xs:sequence>
+    <xs:attribute name="id" type="idType"/>
   </xs:complexType>
 
   <xs:complexType name="foodsType">

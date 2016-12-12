@@ -31,6 +31,7 @@ namespace AdinistrationApp_eNutre.Classes
 
                 List<string> listVeg = new List<string>(vegetables);
                 int conta = 0;
+                int id = 0;
                 XmlDocument doc = new XmlDocument();
                 XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(dec);
@@ -42,6 +43,7 @@ namespace AdinistrationApp_eNutre.Classes
                 foreach (string veg in listVeg)
                 {
                     conta++;
+                    id++;
                     int nomeIndex;
                     string[] porEspaco = veg.Split(' ');
                     string[] porP = veg.Split('(');
@@ -49,6 +51,9 @@ namespace AdinistrationApp_eNutre.Classes
 
                     XmlElement food = doc.CreateElement("food");
                     XmlElement vegetable = doc.CreateElement("vegetable");
+
+                   
+                    food.SetAttribute("id",id.ToString());
 
                     food.AppendChild(vegetable);
 
@@ -91,16 +96,6 @@ namespace AdinistrationApp_eNutre.Classes
 
                     value.InnerText = a[0];
 
-                   /* XmlElement quantity = doc.CreateElement("quantity");
-                    if (listVeg.Count() == conta)
-                    {
-                        quantity.InnerText = tiraParentesis(porP[ultimo], 3);
-                    }
-                    else
-                    {
-                        quantity.InnerText = tiraParentesis(porP[ultimo], 4);
-                    }
-                    food.AppendChild(quantity);*/
                     if (listVeg.Count() == conta)
                     {
                             unity.InnerText= tiraParentesis(a[last-1], 2);
