@@ -54,10 +54,10 @@
             this.panel_vegetablesFullFile = new System.Windows.Forms.Panel();
             this.lb_infoVeggie = new System.Windows.Forms.Label();
             this.lb_fileNameVeggie = new System.Windows.Forms.Label();
+            this.lb_validacao = new System.Windows.Forms.Label();
             this.tb_filePathVeggie = new System.Windows.Forms.TextBox();
             this.bt_addFileVeggie = new System.Windows.Forms.Button();
             this.bt_searchFileVeggie = new System.Windows.Forms.Button();
-            this.lb_validacao = new System.Windows.Forms.Label();
             this.lb_resultVegetable = new System.Windows.Forms.Label();
             this.tabPage_plates = new System.Windows.Forms.TabPage();
             this.panel_platesSingle = new System.Windows.Forms.Panel();
@@ -65,10 +65,10 @@
             this.tb_filePathRestaurant = new System.Windows.Forms.TextBox();
             this.lb_infoRestaurant = new System.Windows.Forms.Label();
             this.lb_fileNameResturant = new System.Windows.Forms.Label();
+            this.lb_resultRestaurants = new System.Windows.Forms.Label();
             this.bt_addFileRestaurants = new System.Windows.Forms.Button();
             this.bt_searchFileRestaurant = new System.Windows.Forms.Button();
             this.lb_validacaoRestaurant = new System.Windows.Forms.Label();
-            this.lb_resultRestaurants = new System.Windows.Forms.Label();
             this.tabPage_activities = new System.Windows.Forms.TabPage();
             this.panel_activitiesSingle = new System.Windows.Forms.Panel();
             this.cb_caloriesType = new System.Windows.Forms.ComboBox();
@@ -113,7 +113,6 @@
             // 
             this.tabPage_vegetables.Controls.Add(this.panel_vegetablesSingle);
             this.tabPage_vegetables.Controls.Add(this.panel_vegetablesFullFile);
-            this.tabPage_vegetables.Controls.Add(this.lb_validacao);
             this.tabPage_vegetables.Controls.Add(this.lb_resultVegetable);
             this.tabPage_vegetables.Location = new System.Drawing.Point(4, 22);
             this.tabPage_vegetables.Name = "tabPage_vegetables";
@@ -322,12 +321,13 @@
             // 
             this.panel_vegetablesFullFile.Controls.Add(this.lb_infoVeggie);
             this.panel_vegetablesFullFile.Controls.Add(this.lb_fileNameVeggie);
+            this.panel_vegetablesFullFile.Controls.Add(this.lb_validacao);
             this.panel_vegetablesFullFile.Controls.Add(this.tb_filePathVeggie);
             this.panel_vegetablesFullFile.Controls.Add(this.bt_addFileVeggie);
             this.panel_vegetablesFullFile.Controls.Add(this.bt_searchFileVeggie);
             this.panel_vegetablesFullFile.Location = new System.Drawing.Point(3, 3);
             this.panel_vegetablesFullFile.Name = "panel_vegetablesFullFile";
-            this.panel_vegetablesFullFile.Size = new System.Drawing.Size(586, 162);
+            this.panel_vegetablesFullFile.Size = new System.Drawing.Size(586, 158);
             this.panel_vegetablesFullFile.TabIndex = 7;
             // 
             // lb_infoVeggie
@@ -349,6 +349,16 @@
             this.lb_fileNameVeggie.Size = new System.Drawing.Size(53, 26);
             this.lb_fileNameVeggie.TabIndex = 0;
             this.lb_fileNameVeggie.Text = "Nome do \r\nficheiro";
+            // 
+            // lb_validacao
+            // 
+            this.lb_validacao.AutoSize = true;
+            this.lb_validacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_validacao.ForeColor = System.Drawing.Color.Red;
+            this.lb_validacao.Location = new System.Drawing.Point(101, 125);
+            this.lb_validacao.Name = "lb_validacao";
+            this.lb_validacao.Size = new System.Drawing.Size(0, 13);
+            this.lb_validacao.TabIndex = 6;
             // 
             // tb_filePathVeggie
             // 
@@ -377,16 +387,6 @@
             this.bt_searchFileVeggie.UseVisualStyleBackColor = true;
             this.bt_searchFileVeggie.Click += new System.EventHandler(this.bt_searchFileVeggie_Click);
             // 
-            // lb_validacao
-            // 
-            this.lb_validacao.AutoSize = true;
-            this.lb_validacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_validacao.ForeColor = System.Drawing.Color.Red;
-            this.lb_validacao.Location = new System.Drawing.Point(181, 131);
-            this.lb_validacao.Name = "lb_validacao";
-            this.lb_validacao.Size = new System.Drawing.Size(0, 13);
-            this.lb_validacao.TabIndex = 6;
-            // 
             // lb_resultVegetable
             // 
             this.lb_resultVegetable.AutoSize = true;
@@ -400,7 +400,6 @@
             this.tabPage_plates.Controls.Add(this.panel_platesSingle);
             this.tabPage_plates.Controls.Add(this.panel_platesFullFile);
             this.tabPage_plates.Controls.Add(this.lb_validacaoRestaurant);
-            this.tabPage_plates.Controls.Add(this.lb_resultRestaurants);
             this.tabPage_plates.Location = new System.Drawing.Point(4, 22);
             this.tabPage_plates.Name = "tabPage_plates";
             this.tabPage_plates.Padding = new System.Windows.Forms.Padding(3);
@@ -421,11 +420,12 @@
             this.panel_platesFullFile.Controls.Add(this.tb_filePathRestaurant);
             this.panel_platesFullFile.Controls.Add(this.lb_infoRestaurant);
             this.panel_platesFullFile.Controls.Add(this.lb_fileNameResturant);
+            this.panel_platesFullFile.Controls.Add(this.lb_resultRestaurants);
             this.panel_platesFullFile.Controls.Add(this.bt_addFileRestaurants);
             this.panel_platesFullFile.Controls.Add(this.bt_searchFileRestaurant);
             this.panel_platesFullFile.Location = new System.Drawing.Point(3, 3);
             this.panel_platesFullFile.Name = "panel_platesFullFile";
-            this.panel_platesFullFile.Size = new System.Drawing.Size(586, 162);
+            this.panel_platesFullFile.Size = new System.Drawing.Size(586, 158);
             this.panel_platesFullFile.TabIndex = 7;
             // 
             // tb_filePathRestaurant
@@ -455,6 +455,14 @@
             this.lb_fileNameResturant.TabIndex = 0;
             this.lb_fileNameResturant.Text = "Nome do \r\nficheiro";
             // 
+            // lb_resultRestaurants
+            // 
+            this.lb_resultRestaurants.AutoSize = true;
+            this.lb_resultRestaurants.Location = new System.Drawing.Point(101, 125);
+            this.lb_resultRestaurants.Name = "lb_resultRestaurants";
+            this.lb_resultRestaurants.Size = new System.Drawing.Size(0, 13);
+            this.lb_resultRestaurants.TabIndex = 5;
+            // 
             // bt_addFileRestaurants
             // 
             this.bt_addFileRestaurants.Location = new System.Drawing.Point(15, 107);
@@ -483,14 +491,6 @@
             this.lb_validacaoRestaurant.Name = "lb_validacaoRestaurant";
             this.lb_validacaoRestaurant.Size = new System.Drawing.Size(0, 13);
             this.lb_validacaoRestaurant.TabIndex = 6;
-            // 
-            // lb_resultRestaurants
-            // 
-            this.lb_resultRestaurants.AutoSize = true;
-            this.lb_resultRestaurants.Location = new System.Drawing.Point(104, 156);
-            this.lb_resultRestaurants.Name = "lb_resultRestaurants";
-            this.lb_resultRestaurants.Size = new System.Drawing.Size(0, 13);
-            this.lb_resultRestaurants.TabIndex = 5;
             // 
             // tabPage_activities
             // 
@@ -597,7 +597,7 @@
             this.panel_activitiesFullFile.Controls.Add(this.lb_fileNameActivity);
             this.panel_activitiesFullFile.Location = new System.Drawing.Point(3, 3);
             this.panel_activitiesFullFile.Name = "panel_activitiesFullFile";
-            this.panel_activitiesFullFile.Size = new System.Drawing.Size(586, 162);
+            this.panel_activitiesFullFile.Size = new System.Drawing.Size(586, 158);
             this.panel_activitiesFullFile.TabIndex = 7;
             // 
             // tb_filePathActivity
@@ -611,7 +611,7 @@
             // 
             this.lb_validacaoActivities.AutoSize = true;
             this.lb_validacaoActivities.ForeColor = System.Drawing.Color.Red;
-            this.lb_validacaoActivities.Location = new System.Drawing.Point(233, 140);
+            this.lb_validacaoActivities.Location = new System.Drawing.Point(101, 125);
             this.lb_validacaoActivities.Name = "lb_validacaoActivities";
             this.lb_validacaoActivities.Size = new System.Drawing.Size(0, 13);
             this.lb_validacaoActivities.TabIndex = 6;

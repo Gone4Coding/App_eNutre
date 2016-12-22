@@ -44,7 +44,7 @@
 	  <xs:sequence>
 		  <xs:element name="value" type="valueQuantityType"/>
 		  <xs:element name="dosage" type="dosageType"/>
-		  <xs:element name="extraDosage" type="dosageType"/>
+		  <xs:element name="extraDosage" type="dosageType" minOccurs="0"/>
 	  </xs:sequence>
   </xs:complexType>
   

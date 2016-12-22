@@ -99,7 +99,7 @@ namespace AdinistrationApp_eNutre.Forms
             {
                 string path = tb_filePathRestaurant.Text;
                 string msg = ExcelHandler.createXml(path);
-
+                
                 if (msg.Equals(""))
                 {
                     lb_resultRestaurants.Text = "Error in File. Check Format";
@@ -110,8 +110,6 @@ namespace AdinistrationApp_eNutre.Forms
 
                     lb_validacaoRestaurant.Text = msg;
                 }
-
-
             }
             else
             {
@@ -166,7 +164,10 @@ namespace AdinistrationApp_eNutre.Forms
             }
         }
 
-
+        private void backgroundWorker_DoWork(DoWorkEventArgs e)
+        {
+            ExcelHandler.createXml(e.Argument.ToString());
+        }
 
         // END TABING ACTIVITIES
     }

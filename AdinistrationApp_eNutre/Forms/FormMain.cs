@@ -19,8 +19,6 @@ namespace AdministrationApp_eNutre.Forms
 
         private String menuType;
        
-        
-
         public FormMain()
         {
             InitializeComponent();
@@ -129,19 +127,19 @@ namespace AdministrationApp_eNutre.Forms
             switch (menuType)
             {
                 case "Activities":
-                    FormAddActivity formAddActivity = new FormAddActivity();
-                    formAddActivity.ShowDialog();
+                    /*FormAddActivity formAddActivity = new FormAddActivity();
+                    formAddActivity.ShowDialog();*/
                     break;
 
                 case "Restaurants":
-                    FormAddRestaurant formAddRestaurant = new FormAddRestaurant();
-                    formAddRestaurant.ShowDialog();                   
+                   /* FormAddRestaurant formAddRestaurant = new FormAddRestaurant();
+                    formAddRestaurant.ShowDialog();    */               
                     break;
 
                 case "Foods":
                     
-                    FormAddVegetable formAddVegetable = new FormAddVegetable();
-                    formAddVegetable.ShowDialog();
+                    /*FormAddVegetable formAddVegetable = new FormAddVegetable();
+                    formAddVegetable.ShowDialog();*/
                     break;
 
                 case "Plans":

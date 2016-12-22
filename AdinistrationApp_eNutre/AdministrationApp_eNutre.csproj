@@ -113,7 +113,6 @@
   <ItemGroup>
     <Content Include="Info\calorias_exercicios.js" />
     <Content Include="Info\calorias_vegetais.txt" />
-    <Content Include="XML\Xml_Files\exercises.xml" />
     <Content Include="XML\Xml_Files\restaurants.xml" />
     <Content Include="XML\Xml_Files\vegetables.xml" />
   </ItemGroup>
