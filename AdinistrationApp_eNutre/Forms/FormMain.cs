@@ -126,7 +126,32 @@ namespace AdministrationApp_eNutre.Forms
         
         private void bt_new_Click(object sender, EventArgs e)
         {
+            switch (menuType)
+            {
+                case "Activities":
+                    FormAddActivity formAddActivity = new FormAddActivity();
+                    formAddActivity.ShowDialog();
+                    break;
 
+                case "Restaurants":
+                    FormAddRestaurant formAddRestaurant = new FormAddRestaurant();
+                    formAddRestaurant.ShowDialog();                   
+                    break;
+
+                case "Foods":
+                    
+                    FormAddVegetable formAddVegetable = new FormAddVegetable();
+                    formAddVegetable.ShowDialog();
+                    break;
+
+                case "Plans":
+                  
+                    break;
+
+                case "Sugestions":
+                  
+                    break;
+            }
         }
 
         private void bt_updade_Click(object sender, EventArgs e)
