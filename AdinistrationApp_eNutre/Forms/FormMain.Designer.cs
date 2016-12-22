@@ -58,7 +58,7 @@
             this.menu_sugestions});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(98, 365);
+            this.menuPrincipal.Size = new System.Drawing.Size(97, 365);
             this.menuPrincipal.TabIndex = 0;
             this.menuPrincipal.Text = "Menu";
             // 
@@ -66,8 +66,8 @@
             // 
             this.menu_activities.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menu_activities.Name = "menu_activities";
-            this.menu_activities.Size = new System.Drawing.Size(85, 24);
-            this.menu_activities.Text = "Activities";
+            this.menu_activities.Size = new System.Drawing.Size(84, 24);
+            this.menu_activities.Text = "Atividades";
             this.menu_activities.Click += new System.EventHandler(this.menu_activities_Click);
             // 
             // menu_nutrition
@@ -77,39 +77,39 @@
             this.menu_restaurants,
             this.menu_foods});
             this.menu_nutrition.Name = "menu_nutrition";
-            this.menu_nutrition.Size = new System.Drawing.Size(85, 24);
-            this.menu_nutrition.Text = "Nutrition";
+            this.menu_nutrition.Size = new System.Drawing.Size(84, 24);
+            this.menu_nutrition.Text = "Nutrição";
             // 
             // menu_restaurants
             // 
             this.menu_restaurants.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menu_restaurants.Name = "menu_restaurants";
-            this.menu_restaurants.Size = new System.Drawing.Size(154, 24);
-            this.menu_restaurants.Text = "Restaurants";
+            this.menu_restaurants.Size = new System.Drawing.Size(134, 24);
+            this.menu_restaurants.Text = "Pratos";
             this.menu_restaurants.Click += new System.EventHandler(this.menu_restaurants_Click);
             // 
             // menu_foods
             // 
             this.menu_foods.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menu_foods.Name = "menu_foods";
-            this.menu_foods.Size = new System.Drawing.Size(154, 24);
-            this.menu_foods.Text = "Foods";
+            this.menu_foods.Size = new System.Drawing.Size(134, 24);
+            this.menu_foods.Text = "Vegetais";
             this.menu_foods.Click += new System.EventHandler(this.menu_foods_Click);
             // 
             // menu_plans
             // 
             this.menu_plans.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menu_plans.Name = "menu_plans";
-            this.menu_plans.Size = new System.Drawing.Size(85, 24);
-            this.menu_plans.Text = "Plans";
+            this.menu_plans.Size = new System.Drawing.Size(84, 24);
+            this.menu_plans.Text = "Planos";
             this.menu_plans.Click += new System.EventHandler(this.menu_plans_Click);
             // 
             // menu_sugestions
             // 
             this.menu_sugestions.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.menu_sugestions.Name = "menu_sugestions";
-            this.menu_sugestions.Size = new System.Drawing.Size(85, 24);
-            this.menu_sugestions.Text = "Sugestions";
+            this.menu_sugestions.Size = new System.Drawing.Size(84, 24);
+            this.menu_sugestions.Text = "Sugestões";
             this.menu_sugestions.Click += new System.EventHandler(this.menu_sugestions_Click);
             // 
             // bt_adminstration
@@ -118,7 +118,7 @@
             this.bt_adminstration.Name = "bt_adminstration";
             this.bt_adminstration.Size = new System.Drawing.Size(83, 23);
             this.bt_adminstration.TabIndex = 1;
-            this.bt_adminstration.Text = "Administration";
+            this.bt_adminstration.Text = "Administração";
             this.bt_adminstration.UseVisualStyleBackColor = true;
             this.bt_adminstration.Click += new System.EventHandler(this.bt_adminstration_Click);
             // 
@@ -128,9 +128,9 @@
             this.lb_welcome.Font = new System.Drawing.Font("High Tower Text", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_welcome.Location = new System.Drawing.Point(181, 141);
             this.lb_welcome.Name = "lb_welcome";
-            this.lb_welcome.Size = new System.Drawing.Size(365, 75);
+            this.lb_welcome.Size = new System.Drawing.Size(406, 75);
             this.lb_welcome.TabIndex = 2;
-            this.lb_welcome.Text = "WELCOME";
+            this.lb_welcome.Text = "BEM VINDO";
             // 
             // lb_title
             // 
@@ -138,9 +138,9 @@
             this.lb_title.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title.Location = new System.Drawing.Point(134, 9);
             this.lb_title.Name = "lb_title";
-            this.lb_title.Size = new System.Drawing.Size(70, 32);
+            this.lb_title.Size = new System.Drawing.Size(86, 32);
             this.lb_title.TabIndex = 3;
-            this.lb_title.Text = "Title";
+            this.lb_title.Text = "Título";
             // 
             // panel_all
             // 
@@ -156,11 +156,11 @@
             // bt_delete
             // 
             this.bt_delete.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delete.Location = new System.Drawing.Point(181, 264);
+            this.bt_delete.Location = new System.Drawing.Point(197, 264);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(75, 32);
             this.bt_delete.TabIndex = 1;
-            this.bt_delete.Text = "Delete";
+            this.bt_delete.Text = "Apagar";
             this.bt_delete.UseVisualStyleBackColor = true;
             this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
             // 
@@ -169,9 +169,9 @@
             this.bt_updade.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_updade.Location = new System.Drawing.Point(92, 264);
             this.bt_updade.Name = "bt_updade";
-            this.bt_updade.Size = new System.Drawing.Size(83, 32);
+            this.bt_updade.Size = new System.Drawing.Size(99, 32);
             this.bt_updade.TabIndex = 1;
-            this.bt_updade.Text = "Update";
+            this.bt_updade.Text = "Atualizar";
             this.bt_updade.UseVisualStyleBackColor = true;
             this.bt_updade.Click += new System.EventHandler(this.bt_updade_Click);
             // 
@@ -182,7 +182,7 @@
             this.bt_new.Name = "bt_new";
             this.bt_new.Size = new System.Drawing.Size(75, 32);
             this.bt_new.TabIndex = 1;
-            this.bt_new.Text = "New";
+            this.bt_new.Text = "Novo";
             this.bt_new.UseVisualStyleBackColor = true;
             this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
             // 
@@ -206,7 +206,7 @@
             this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
-            this.Text = "Administration App";
+            this.Text = "App de Administração";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
