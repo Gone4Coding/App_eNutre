@@ -42,6 +42,7 @@
             this.bt_updade = new System.Windows.Forms.Button();
             this.bt_new = new System.Windows.Forms.Button();
             this.lv_tables = new System.Windows.Forms.ListView();
+            this.bt_close = new System.Windows.Forms.Button();
             this.menuPrincipal.SuspendLayout();
             this.panel_all.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +105,7 @@
             // 
             // bt_adminstration
             // 
-            this.bt_adminstration.Location = new System.Drawing.Point(12, 330);
+            this.bt_adminstration.Location = new System.Drawing.Point(12, 301);
             this.bt_adminstration.Name = "bt_adminstration";
             this.bt_adminstration.Size = new System.Drawing.Size(83, 23);
             this.bt_adminstration.TabIndex = 1;
@@ -184,14 +185,26 @@
             this.lv_tables.TabIndex = 0;
             this.lv_tables.UseCompatibleStateImageBehavior = false;
             // 
+            // bt_close
+            // 
+            this.bt_close.Location = new System.Drawing.Point(12, 330);
+            this.bt_close.Name = "bt_close";
+            this.bt_close.Size = new System.Drawing.Size(83, 23);
+            this.bt_close.TabIndex = 1;
+            this.bt_close.Text = "Fechar";
+            this.bt_close.UseVisualStyleBackColor = true;
+            this.bt_close.Click += new System.EventHandler(this.bt_close_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 365);
+            this.ControlBox = false;
             this.Controls.Add(this.panel_all);
             this.Controls.Add(this.lb_title);
             this.Controls.Add(this.lb_welcome);
+            this.Controls.Add(this.bt_close);
             this.Controls.Add(this.bt_adminstration);
             this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -222,5 +235,6 @@
         private System.Windows.Forms.Button bt_updade;
         private System.Windows.Forms.Button bt_new;
         private System.Windows.Forms.ListView lv_tables;
+        private System.Windows.Forms.Button bt_close;
     }
 }

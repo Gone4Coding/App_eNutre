@@ -33,7 +33,7 @@ namespace AdinistrationApp_eNutre.Forms
             string username = tb_username.Text.Trim();
             string pass = tb_passwod.Text.Trim();
 
-            if (!username.Equals("") && !pass.Equals(""))
+            /*if (!username.Equals("") && !pass.Equals(""))
             {
                 //string token = LogIn(username, pass);
                 string token = "";
@@ -41,7 +41,8 @@ namespace AdinistrationApp_eNutre.Forms
                 {
                     FormMain main = new FormMain(token);
                     main.Show();
-                    Close();    
+                    Close();
+                    return;
                 }
                 MessageBox.Show("Combinação Nome de Uilizador/Password incorreta", "Aviso", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
@@ -58,7 +59,12 @@ namespace AdinistrationApp_eNutre.Forms
 
                 MessageBox.Show("A Password tem \nde ser preencheda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-            }
+            }*/
+
+            FormMain main = new FormMain();
+            Hide();
+            main.ShowDialog();
+            Close();
         }
     }
 }

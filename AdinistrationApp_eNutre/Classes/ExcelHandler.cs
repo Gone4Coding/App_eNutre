@@ -18,7 +18,6 @@ namespace AdinistrationApp_eNutre.Classes
             bool isValid = true;
             string msg1 = "";
             string msg2;
-            
 
 
             Excel.Application excelApplication = new Excel.Application();

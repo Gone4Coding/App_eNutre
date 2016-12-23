@@ -21,8 +21,7 @@ namespace AdministrationApp_eNutre
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
-            
+            Application.Run(new FormLogin());
         }
     }
 }

@@ -28,10 +28,11 @@ namespace AdministrationApp_eNutre.Forms
             Sugestions
         }
 
-        public FormMain(string token)
+        public FormMain(/*string token*/)
         {
             InitializeComponent();
-            FormMain.TOKEN = token;
+            //FormMain.TOKEN = token;
+
             //txt.carregarTXT(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais");
         }
 
@@ -47,6 +48,7 @@ namespace AdministrationApp_eNutre.Forms
         {
             formatForMenu(MenuType.Activities);
             createListView();
+            
         }
 
         private void menu_restaurants_Click(object sender, EventArgs e)
@@ -106,23 +108,19 @@ namespace AdministrationApp_eNutre.Forms
             switch (menuType)
             {
                 case MenuType.Activities:
-                    addColumns(new string[] { "Activity", "M.E.T." , "Calorie Consumption/h" },161);
-                    AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Activities";
+                    addColumns(new string[] { "Atividade", "M.E.T." , "Consumo Calorico/h" }, 161);    
                     break;
 
                 case MenuType.Plates:
-                    addColumns(new string[] { "Plate", "Item", "Quantity", "Calories" }, 121);
-                    AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Restaurants";
+                    addColumns(new string[] { "Restaurante", "Item", "Calorias/Quantidade" }, 161);
                     break;
                     
                 case MenuType.Veggetables:
-                    addColumns(new string[] { "Vegetable", "Extra Info", "Quantity", "Calories" }, 121);
-                    AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Foods";
+                    addColumns(new string[] { "Vegetal", "Info", "Calorias/Quantidade" }, 161);
                     break;
 
                 case MenuType.Sugestions:
                     addColumns(new string[] { "Sugestion", "X", "X", "X" }, 121);
-                    AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Sugestions";
                     break;
             }
         }
@@ -211,6 +209,11 @@ namespace AdministrationApp_eNutre.Forms
         {
             FormAdministration formAdm = new FormAdministration();
             formAdm.ShowDialog();
+        }
+
+        private void bt_close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         // END BUTTONS
