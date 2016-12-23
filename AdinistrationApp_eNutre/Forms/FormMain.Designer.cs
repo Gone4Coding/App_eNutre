@@ -33,7 +33,6 @@
             this.menu_nutrition = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_restaurants = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_foods = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_plans = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_sugestions = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_adminstration = new System.Windows.Forms.Button();
             this.lb_welcome = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_activities,
             this.menu_nutrition,
-            this.menu_plans,
             this.menu_sugestions});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
@@ -95,14 +93,6 @@
             this.menu_foods.Size = new System.Drawing.Size(134, 24);
             this.menu_foods.Text = "Vegetais";
             this.menu_foods.Click += new System.EventHandler(this.menu_foods_Click);
-            // 
-            // menu_plans
-            // 
-            this.menu_plans.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.menu_plans.Name = "menu_plans";
-            this.menu_plans.Size = new System.Drawing.Size(84, 24);
-            this.menu_plans.Text = "Planos";
-            this.menu_plans.Click += new System.EventHandler(this.menu_plans_Click);
             // 
             // menu_sugestions
             // 
@@ -223,7 +213,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu_nutrition;
         private System.Windows.Forms.ToolStripMenuItem menu_restaurants;
         private System.Windows.Forms.ToolStripMenuItem menu_foods;
-        private System.Windows.Forms.ToolStripMenuItem menu_plans;
         private System.Windows.Forms.ToolStripMenuItem menu_sugestions;
         private System.Windows.Forms.Button bt_adminstration;
         private System.Windows.Forms.Label lb_welcome;

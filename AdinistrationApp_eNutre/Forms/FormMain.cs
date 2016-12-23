@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,12 +17,22 @@ namespace AdministrationApp_eNutre.Forms
 {
     public partial class FormMain : Form
     {
+        private static string TOKEN;
+        private MenuType menuType;
 
-        private String menuType;
-       
-        public FormMain()
+        private enum MenuType
+        {
+            Activities,
+            Plates,
+            Veggetables,
+            Sugestions
+        }
+
+
+        public FormMain(string token)
         {
             InitializeComponent();
+            FormMain.TOKEN = token;
             //txt.carregarTXT(@"C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\Info\calorias_vegetais");
         }
 
@@ -35,32 +46,26 @@ namespace AdministrationApp_eNutre.Forms
         //  MENUS 
         private void menu_activities_Click(object sender, EventArgs e)
         {
-            formatForMenu("Activities");
+            formatForMenu(MenuType.Activities);
             createListView();
         }
 
         private void menu_restaurants_Click(object sender, EventArgs e)
         {
-            formatForMenu("Restaurants");
+            formatForMenu(MenuType.Plates);
             createListView();
         }
 
         private void menu_foods_Click(object sender, EventArgs e)
         {
-            formatForMenu("Foods");
+            formatForMenu(MenuType.Veggetables);
             createListView();
             
         }
 
-        private void menu_plans_Click(object sender, EventArgs e)
-        {
-            formatForMenu("Plans");
-            createListView();
-        }
-
         private void menu_sugestions_Click(object sender, EventArgs e)
         {
-            formatForMenu("Sugestions");
+            formatForMenu(MenuType.Sugestions);
             createListView();
         }
 
@@ -68,11 +73,30 @@ namespace AdministrationApp_eNutre.Forms
 
         // FUNCTIONS
 
-        private void formatForMenu(string menu)
+        private void formatForMenu(MenuType menu)
         {
             lb_welcome.Hide();
             panel_all.Show();
-            lb_title.Text = menu;
+            string menuString = "";
+            switch (menu)
+            {
+                case MenuType.Activities:
+                    menuString = "Atividades";
+                    break;
+
+                case MenuType.Plates:
+                    menuString = "Pratos";
+                    break;
+
+                case MenuType.Veggetables:
+                    menuString = "Vegetais";
+                    break;
+
+                case MenuType.Sugestions:
+                    menuString = "Sugestõies";
+                    break;
+            }
+            lb_title.Text = menuString;
             lb_title.Show();
             menuType = menu;
         }
@@ -82,27 +106,22 @@ namespace AdministrationApp_eNutre.Forms
             lv_tables.View = View.Details;
             switch (menuType)
             {
-                case "Activities":
+                case MenuType.Activities:
                     addColumns(new string[] { "Activity", "M.E.T." , "Calorie Consumption/h" },161);
                     AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Activities";
                     break;
 
-                case "Restaurants":
+                case MenuType.Plates:
                     addColumns(new string[] { "Plate", "Item", "Quantity", "Calories" }, 121);
                     AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Restaurants";
                     break;
                     
-                case "Foods":
+                case MenuType.Veggetables:
                     addColumns(new string[] { "Vegetable", "Extra Info", "Quantity", "Calories" }, 121);
                     AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Foods";
                     break;
 
-                case "Plans":
-                    addColumns(new string[] { "Plan", "X", "X", "X" }, 121);
-                    AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Plans";
-                    break;
-
-                case "Sugestions":
+                case MenuType.Sugestions:
                     addColumns(new string[] { "Sugestion", "X", "X", "X" }, 121);
                     AdministrationApp_eNutre.Properties.Settings.Default.GLOBAL_MENU_TYPE = "Sugestions";
                     break;
@@ -117,6 +136,11 @@ namespace AdministrationApp_eNutre.Forms
                 lv_tables.Columns.Add(column, size, HorizontalAlignment.Left);
             }
         }
+
+        public string getToken()
+        {
+            return TOKEN;
+        }
            
         // END FUNCTIONS
 
@@ -126,28 +150,22 @@ namespace AdministrationApp_eNutre.Forms
         {
             switch (menuType)
             {
-                case "Activities":
+                case MenuType.Activities:
                     /*FormAddActivity formAddActivity = new FormAddActivity();
                     formAddActivity.ShowDialog();*/
                     break;
 
-                case "Restaurants":
+                case MenuType.Plates:
                    /* FormAddRestaurant formAddRestaurant = new FormAddRestaurant();
                     formAddRestaurant.ShowDialog();    */               
                     break;
 
-                case "Foods":
-                    
+                case MenuType.Veggetables:
                     /*FormAddVegetable formAddVegetable = new FormAddVegetable();
                     formAddVegetable.ShowDialog();*/
                     break;
 
-                case "Plans":
-                  
-                    break;
-
-                case "Sugestions":
-                  
+                case MenuType.Sugestions:
                     break;
             }
         }
@@ -165,7 +183,7 @@ namespace AdministrationApp_eNutre.Forms
         private void bt_adminstration_Click(object sender, EventArgs e)
         {
             FormAdministration formAdm = new FormAdministration();
-            formAdm.Show();
+            formAdm.ShowDialog();
         }
 
         // END BUTTONS
