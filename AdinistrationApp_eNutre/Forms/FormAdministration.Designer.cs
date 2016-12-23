@@ -70,15 +70,6 @@
             this.bt_searchFileRestaurant = new System.Windows.Forms.Button();
             this.lb_validacaoRestaurant = new System.Windows.Forms.Label();
             this.tabPage_activities = new System.Windows.Forms.TabPage();
-            this.panel_activitiesSingle = new System.Windows.Forms.Panel();
-            this.cb_caloriesType = new System.Windows.Forms.ComboBox();
-            this.bt_addSingleActivity = new System.Windows.Forms.Button();
-            this.tb_activityMet = new System.Windows.Forms.TextBox();
-            this.lb_activityMet = new System.Windows.Forms.Label();
-            this.tb_calories = new System.Windows.Forms.TextBox();
-            this.lb_activityCalories = new System.Windows.Forms.Label();
-            this.tb_activityName = new System.Windows.Forms.TextBox();
-            this.lb_activityName = new System.Windows.Forms.Label();
             this.panel_activitiesFullFile = new System.Windows.Forms.Panel();
             this.tb_filePathActivity = new System.Windows.Forms.TextBox();
             this.lb_validacaoActivities = new System.Windows.Forms.Label();
@@ -94,7 +85,6 @@
             this.tabPage_plates.SuspendLayout();
             this.panel_platesFullFile.SuspendLayout();
             this.tabPage_activities.SuspendLayout();
-            this.panel_activitiesSingle.SuspendLayout();
             this.panel_activitiesFullFile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -494,7 +484,6 @@
             // 
             // tabPage_activities
             // 
-            this.tabPage_activities.Controls.Add(this.panel_activitiesSingle);
             this.tabPage_activities.Controls.Add(this.panel_activitiesFullFile);
             this.tabPage_activities.Location = new System.Drawing.Point(4, 22);
             this.tabPage_activities.Name = "tabPage_activities";
@@ -502,89 +491,6 @@
             this.tabPage_activities.TabIndex = 2;
             this.tabPage_activities.Text = "Atividades";
             this.tabPage_activities.UseVisualStyleBackColor = true;
-            // 
-            // panel_activitiesSingle
-            // 
-            this.panel_activitiesSingle.Controls.Add(this.cb_caloriesType);
-            this.panel_activitiesSingle.Controls.Add(this.bt_addSingleActivity);
-            this.panel_activitiesSingle.Controls.Add(this.tb_activityMet);
-            this.panel_activitiesSingle.Controls.Add(this.lb_activityMet);
-            this.panel_activitiesSingle.Controls.Add(this.tb_calories);
-            this.panel_activitiesSingle.Controls.Add(this.lb_activityCalories);
-            this.panel_activitiesSingle.Controls.Add(this.tb_activityName);
-            this.panel_activitiesSingle.Controls.Add(this.lb_activityName);
-            this.panel_activitiesSingle.Location = new System.Drawing.Point(3, 167);
-            this.panel_activitiesSingle.Name = "panel_activitiesSingle";
-            this.panel_activitiesSingle.Size = new System.Drawing.Size(586, 151);
-            this.panel_activitiesSingle.TabIndex = 8;
-            // 
-            // cb_caloriesType
-            // 
-            this.cb_caloriesType.FormattingEnabled = true;
-            this.cb_caloriesType.Items.AddRange(new object[] {
-            "kcal",
-            "cal"});
-            this.cb_caloriesType.Location = new System.Drawing.Point(148, 58);
-            this.cb_caloriesType.Name = "cb_caloriesType";
-            this.cb_caloriesType.Size = new System.Drawing.Size(68, 21);
-            this.cb_caloriesType.TabIndex = 3;
-            // 
-            // bt_addSingleActivity
-            // 
-            this.bt_addSingleActivity.Location = new System.Drawing.Point(511, 109);
-            this.bt_addSingleActivity.Name = "bt_addSingleActivity";
-            this.bt_addSingleActivity.Size = new System.Drawing.Size(75, 39);
-            this.bt_addSingleActivity.TabIndex = 2;
-            this.bt_addSingleActivity.Text = "Adicionar\r\nSingular";
-            this.bt_addSingleActivity.UseVisualStyleBackColor = true;
-            // 
-            // tb_activityMet
-            // 
-            this.tb_activityMet.Location = new System.Drawing.Point(72, 84);
-            this.tb_activityMet.Name = "tb_activityMet";
-            this.tb_activityMet.Size = new System.Drawing.Size(70, 20);
-            this.tb_activityMet.TabIndex = 1;
-            // 
-            // lb_activityMet
-            // 
-            this.lb_activityMet.AutoSize = true;
-            this.lb_activityMet.Location = new System.Drawing.Point(22, 87);
-            this.lb_activityMet.Name = "lb_activityMet";
-            this.lb_activityMet.Size = new System.Drawing.Size(30, 13);
-            this.lb_activityMet.TabIndex = 0;
-            this.lb_activityMet.Text = "MET";
-            // 
-            // tb_calories
-            // 
-            this.tb_calories.Location = new System.Drawing.Point(72, 58);
-            this.tb_calories.Name = "tb_calories";
-            this.tb_calories.Size = new System.Drawing.Size(70, 20);
-            this.tb_calories.TabIndex = 1;
-            // 
-            // lb_activityCalories
-            // 
-            this.lb_activityCalories.AutoSize = true;
-            this.lb_activityCalories.Location = new System.Drawing.Point(22, 61);
-            this.lb_activityCalories.Name = "lb_activityCalories";
-            this.lb_activityCalories.Size = new System.Drawing.Size(44, 13);
-            this.lb_activityCalories.TabIndex = 0;
-            this.lb_activityCalories.Text = "Calorias";
-            // 
-            // tb_activityName
-            // 
-            this.tb_activityName.Location = new System.Drawing.Point(72, 33);
-            this.tb_activityName.Name = "tb_activityName";
-            this.tb_activityName.Size = new System.Drawing.Size(184, 20);
-            this.tb_activityName.TabIndex = 1;
-            // 
-            // lb_activityName
-            // 
-            this.lb_activityName.AutoSize = true;
-            this.lb_activityName.Location = new System.Drawing.Point(22, 36);
-            this.lb_activityName.Name = "lb_activityName";
-            this.lb_activityName.Size = new System.Drawing.Size(35, 13);
-            this.lb_activityName.TabIndex = 0;
-            this.lb_activityName.Text = "Nome";
             // 
             // panel_activitiesFullFile
             // 
@@ -686,8 +592,6 @@
             this.panel_platesFullFile.ResumeLayout(false);
             this.panel_platesFullFile.PerformLayout();
             this.tabPage_activities.ResumeLayout(false);
-            this.panel_activitiesSingle.ResumeLayout(false);
-            this.panel_activitiesSingle.PerformLayout();
             this.panel_activitiesFullFile.ResumeLayout(false);
             this.panel_activitiesFullFile.PerformLayout();
             this.ResumeLayout(false);
@@ -722,15 +626,6 @@
         private System.Windows.Forms.Label lb_validacaoRestaurant;
         private System.Windows.Forms.Label lb_validacaoActivities;
         private System.Windows.Forms.Panel panel_activitiesFullFile;
-        private System.Windows.Forms.Panel panel_activitiesSingle;
-        private System.Windows.Forms.Button bt_addSingleActivity;
-        private System.Windows.Forms.TextBox tb_activityMet;
-        private System.Windows.Forms.Label lb_activityMet;
-        private System.Windows.Forms.TextBox tb_calories;
-        private System.Windows.Forms.Label lb_activityCalories;
-        private System.Windows.Forms.TextBox tb_activityName;
-        private System.Windows.Forms.Label lb_activityName;
-        private System.Windows.Forms.ComboBox cb_caloriesType;
         private System.Windows.Forms.Panel panel_platesFullFile;
         private System.Windows.Forms.Panel panel_platesSingle;
         private System.Windows.Forms.Panel panel_vegetablesFullFile;

@@ -50,3 +50,7 @@ C:\Users\Joao\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\Administ
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormAddVegetable.resources
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormAddActivity.resources
 C:\Users\j17vi\Source\Repos\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormAddRestaurant.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormActivity.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormLogin.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormPlate.resources
+C:\Git\App_eNutre\AdinistrationApp_eNutre\obj\Debug\AdinistrationApp_eNutre.Forms.FormVegetable.resources

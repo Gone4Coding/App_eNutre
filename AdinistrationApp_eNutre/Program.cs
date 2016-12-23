@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.Classes;
+using AdinistrationApp_eNutre.Forms;
 using AdministrationApp_eNutre.Classes;
 using Newtonsoft.Json;
 
@@ -21,9 +22,7 @@ namespace AdministrationApp_eNutre
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
-
-            //JsonHandler.deserialize(@"C:\Git\App_eNutre\AdinistrationApp_eNutre\Info\calorias_exercicios.js");
-            //ExcelHandler.createXml(@"C:\Git\App_eNutre\AdinistrationApp_eNutre\Info\calorias_restaurantes.xls");
+            
         }
     }
 }

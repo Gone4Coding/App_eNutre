@@ -28,7 +28,6 @@ namespace AdministrationApp_eNutre.Forms
             Sugestions
         }
 
-
         public FormMain(string token)
         {
             InitializeComponent();

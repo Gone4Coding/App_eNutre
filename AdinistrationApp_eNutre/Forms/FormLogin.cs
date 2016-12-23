@@ -35,7 +35,8 @@ namespace AdinistrationApp_eNutre.Forms
 
             if (!username.Equals("") && !pass.Equals(""))
             {
-                string token = LogIn(username, pass);
+                //string token = LogIn(username, pass);
+                string token = "";
                 if (token != null || !token.Equals(""))
                 {
                     FormMain main = new FormMain(token);
