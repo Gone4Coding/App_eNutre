@@ -150,18 +150,38 @@ namespace AdministrationApp_eNutre.Forms
             switch (menuType)
             {
                 case MenuType.Activities:
-                    /*FormAddActivity formAddActivity = new FormAddActivity();
-                    formAddActivity.ShowDialog();*/
+                    FormActivity act = new FormActivity();
+                    act.Show();
                     break;
 
                 case MenuType.Plates:
-                   /* FormAddRestaurant formAddRestaurant = new FormAddRestaurant();
-                    formAddRestaurant.ShowDialog();    */               
+                    FormPlate plate = new FormPlate();
+                    plate.Show();
                     break;
 
                 case MenuType.Veggetables:
-                    /*FormAddVegetable formAddVegetable = new FormAddVegetable();
-                    formAddVegetable.ShowDialog();*/
+                    FormVegetable veggie = new FormVegetable();
+                    veggie.Show();
+                    break;
+
+                case MenuType.Sugestions:
+                    FormSugestion sug = new FormSugestion();
+                    sug.Show();
+                    break;
+            }
+        }
+
+        private void bt_updade_Click(object sender, EventArgs e)
+        {
+            switch (menuType)
+            {
+                case MenuType.Activities:
+                    break;
+
+                case MenuType.Plates:
+                    break;
+
+                case MenuType.Veggetables:
                     break;
 
                 case MenuType.Sugestions:
@@ -169,14 +189,22 @@ namespace AdministrationApp_eNutre.Forms
             }
         }
 
-        private void bt_updade_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bt_delete_Click(object sender, EventArgs e)
         {
+            switch (menuType)
+            {
+                case MenuType.Activities:
+                    break;
 
+                case MenuType.Plates:
+                    break;
+
+                case MenuType.Veggetables:
+                    break;
+
+                case MenuType.Sugestions:
+                    break;
+            }
         }
 
         private void bt_adminstration_Click(object sender, EventArgs e)
