@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebserviceAppNutre" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebserviceAppNutre" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://appnutrewebservice.apphb.com/ServiceAppNutre.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Admin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Activity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CaloriasUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CaloriasValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Met" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Activity" nillable="true" type="tns:Activity" />
+  <xs:complexType name="Plate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CaloriasUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CaloriesValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityDosage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityExtraDosage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RestaurantName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Plate" nillable="true" type="tns:Plate" />
+  <xs:complexType name="Vegetable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CaloriesValue" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraInfo" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnityCal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnityQuantity" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vegetable" nillable="true" type="tns:Vegetable" />
+  <xs:complexType name="ArrayOfActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity" nillable="true" type="tns:Activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivity" nillable="true" type="tns:ArrayOfActivity" />
+  <xs:complexType name="ArrayOfPlate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Plate" nillable="true" type="tns:Plate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlate" nillable="true" type="tns:ArrayOfPlate" />
+  <xs:complexType name="ArrayOfVegetable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vegetable" nillable="true" type="tns:Vegetable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVegetable" nillable="true" type="tns:ArrayOfVegetable" />
+</xs:schema>

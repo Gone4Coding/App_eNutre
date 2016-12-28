@@ -188,7 +188,7 @@ namespace AdinistrationApp_eNutre.Classes
                 settings.ValidationType = ValidationType.Schema;
 
                 XmlReader reader = XmlReader.Create(@"..\\..\\XML\\Xml_Files\\restaurants.xml", settings);
-                doc.Load(reader);
+                doc.Load(reader);			
 
                 MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

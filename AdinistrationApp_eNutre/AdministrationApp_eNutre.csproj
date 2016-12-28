@@ -39,6 +39,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -100,6 +102,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceAppNutre\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\FormActivity.resx">
       <DependentUpon>FormActivity.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +146,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\ServiceAppNutre\AdinistrationApp_eNutre.ServiceAppNutre.Activity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAppNutre\AdinistrationApp_eNutre.ServiceAppNutre.Plate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAppNutre\AdinistrationApp_eNutre.ServiceAppNutre.Vegetable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAppNutre\ServiceAppNutre.wsdl" />
+    <None Include="Service References\ServiceAppNutre\ServiceAppNutre.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAppNutre\ServiceAppNutre1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAppNutre\ServiceAppNutre2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAppNutre\ServiceAppNutre3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="XML\Schemas\activitiesSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -155,6 +184,13 @@
   <ItemGroup>
     <Content Include="Info\calorias_exercicios.js" />
     <Content Include="Info\calorias_vegetais.txt" />
+    <None Include="Service References\ServiceAppNutre\ServiceAppNutre.disco" />
+    <None Include="Service References\ServiceAppNutre\configuration91.svcinfo" />
+    <None Include="Service References\ServiceAppNutre\configuration.svcinfo" />
+    <None Include="Service References\ServiceAppNutre\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="XML\Xml_Files\restaurants.xml" />
     <Content Include="XML\Xml_Files\vegetables.xml" />
   </ItemGroup>
@@ -187,7 +223,12 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceAppNutre\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

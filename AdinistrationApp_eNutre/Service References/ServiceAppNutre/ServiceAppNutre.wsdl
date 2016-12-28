@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceAppNutre" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://appnutrewebservice.apphb.com/ServiceAppNutre.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://appnutrewebservice.apphb.com/ServiceAppNutre.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://appnutrewebservice.apphb.com/ServiceAppNutre.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebserviceAppNutre" />
+      <xsd:import schemaLocation="http://appnutrewebservice.apphb.com/ServiceAppNutre.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceAppNutre_SignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignUp" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_SignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_LogIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_LogIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_LogOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOut" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_LogOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:addActivity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addActivityXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:addActivityXML" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addActivityXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addActivityXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addRestaurant_InputMessage">
+    <wsdl:part name="parameters" element="tns:addRestaurant" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addRestaurant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addRestaurantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addRestaurantXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:addRestaurantXML" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addRestaurantXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addRestaurantXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addVegetable_InputMessage">
+    <wsdl:part name="parameters" element="tns:addVegetable" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addVegetable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addVegetableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addVegetableXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:addVegetableXML" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_addVegetableXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addVegetableXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getActivitiesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getActivitiesList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getActivitiesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getActivitiesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_GetRestaurantsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestaurantsList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_GetRestaurantsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestaurantsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getVegetablesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVegetablesList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getVegetablesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVegetablesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_removeActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeActivity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_removeActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_removePlate_InputMessage">
+    <wsdl:part name="parameters" element="tns:removePlate" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_removePlate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removePlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_removeVegetable_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeVegetable" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_removeVegetable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeVegetableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getCaloriesByActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCaloriesByActivity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getCaloriesByActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCaloriesByActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getCaloriesByVeggie_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCaloriesByVeggie" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getCaloriesByVeggie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCaloriesByVeggieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getCaloriesByPlate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCaloriesByPlate" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getCaloriesByPlate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCaloriesByPlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getActivitiesListByCalories_InputMessage">
+    <wsdl:part name="parameters" element="tns:getActivitiesListByCalories" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getActivitiesListByCalories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getActivitiesListByCaloriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getVegetablesListBycalories_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVegetablesListBycalories" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAppNutre_getVegetablesListBycalories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVegetablesListBycaloriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceAppNutre">
+    <wsdl:operation name="SignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/SignUp" message="tns:IServiceAppNutre_SignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/SignUpResponse" message="tns:IServiceAppNutre_SignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/LogIn" message="tns:IServiceAppNutre_LogIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/LogInResponse" message="tns:IServiceAppNutre_LogIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/LogOut" message="tns:IServiceAppNutre_LogOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/LogOutResponse" message="tns:IServiceAppNutre_LogOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/addActivity" message="tns:IServiceAppNutre_addActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/addActivityResponse" message="tns:IServiceAppNutre_addActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addActivityXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/addActivityXML" message="tns:IServiceAppNutre_addActivityXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/addActivityXMLResponse" message="tns:IServiceAppNutre_addActivityXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addRestaurant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/addRestaurant" message="tns:IServiceAppNutre_addRestaurant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/addRestaurantResponse" message="tns:IServiceAppNutre_addRestaurant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addRestaurantXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/addRestaurantXML" message="tns:IServiceAppNutre_addRestaurantXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/addRestaurantXMLResponse" message="tns:IServiceAppNutre_addRestaurantXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addVegetable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/addVegetable" message="tns:IServiceAppNutre_addVegetable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/addVegetableResponse" message="tns:IServiceAppNutre_addVegetable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addVegetableXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/addVegetableXML" message="tns:IServiceAppNutre_addVegetableXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/addVegetableXMLResponse" message="tns:IServiceAppNutre_addVegetableXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getActivitiesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getActivitiesList" message="tns:IServiceAppNutre_getActivitiesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getActivitiesListResponse" message="tns:IServiceAppNutre_getActivitiesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestaurantsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/GetRestaurantsList" message="tns:IServiceAppNutre_GetRestaurantsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/GetRestaurantsListResponse" message="tns:IServiceAppNutre_GetRestaurantsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVegetablesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getVegetablesList" message="tns:IServiceAppNutre_getVegetablesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getVegetablesListResponse" message="tns:IServiceAppNutre_getVegetablesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/removeActivity" message="tns:IServiceAppNutre_removeActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/removeActivityResponse" message="tns:IServiceAppNutre_removeActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removePlate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/removePlate" message="tns:IServiceAppNutre_removePlate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/removePlateResponse" message="tns:IServiceAppNutre_removePlate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeVegetable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/removeVegetable" message="tns:IServiceAppNutre_removeVegetable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/removeVegetableResponse" message="tns:IServiceAppNutre_removeVegetable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCaloriesByActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getCaloriesByActivity" message="tns:IServiceAppNutre_getCaloriesByActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getCaloriesByActivityResponse" message="tns:IServiceAppNutre_getCaloriesByActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCaloriesByVeggie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getCaloriesByVeggie" message="tns:IServiceAppNutre_getCaloriesByVeggie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getCaloriesByVeggieResponse" message="tns:IServiceAppNutre_getCaloriesByVeggie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCaloriesByPlate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getCaloriesByPlate" message="tns:IServiceAppNutre_getCaloriesByPlate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getCaloriesByPlateResponse" message="tns:IServiceAppNutre_getCaloriesByPlate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getActivitiesListByCalories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getActivitiesListByCalories" message="tns:IServiceAppNutre_getActivitiesListByCalories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getActivitiesListByCaloriesResponse" message="tns:IServiceAppNutre_getActivitiesListByCalories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVegetablesListBycalories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAppNutre/getVegetablesListBycalories" message="tns:IServiceAppNutre_getVegetablesListBycalories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAppNutre/getVegetablesListBycaloriesResponse" message="tns:IServiceAppNutre_getVegetablesListBycalories_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceAppNutre" type="tns:IServiceAppNutre">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SignUp">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/SignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/LogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/LogOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addActivity">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/addActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addActivityXML">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/addActivityXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRestaurant">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/addRestaurant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRestaurantXML">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/addRestaurantXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addVegetable">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/addVegetable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addVegetableXML">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/addVegetableXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActivitiesList">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getActivitiesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestaurantsList">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/GetRestaurantsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVegetablesList">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getVegetablesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeActivity">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/removeActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePlate">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/removePlate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeVegetable">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/removeVegetable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCaloriesByActivity">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getCaloriesByActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCaloriesByVeggie">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getCaloriesByVeggie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCaloriesByPlate">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getCaloriesByPlate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActivitiesListByCalories">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getActivitiesListByCalories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVegetablesListBycalories">
+      <soap:operation soapAction="http://tempuri.org/IServiceAppNutre/getVegetablesListBycalories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceAppNutre">
+    <wsdl:port name="BasicHttpBinding_IServiceAppNutre" binding="tns:BasicHttpBinding_IServiceAppNutre">
+      <soap:address location="http://appnutrewebservice.apphb.com/ServiceAppNutre.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

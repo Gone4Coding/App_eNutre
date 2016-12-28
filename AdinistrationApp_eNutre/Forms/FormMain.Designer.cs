@@ -1,4 +1,4 @@
-﻿namespace AdministrationApp_eNutre.Forms
+﻿namespace AdinistrationApp_eNutre.Forms
 {
     partial class FormMain
     {

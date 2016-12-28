@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using AdinistrationApp_eNutre.Classes;
-using AdinistrationApp_eNutre.Forms;
-using AdministrationApp_eNutre.Classes;
 
-namespace AdministrationApp_eNutre.Forms
+namespace AdinistrationApp_eNutre.Forms
 {
     public partial class FormMain : Form
     {
