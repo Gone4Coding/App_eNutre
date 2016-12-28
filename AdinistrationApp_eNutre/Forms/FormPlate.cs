@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdinistrationApp_eNutre.ServiceAppNutre;
 
 namespace AdinistrationApp_eNutre.Forms
 {
     public partial class FormPlate : Form
     {
         private static string NEW_RESTAURANT = "...";
+        private ServiceAppNutreClient client;
+        private string TOKEN;
+        private int id;
+        private Funcao funcao;
 
+        public enum Funcao
+        {
+            Abrir,
+            Editar
+        }
 
         private void FillComboBox()
         {
@@ -41,12 +45,12 @@ namespace AdinistrationApp_eNutre.Forms
             string caloriasType = cb_caloriesType.Text.Trim();
             string restaurant = cb_restaurant.Text.Trim();
 
-            Regex caloriasPattern = new Regex("^[0-9]$");
+            Regex caloriasPattern = new Regex("^[0-9]+$");
 
-            if (!item.Equals("") && !calorias.Equals("") && caloriasType.Equals("") && !quantity.Equals("")
+            if (!item.Equals("") && !calorias.Equals("") && !caloriasType.Equals("") && !quantity.Equals("")
                 && !dosage.Equals("") && !restaurant.Equals(""))
             {
-                if (!caloriasPattern.IsMatch(calorias))
+                if (caloriasPattern.IsMatch(calorias))
                 {
                     if (!restaurant.Equals("..."))
                     {
@@ -97,9 +101,20 @@ namespace AdinistrationApp_eNutre.Forms
             }
         }
 
-        public FormPlate()
+        public FormPlate(string Token)
         {
             InitializeComponent();
+            this.funcao = Funcao.Abrir;
+            this.TOKEN = Token;
+            client = new ServiceAppNutreClient();
+        }
+        public FormPlate(string Token, int id)
+        {
+            InitializeComponent();
+            this.funcao = Funcao.Editar;
+            this.id = id;
+            this.TOKEN = Token;
+            client = new ServiceAppNutreClient();
         }
 
         private void FormPlate_Load(object sender, EventArgs e)
@@ -120,6 +135,21 @@ namespace AdinistrationApp_eNutre.Forms
                 string calorias = tb_calories.Text.Trim();
                 string caloriasType = cb_caloriesType.Text.Trim();
                 string restaurant = cb_restaurant.Text.Trim();
+
+                Plate plate = new Plate();
+                plate.Name = item;
+                plate.QuantityValue = quantity;
+                plate.QuantityDosage = dosage;
+                plate.QuantityExtraDosage = extraDosage;
+                plate.CaloriesValue = int.Parse(calorias);
+                plate.CaloriasUnit = caloriasType;
+                plate.RestaurantName = restaurant;
+
+                bool res = client.addRestaurant(plate, TOKEN);
+
+                if (res)
+                    MessageBox.Show("Prato inserido com sucesso!", "Info", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
             }
         }
 

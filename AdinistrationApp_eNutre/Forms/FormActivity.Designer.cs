@@ -129,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(233, 15);
+            this.label3.Location = new System.Drawing.Point(250, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(11, 13);
             this.label3.TabIndex = 14;
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 134);
+            this.ClientSize = new System.Drawing.Size(293, 134);
             this.ControlBox = false;
             this.Controls.Add(this.bt_cancelar);
             this.Controls.Add(this.label3);

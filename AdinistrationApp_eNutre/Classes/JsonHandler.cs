@@ -14,6 +14,43 @@ namespace AdinistrationApp_eNutre.Classes
 {
     public static class JsonHandler
     {
+        private class InnerActivity
+        {
+            private string nome;
+            private int calorias;
+            private double met;
+
+            public InnerActivity(string nome, int calorias, double met)
+            {
+                this.nome = nome;
+                this.met = met;
+                this.calorias = calorias;
+            }
+
+            public string Nome
+            {
+                get { return nome; }
+                set { nome = value; }
+            }
+
+            public int Calorias
+            {
+                get { return calorias; }
+                set { calorias = value; }
+            }
+
+            public double Met
+            {
+                get { return met; }
+                set { met = value; }
+            }
+
+            public override string ToString()
+            {
+                return "Activity: " + nome + "; MET: " + met + "; Cals/h: " + calorias;
+            }
+        }
+
         public static string createXml(string path)
         {
             bool isValid = true;
@@ -25,9 +62,9 @@ namespace AdinistrationApp_eNutre.Classes
                 XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(dec);
 
-                List<Activity> activitiesList = new List<Activity>();
+                List<InnerActivity> activitiesList = new List<InnerActivity>();
                 string file = System.IO.File.ReadAllText(path);
-                activitiesList = JsonConvert.DeserializeObject<List<Activity>>(file);
+                activitiesList = JsonConvert.DeserializeObject<List<InnerActivity>>(file);
 
                 // ROOT
                 XmlElement root = doc.CreateElement("exercises");
@@ -35,7 +72,7 @@ namespace AdinistrationApp_eNutre.Classes
 
                 int id = 1;
 
-                foreach (Activity act in activitiesList)
+                foreach (InnerActivity act in activitiesList)
                 {
                     XmlElement exerciseNode = doc.CreateElement("exercise");
                     exerciseNode.SetAttribute("id", id.ToString());

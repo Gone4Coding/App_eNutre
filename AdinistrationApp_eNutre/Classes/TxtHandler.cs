@@ -126,7 +126,6 @@ namespace AdinistrationApp_eNutre.Classes
                     }
                     calories.AppendChild(caloriesValue);
                     calories.AppendChild(caloriesUnity);
-                   
 
                     root.AppendChild(food);
                 }

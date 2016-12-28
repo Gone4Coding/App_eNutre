@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace AdministrationApp_eNutre.Classes
 {
-    class Activity
+    public class Activity
     {
         private string nome;
-        private int calorias;
-        private double met;
+        private string metName;
+        private int caloriasValue;
+        private string caloriasUnit;
+        private string met;
 
-        public Activity(string nome, int calorias, double met)
+        public Activity(string nome, int caloriasValue, string caloriasUnit, string metName, string met)
         {
             this.nome = nome;
             this.met = met;
-            this.calorias = calorias;
+            this.caloriasUnit = caloriasUnit;
+            this.caloriasValue = caloriasValue;
+            this.metName = metName;
         }
 
         public string Nome
@@ -25,21 +29,28 @@ namespace AdministrationApp_eNutre.Classes
             set { nome = value; }
         }
 
-        public int Calorias
+        public string MetName
         {
-            get { return calorias; }
-            set { calorias = value; }
+            get { return metName; }
+            set { metName = value; }
         }
 
-        public double Met
+        public int CaloriasValue
+        {
+            get { return caloriasValue; }
+            set { caloriasValue = value; }
+        }
+
+        public string CaloriasUnit
+        {
+            get { return caloriasUnit; }
+            set { caloriasUnit = value; }
+        }
+
+        public string Met
         {
             get { return met; }
             set { met = value; }
-        }
-
-        public override string ToString()
-        {
-            return "Activity: " + nome + "; MET: " + met + "; Cals/h: " + calorias;
         }
     }
 }

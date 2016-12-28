@@ -13,6 +13,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CaloriasUnit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CaloriasValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Met" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MetName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
@@ -23,6 +24,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CaloriasUnit" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CaloriesValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="QuantityDosage" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="QuantityExtraDosage" nillable="true" type="xs:string" />

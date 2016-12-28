@@ -106,6 +106,9 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         private int CaloriasValueField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MetField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -146,6 +149,19 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
                 if ((this.CaloriasValueField.Equals(value) != true)) {
                     this.CaloriasValueField = value;
                     this.RaisePropertyChanged("CaloriasValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -215,6 +231,9 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         private int CaloriesValueField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -261,6 +280,19 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
                 if ((this.CaloriesValueField.Equals(value) != true)) {
                     this.CaloriesValueField = value;
                     this.RaisePropertyChanged("CaloriesValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -631,6 +663,42 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/getVegetablesListBycalories", ReplyAction="http://tempuri.org/IServiceAppNutre/getVegetablesListBycaloriesResponse")]
         System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Vegetable[]> getVegetablesListBycaloriesAsync(int calories, string unity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/GetActivityById", ReplyAction="http://tempuri.org/IServiceAppNutre/GetActivityByIdResponse")]
+        AdinistrationApp_eNutre.ServiceAppNutre.Activity GetActivityById(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/GetActivityById", ReplyAction="http://tempuri.org/IServiceAppNutre/GetActivityByIdResponse")]
+        System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Activity> GetActivityByIdAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/GetPlateById", ReplyAction="http://tempuri.org/IServiceAppNutre/GetPlateByIdResponse")]
+        AdinistrationApp_eNutre.ServiceAppNutre.Plate GetPlateById(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/GetPlateById", ReplyAction="http://tempuri.org/IServiceAppNutre/GetPlateByIdResponse")]
+        System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Plate> GetPlateByIdAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/GetVegetableById", ReplyAction="http://tempuri.org/IServiceAppNutre/GetVegetableByIdResponse")]
+        AdinistrationApp_eNutre.ServiceAppNutre.Vegetable GetVegetableById(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/GetVegetableById", ReplyAction="http://tempuri.org/IServiceAppNutre/GetVegetableByIdResponse")]
+        System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Vegetable> GetVegetableByIdAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/UpdateActivity", ReplyAction="http://tempuri.org/IServiceAppNutre/UpdateActivityResponse")]
+        bool UpdateActivity(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, int _id, string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/UpdateActivity", ReplyAction="http://tempuri.org/IServiceAppNutre/UpdateActivityResponse")]
+        System.Threading.Tasks.Task<bool> UpdateActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, int _id, string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/UpdatePlate", ReplyAction="http://tempuri.org/IServiceAppNutre/UpdatePlateResponse")]
+        bool UpdatePlate(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, int _id, string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/UpdatePlate", ReplyAction="http://tempuri.org/IServiceAppNutre/UpdatePlateResponse")]
+        System.Threading.Tasks.Task<bool> UpdatePlateAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, int _id, string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/UpdateVegetable", ReplyAction="http://tempuri.org/IServiceAppNutre/UpdateVegetableResponse")]
+        bool UpdateVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, int _id, string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/UpdateVegetable", ReplyAction="http://tempuri.org/IServiceAppNutre/UpdateVegetableResponse")]
+        System.Threading.Tasks.Task<bool> UpdateVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, int _id, string token);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -818,6 +886,54 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         
         public System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Vegetable[]> getVegetablesListBycaloriesAsync(int calories, string unity) {
             return base.Channel.getVegetablesListBycaloriesAsync(calories, unity);
+        }
+        
+        public AdinistrationApp_eNutre.ServiceAppNutre.Activity GetActivityById(int _id) {
+            return base.Channel.GetActivityById(_id);
+        }
+        
+        public System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Activity> GetActivityByIdAsync(int _id) {
+            return base.Channel.GetActivityByIdAsync(_id);
+        }
+        
+        public AdinistrationApp_eNutre.ServiceAppNutre.Plate GetPlateById(int _id) {
+            return base.Channel.GetPlateById(_id);
+        }
+        
+        public System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Plate> GetPlateByIdAsync(int _id) {
+            return base.Channel.GetPlateByIdAsync(_id);
+        }
+        
+        public AdinistrationApp_eNutre.ServiceAppNutre.Vegetable GetVegetableById(int _id) {
+            return base.Channel.GetVegetableById(_id);
+        }
+        
+        public System.Threading.Tasks.Task<AdinistrationApp_eNutre.ServiceAppNutre.Vegetable> GetVegetableByIdAsync(int _id) {
+            return base.Channel.GetVegetableByIdAsync(_id);
+        }
+        
+        public bool UpdateActivity(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, int _id, string token) {
+            return base.Channel.UpdateActivity(activity, _id, token);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, int _id, string token) {
+            return base.Channel.UpdateActivityAsync(activity, _id, token);
+        }
+        
+        public bool UpdatePlate(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, int _id, string token) {
+            return base.Channel.UpdatePlate(plate, _id, token);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdatePlateAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, int _id, string token) {
+            return base.Channel.UpdatePlateAsync(plate, _id, token);
+        }
+        
+        public bool UpdateVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, int _id, string token) {
+            return base.Channel.UpdateVegetable(vegetable, _id, token);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, int _id, string token) {
+            return base.Channel.UpdateVegetableAsync(vegetable, _id, token);
         }
     }
 }

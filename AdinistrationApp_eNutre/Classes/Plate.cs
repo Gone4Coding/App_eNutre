@@ -6,48 +6,68 @@ using System.Threading.Tasks;
 
 namespace AdministrationApp_eNutre.Classes
 {
-    class Plate
+    public class Plate
     {
         private string name;
         private string restaurantName;
-        private string quantity;
-        private int calories;
+        private string quantityValue;
+        private string quantityDosage;
+        private string quantityExtraDosage;
+        private int caloriesValue;
+        private string caloriasUnit;
 
-        public Plate(string name, string restaurantName, string quantity, int calories)
+        public Plate(string name, string restaurantName, string quantityValue, string quantityDosage, string quantityExtraDosage,
+            int caloriesValue, string caloriasUnit)
         {
             this.name = name;
             this.restaurantName = restaurantName;
-            this.quantity = quantity;
-            this.calories = calories;
+            this.quantityValue = quantityValue;
+            this.quantityDosage = quantityDosage;
+            this.quantityExtraDosage = quantityExtraDosage;
+            this.caloriesValue = caloriesValue;
+            this.caloriasUnit = caloriasUnit;
         }
-
+        
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
-
+        
         public string RestaurantName
         {
             get { return restaurantName; }
             set { restaurantName = value; }
         }
-
-        public string Quantity
+        
+        public string QuantityValue
         {
-            get { return quantity; }
-            set { quantity = value; }
+            get { return quantityValue; }
+            set { quantityValue = value; }
         }
-
-        public int Calories
+        
+        public string QuantityDosage
         {
-            get { return calories; }
-            set { calories = value; }
+            get { return quantityDosage; }
+            set { quantityDosage = value; }
         }
-
-        public override string ToString()
+        
+        public string QuantityExtraDosage
         {
-            return "Name: " + name + "; Restaurant: " + restaurantName + "; Quantity: " + quantity + "; Calories: " + calories;
+            get { return quantityExtraDosage; }
+            set { quantityExtraDosage = value; }
+        }
+        
+        public int CaloriesValue
+        {
+            get { return caloriesValue; }
+            set { caloriesValue = value; }
+        }
+        
+        public string CaloriasUnit
+        {
+            get { return caloriasUnit; }
+            set { caloriasUnit = value; }
         }
     }
 }

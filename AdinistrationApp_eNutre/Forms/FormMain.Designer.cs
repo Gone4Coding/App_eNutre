@@ -179,11 +179,13 @@
             // 
             // lv_tables
             // 
+            this.lv_tables.FullRowSelect = true;
             this.lv_tables.Location = new System.Drawing.Point(11, 21);
             this.lv_tables.Name = "lv_tables";
             this.lv_tables.Size = new System.Drawing.Size(484, 237);
             this.lv_tables.TabIndex = 0;
             this.lv_tables.UseCompatibleStateImageBehavior = false;
+            this.lv_tables.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.lv_tables_ColumnWidthChanging);
             // 
             // bt_close
             // 

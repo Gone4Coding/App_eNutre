@@ -1,18 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdinistrationApp_eNutre.ServiceAppNutre;
+using Activity = AdinistrationApp_eNutre.ServiceAppNutre.Activity;
 
 namespace AdinistrationApp_eNutre.Forms
 {
     public partial class FormActivity : Form
     {
+        private ServiceAppNutreClient client;
+        private string TOKEN;
+        private int id;
+        private Funcao funcao;
+
+        public enum Funcao
+        {
+            Abrir, 
+            Editar
+        } 
 
         private void FillComboBox()
         {
@@ -27,14 +32,14 @@ namespace AdinistrationApp_eNutre.Forms
             string caloriasType = cb_caloriesType.Text.Trim();
             string met = tb_activityMet.Text.Trim();
 
-            Regex caloriasPattern = new Regex("^[0-9]$");
+            Regex caloriasPattern = new Regex("^[0-9]+$");
             Regex metPattern = new Regex("^([0-9]+).[0-9]$");
 
-            if (!name.Equals("") && !calorias.Equals("") && caloriasType.Equals("") && !met.Equals(""))
+            if (!name.Equals("") && !calorias.Equals("") && !caloriasType.Equals("") && !met.Equals(""))
             {
-                if (!caloriasPattern.IsMatch(calorias))
+                if (caloriasPattern.IsMatch(calorias))
                 {
-                    if (!metPattern.IsMatch(met))
+                    if (metPattern.IsMatch(met))
                     {
                         return true;
                     }
@@ -62,9 +67,35 @@ namespace AdinistrationApp_eNutre.Forms
             return false;
         }
 
-        public FormActivity()
+        private void PreencheCampos()
+        {
+            if (funcao == Funcao.Abrir)
+            {
+                Activity act = client.GetActivityById(id);
+
+                tb_activityName.Text = act.Nome;
+                tb_calories.Text = act.CaloriasValue.ToString();
+                tb_activityMet.Text = act.Met;
+                cb_caloriesType.SelectedItem = act.CaloriasUnit;
+            }
+        }
+
+        public FormActivity(string Token)
         {
             InitializeComponent();
+            this.funcao = Funcao.Abrir;
+            this.TOKEN = Token;
+            client = new ServiceAppNutreClient();
+        }
+
+        public FormActivity(string Token, int id)
+        {
+            InitializeComponent();
+            this.funcao = Funcao.Editar;
+            this.id = id;
+            this.TOKEN = Token;
+            client = new ServiceAppNutreClient();
+            PreencheCampos();
         }
 
         private void FormActivity_Load(object sender, EventArgs e)
@@ -83,11 +114,18 @@ namespace AdinistrationApp_eNutre.Forms
                 string met = tb_activityMet.Text.Trim();
 
                 //TODO
-                // CRIAR OBEJTO TIPO ACTIVITY
-                // ENVIAR PARA CIMA
+                Activity activity = new Activity();
+                activity.Nome = name;
+                activity.CaloriasValue = int.Parse(calorias);
+                activity.CaloriasUnit = caloriasType;
+                activity.Met = met;
+                activity.MetName = "Metabolic Equivalent";
 
-                // MESSAGEBOX
-
+                bool res = client.addActivity(activity, TOKEN);
+                if (res)
+                    MessageBox.Show("Atividade inserida com sucesso!", "Info", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                
                 Close();
             }
 

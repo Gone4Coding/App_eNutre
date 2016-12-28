@@ -7,47 +7,75 @@ using AdinistrationApp_eNutre.Classes;
 
 namespace AdministrationApp_eNutre.Classes
 {
-    class Vegetable
+    public class Vegetable
     {
+        private int id;
         private string name;
-        private string extraInfo;
-        private string quantity;
-        private string calories;
+        private List<string> extraInfo;
+        private string quantityValue;
+        private string unityQuantity;
+        private int caloriesValue;
+        private string unityCal;
 
-        public Vegetable(string name, string quantity, string calories)
+
+        public Vegetable(int id, string name, List<string> extraInfo, string quantityValue, string unityQuantity, int caloriesValue, string unityCal)
         {
-
+            this.id = id;
             this.name = name;
-            this.quantity = quantity;
-            this.calories = calories;
-        }
-
-        public Vegetable(string name, string extraInfo, string quantity, string calories)
-        {
-            this.name = name;
-            this.quantity = quantity;
-            this.calories = calories;
             this.extraInfo = extraInfo;
+            this.quantityValue = quantityValue;
+            this.unityQuantity = unityQuantity;
+            this.caloriesValue = caloriesValue;
+            this.unityCal = unityCal;
         }
+        
 
-        public string getName()
+        public int Id
         {
-            return name;
+            get { return id; }
+            set { id = value; }
         }
+        
 
-        public string getExtraInfo()
+        public string Name
         {
-            return extraInfo;
+            get { return name; }
+            set { name = value; }
         }
+        
 
-        public string getQuantity()
+        public List<string> ExtraInfo
         {
-            return quantity;
+            get { return extraInfo; }
+            set { extraInfo = value; }
         }
+        
 
-        public string getCalories()
+        public string QuantityValue
         {
-            return calories;
+            get { return quantityValue; }
+            set { quantityValue = value; }
+        }
+        
+
+        public string UnityQuantity
+        {
+            get { return unityQuantity; }
+            set { unityQuantity = value; }
+        }
+        
+
+        public int CaloriesValue
+        {
+            get { return caloriesValue; }
+            set { caloriesValue = value; }
+        }
+        
+
+        public string UnityCal
+        {
+            get { return unityCal; }
+            set { unityCal = value; }
         }
     }
 }

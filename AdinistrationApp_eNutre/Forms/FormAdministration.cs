@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.Classes;
+using AdinistrationApp_eNutre.ServiceAppNutre;
 
 namespace AdinistrationApp_eNutre.Forms
 {
     public partial class FormAdministration : Form
     {
-        public FormAdministration()
+        private ServiceAppNutreClient client;
+        private string TOKEN;
+
+        public FormAdministration(string Token)
         {
             InitializeComponent();
+            this.TOKEN = Token;
+            client = new ServiceAppNutreClient();
         }
 
         private void FormAdministration_Load(object sender, EventArgs e)

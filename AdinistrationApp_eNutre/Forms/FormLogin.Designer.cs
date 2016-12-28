@@ -51,6 +51,7 @@
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(100, 20);
             this.tb_username.TabIndex = 1;
+            this.tb_username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_username_KeyDown);
             // 
             // label2
             // 
@@ -66,14 +67,15 @@
             this.tb_passwod.Location = new System.Drawing.Point(109, 38);
             this.tb_passwod.Name = "tb_passwod";
             this.tb_passwod.Size = new System.Drawing.Size(100, 20);
-            this.tb_passwod.TabIndex = 1;
+            this.tb_passwod.TabIndex = 2;
+            this.tb_passwod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_passwod_KeyDown);
             // 
             // bt_login
             // 
             this.bt_login.Location = new System.Drawing.Point(80, 64);
             this.bt_login.Name = "bt_login";
             this.bt_login.Size = new System.Drawing.Size(75, 23);
-            this.bt_login.TabIndex = 2;
+            this.bt_login.TabIndex = 3;
             this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = true;
             this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
@@ -83,7 +85,7 @@
             this.bt_cancelar.Location = new System.Drawing.Point(80, 93);
             this.bt_cancelar.Name = "bt_cancelar";
             this.bt_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.bt_cancelar.TabIndex = 2;
+            this.bt_cancelar.TabIndex = 4;
             this.bt_cancelar.Text = "Cancelar";
             this.bt_cancelar.UseVisualStyleBackColor = true;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
@@ -103,6 +105,7 @@
             this.Name = "FormLogin";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
