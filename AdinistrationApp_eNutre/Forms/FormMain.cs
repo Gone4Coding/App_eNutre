@@ -185,6 +185,18 @@ namespace AdinistrationApp_eNutre.Forms
             }
         }
 
+        private void logout()
+        {
+            try
+            {
+                client.LogOut(TOKEN); 
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
         // END FUNCTIONS
 
         // BUTTONS
@@ -293,6 +305,7 @@ namespace AdinistrationApp_eNutre.Forms
 
         private void bt_close_Click(object sender, EventArgs e)
         {
+            logout();
             Close();
         }
 

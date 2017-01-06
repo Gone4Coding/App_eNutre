@@ -52,12 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Activity.cs" />
     <Compile Include="Classes\ExcelHandler.cs" />
     <Compile Include="Classes\JsonHandler.cs" />
-    <Compile Include="Classes\Plate.cs" />
     <Compile Include="Classes\TxtHandler.cs" />
-    <Compile Include="Classes\Vegetable.cs" />
     <Compile Include="Forms\FormActivity.cs">
       <SubType>Form</SubType>
     </Compile>

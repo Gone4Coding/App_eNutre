@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using AdinistrationApp_eNutre.Classes;
 using AdinistrationApp_eNutre.ServiceAppNutre;
 
@@ -53,26 +54,30 @@ namespace AdinistrationApp_eNutre.Forms
         {
             lb_validacao.Text = "";
 
-            if (!tb_filePathVeggie.Text.Equals(""))
+            string path = tb_filePathVeggie.Text;
+
+            if (!path.Equals(""))
             {
-                string path = tb_filePathVeggie.Text;
-
-                string msg = TxtHandler.createXml(path);
-
-                if (msg.Equals(""))
+                try
                 {
-                    lb_resultVegetable.Text = "Error in File. Check Format";
+
+                    XmlDocument vegiDocument = TxtHandler.createXml(path);
+
+                    string data = vegiDocument.ToString();
+                    object[] dataToSend = new[] { Encoding.UTF8.GetBytes(data) };
+
+                    client.addVegetableXML(dataToSend, TOKEN);
+
+                    lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
-                else
+                catch (ArgumentException ex)
                 {
-                    lb_resultVegetable.Text = "File Added";
-
-                    lb_validacao.Text = msg;
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Choose a file first");
+                MessageBox.Show("Escolha um ficheiro primeiro");
             }
         }
 
@@ -101,25 +106,30 @@ namespace AdinistrationApp_eNutre.Forms
         private void bt_addFileRestaurants_Click(object sender, EventArgs e)
         {
             lb_validacaoRestaurant.Text = "";
-            if (!tb_filePathRestaurant.Text.Equals(""))
-            {
-                string path = tb_filePathRestaurant.Text;
-                string msg = ExcelHandler.createXml(path);
-                
-                if (msg.Equals(""))
-                {
-                    lb_resultRestaurants.Text = "Error in File. Check Format";
-                }
-                else
-                {
-                    lb_resultRestaurants.Text = "File Added";
+            string path = tb_filePathRestaurant.Text;
 
-                    lb_validacaoRestaurant.Text = msg;
+            if (!path.Equals(""))
+            {
+                try
+                {
+                    XmlDocument platesDoc = ExcelHandler.createXml(path);
+
+                    string data = platesDoc.ToString();
+                    object[] dataToSend = new[] { Encoding.UTF8.GetBytes(data) };
+
+                    client.addRestaurantXML(dataToSend, TOKEN);
+
+                    lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                 }
             }
             else
             {
-                MessageBox.Show("Choose a file first");
+                MessageBox.Show("Escolha um ficheiro primeiro");
             }
         }
 
@@ -148,25 +158,30 @@ namespace AdinistrationApp_eNutre.Forms
         private void bt_addFileActivities_Click(object sender, EventArgs e)
         {
             lb_validacaoActivities.Text = "";
-            if (!tb_filePathActivity.Text.Equals(""))
+            string path = tb_filePathActivity.Text;
+
+            if (!path.Equals(""))
             {
-                string path = tb_filePathActivity.Text;
-                string msg = JsonHandler.createXml(path);
-
-                if (msg.Equals(""))
+                try
                 {
-                    lb_resultActivities.Text = "Error in File. Check Format";
+                    XmlDocument actsDoc = JsonHandler.createXml(path);
+
+                    string data = actsDoc.ToString();
+                    object[] dataToSend = new[] { Encoding.UTF8.GetBytes(data) };
+
+                    client.addActivityXML(dataToSend, TOKEN);
+
+                    lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
-                else
+                catch (ArgumentException ex)
                 {
-                    lb_resultActivities.Text = "File Added";
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    lb_validacaoActivities.Text = msg;
                 }
             }
             else
             {
-                MessageBox.Show("Choose a file first");
+                MessageBox.Show("Escolha um ficheiro primeiro");
             }
         }
 

@@ -7,22 +7,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using AdinistrationApp_eNutre.Forms;
-using AdministrationApp_eNutre.Classes;
 using Microsoft.Office.Core;
 
 namespace AdinistrationApp_eNutre.Classes
 {
     public static class TxtHandler
     {
-
-
-        public static string createXml(string path)
+        public static XmlDocument createXml(string path)
         {
-            string msg1 = "";
-            string msg2;
-           
-            bool isValid = true;
-            string filenameXML = @"..\\..\\XML\\Xml_Files\\vegetables.xml";
+            XmlDocument doc = new XmlDocument();
 
             try
             {
@@ -32,7 +25,7 @@ namespace AdinistrationApp_eNutre.Classes
                 List<string> listVeg = new List<string>(vegetables);
                 int conta = 0;
                 int id = 0;
-                XmlDocument doc = new XmlDocument();
+                
                 XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(dec);
 
@@ -129,33 +122,12 @@ namespace AdinistrationApp_eNutre.Classes
 
                     root.AppendChild(food);
                 }
-
-                doc.Save(filenameXML);
-
-                MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                XmlReaderSettings xsdReader = new XmlReaderSettings();
-                string vegetablesXsd = @"..\\..\\XML\\Schemas\\vegetablesSchema.xsd";
-
-                xsdReader.Schemas.Add(null, vegetablesXsd);
-                xsdReader.ValidationType = ValidationType.Schema;
-
-                XmlReader reader = XmlReader.Create(filenameXML, xsdReader);
-                doc.Load(reader);
-
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                isValid = false;
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
-            finally
-            {
-                msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
-            }
-
-
-            return msg2;
+            return doc;
         }
 
         private static string tiraParentesis(string str, int ultimosChars)
@@ -166,7 +138,6 @@ namespace AdinistrationApp_eNutre.Classes
 
             return substring;
         }
-
 
     }
 }

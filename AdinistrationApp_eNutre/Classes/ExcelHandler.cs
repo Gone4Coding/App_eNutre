@@ -13,12 +13,9 @@ namespace AdinistrationApp_eNutre.Classes
 {
     public static class ExcelHandler
     {
-        public static string createXml(string path)
+        public static XmlDocument createXml(string path)
         {
-            bool isValid = true;
-            string msg1 = "";
-            string msg2;
-
+            XmlDocument doc = new XmlDocument();
 
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.Visible = false;
@@ -28,7 +25,6 @@ namespace AdinistrationApp_eNutre.Classes
 
             try
             {
-                XmlDocument doc = new XmlDocument();
                 XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(dec);
 
@@ -36,14 +32,14 @@ namespace AdinistrationApp_eNutre.Classes
                 doc.AppendChild(root);
 
                 int id = 1;
-                
+
                 for (int line = 2; line <= workSheet.UsedRange.Rows.Count; line++)
                 {
                     string restaurantName = workSheet.Cells[line, 1].Value;
 
                     XmlElement restaurantNode = doc.CreateElement("restaurant");
                     restaurantNode.SetAttribute("name", restaurantName);
-                    
+
                     XmlElement plateNode = doc.CreateElement("plate");
                     plateNode.SetAttribute("id", id.ToString());
 
@@ -180,34 +176,12 @@ namespace AdinistrationApp_eNutre.Classes
 
                     root.AppendChild(restaurantNode);
                 }
-
-                doc.Save(@"..\\..\\XML\\Xml_Files\\restaurants.xml");
-
-                XmlReaderSettings settings = new XmlReaderSettings();
-                settings.Schemas.Add(null, @"..\\..\\XML\\Schemas\\restaurantsSchema.xsd");
-                settings.ValidationType = ValidationType.Schema;
-
-                XmlReader reader = XmlReader.Create(@"..\\..\\XML\\Xml_Files\\restaurants.xml", settings);
-                doc.Load(reader);			
-
-                MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                
             }
             catch (Exception ex)
             {
-                isValid = false;
-               
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
-            finally
-            {
-                msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
-
-                workBook.Close();
-                excelApplication.Quit();
-            }
-            return msg2;
+            return doc;
         }
        
     }

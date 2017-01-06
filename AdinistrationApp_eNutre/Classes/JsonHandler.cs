@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Schema;
-using AdministrationApp_eNutre.Classes;
 using Newtonsoft.Json;
 
 namespace AdinistrationApp_eNutre.Classes
@@ -51,14 +50,13 @@ namespace AdinistrationApp_eNutre.Classes
             }
         }
 
-        public static string createXml(string path)
+        public static XmlDocument createXml(string path)
         {
-            bool isValid = true;
-            string msg1 = "";
-            string msg2;
+            XmlDocument doc = new XmlDocument();
+
             try
             {
-                XmlDocument doc = new XmlDocument();
+
                 XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(dec);
 
@@ -99,7 +97,7 @@ namespace AdinistrationApp_eNutre.Classes
                     XmlElement caloriesNodeUnity = doc.CreateElement("unity");
                     caloriesNodeUnity.InnerText = "kcal";
                     caloriesNode.AppendChild(caloriesNodeUnity);
-                    
+
 
                     exerciseNode.AppendChild(activityNode);
                     exerciseNode.AppendChild(metNode);
@@ -108,30 +106,13 @@ namespace AdinistrationApp_eNutre.Classes
 
                     id++;
                 }
-                
-                doc.Save(@"..\\..\\XML\\Xml_Files\\exercises.xml");
-
-                XmlReaderSettings settings = new XmlReaderSettings();
-                settings.Schemas.Add(null, @"..\\..\\XML\\Schemas\\activitiesSchema.xsd");
-                settings.ValidationType = ValidationType.Schema;
-
-                XmlReader reader = XmlReader.Create(@"..\\..\\XML\\Xml_Files\\exercises.xml",settings);
-                doc.Load(reader);
-
-                MessageBox.Show("Ficheiro Xml criado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                isValid = false;
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
-            finally
-            {
-                msg2 = isValid ? "O doc é valido!" : "O doc é invalido...";
-            }
-            return msg2;
+            return doc;
         }
-
     }
 }
 

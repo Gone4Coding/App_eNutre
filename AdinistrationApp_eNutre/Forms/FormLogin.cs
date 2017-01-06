@@ -15,18 +15,19 @@ namespace AdinistrationApp_eNutre.Forms
 
             if (!username.Equals("") && !pass.Equals(""))
             {
-                string token = client.LogIn(username, pass);
-                if (token != null)
+                try
                 {
+                    string token = client.LogIn(username, pass);
                     FormMain main = new FormMain(token);
                     Hide();
                     main.ShowDialog();
                     Close();
                 }
-                MessageBox.Show("Combinação Nome de Uilizador/Password incorreta", "Aviso", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
-                return;
-
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
             if (username.Equals(""))
             {
