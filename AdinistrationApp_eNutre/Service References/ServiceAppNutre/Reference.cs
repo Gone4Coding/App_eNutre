@@ -542,10 +542,10 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         System.Threading.Tasks.Task addActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addActivityXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addActivityXMLResponse")]
-        void addActivityXML(string activitiesXml, string token);
+        void addActivityXML(string _activitiesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addActivityXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addActivityXMLResponse")]
-        System.Threading.Tasks.Task addActivityXMLAsync(string activitiesXml, string token);
+        System.Threading.Tasks.Task addActivityXMLAsync(string _activitiesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurant", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantResponse")]
         void addRestaurant(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token);
@@ -554,10 +554,10 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         System.Threading.Tasks.Task addRestaurantAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurantXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantXMLResponse")]
-        void addRestaurantXML(string platesXml, string token);
+        void addRestaurantXML(string _platesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurantXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantXMLResponse")]
-        System.Threading.Tasks.Task addRestaurantXMLAsync(string platesXml, string token);
+        System.Threading.Tasks.Task addRestaurantXMLAsync(string _platesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetable", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableResponse")]
         void addVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token);
@@ -566,10 +566,10 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         System.Threading.Tasks.Task addVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetableXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableXMLResponse")]
-        void addVegetableXML(string vegetablesXml, string token);
+        void addVegetableXML(string _vegetablesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetableXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableXMLResponse")]
-        System.Threading.Tasks.Task addVegetableXMLAsync(string vegetablesXml, string token);
+        System.Threading.Tasks.Task addVegetableXMLAsync(string _vegetablesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/getActivitiesList", ReplyAction="http://tempuri.org/IServiceAppNutre/getActivitiesListResponse")]
         AdinistrationApp_eNutre.ServiceAppNutre.Activity[] getActivitiesList();
@@ -733,12 +733,12 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
             return base.Channel.addActivityAsync(activity, token);
         }
         
-        public void addActivityXML(string activitiesXml, string token) {
-            base.Channel.addActivityXML(activitiesXml, token);
+        public void addActivityXML(string _activitiesXml, string token) {
+            base.Channel.addActivityXML(_activitiesXml, token);
         }
         
-        public System.Threading.Tasks.Task addActivityXMLAsync(string activitiesXml, string token) {
-            return base.Channel.addActivityXMLAsync(activitiesXml, token);
+        public System.Threading.Tasks.Task addActivityXMLAsync(string _activitiesXml, string token) {
+            return base.Channel.addActivityXMLAsync(_activitiesXml, token);
         }
         
         public void addRestaurant(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token) {
@@ -749,12 +749,12 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
             return base.Channel.addRestaurantAsync(plate, token);
         }
         
-        public void addRestaurantXML(string platesXml, string token) {
-            base.Channel.addRestaurantXML(platesXml, token);
+        public void addRestaurantXML(string _platesXml, string token) {
+            base.Channel.addRestaurantXML(_platesXml, token);
         }
         
-        public System.Threading.Tasks.Task addRestaurantXMLAsync(string platesXml, string token) {
-            return base.Channel.addRestaurantXMLAsync(platesXml, token);
+        public System.Threading.Tasks.Task addRestaurantXMLAsync(string _platesXml, string token) {
+            return base.Channel.addRestaurantXMLAsync(_platesXml, token);
         }
         
         public void addVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token) {
@@ -765,12 +765,12 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
             return base.Channel.addVegetableAsync(vegetable, token);
         }
         
-        public void addVegetableXML(string vegetablesXml, string token) {
-            base.Channel.addVegetableXML(vegetablesXml, token);
+        public void addVegetableXML(string _vegetablesXml, string token) {
+            base.Channel.addVegetableXML(_vegetablesXml, token);
         }
         
-        public System.Threading.Tasks.Task addVegetableXMLAsync(string vegetablesXml, string token) {
-            return base.Channel.addVegetableXMLAsync(vegetablesXml, token);
+        public System.Threading.Tasks.Task addVegetableXMLAsync(string _vegetablesXml, string token) {
+            return base.Channel.addVegetableXMLAsync(_vegetablesXml, token);
         }
         
         public AdinistrationApp_eNutre.ServiceAppNutre.Activity[] getActivitiesList() {

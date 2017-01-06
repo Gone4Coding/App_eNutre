@@ -57,7 +57,7 @@
   <xs:element name="addActivityXML">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="activitiesXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_activitiesXml" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -83,7 +83,7 @@
   <xs:element name="addRestaurantXML">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="platesXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_platesXml" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -109,7 +109,7 @@
   <xs:element name="addVegetableXML">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="vegetablesXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_vegetablesXml" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>

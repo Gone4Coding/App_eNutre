@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -62,8 +63,13 @@ namespace AdinistrationApp_eNutre.Forms
                 try
                 {
                     XmlDocument vegiDocument = TxtHandler.createXml(path);
-                    
-                    client.addVegetableXML(vegiDocument.ToString(), TOKEN);
+
+                    string file = vegiDocument.OuterXml;
+
+
+                    file = file.Replace(@"\", "");
+
+                    client.addVegetableXML(file, TOKEN);
 
                     lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
@@ -112,23 +118,33 @@ namespace AdinistrationApp_eNutre.Forms
 
             if (!path.Equals(""))
             {
+                lb_validacaoRestaurant.Text = "A processar...";
+
                 try
                 {
                     XmlDocument platesDoc = ExcelHandler.createXml(path);
-                    
-                    client.addRestaurantXML(platesDoc.ToString(), TOKEN);
+
+                    string file = platesDoc.OuterXml;
+
+                    file = removeWhiteSpace(file);
+
+                    client.addRestaurantXML(file, TOKEN);
 
                     lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
                 catch (FaultException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex, "Aviso", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
+
+                    lb_validacaoRestaurant.Text = "";
                 }
                 catch (ProtocolException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex, "Aviso", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
+
+                    lb_validacaoRestaurant.Text = "";
                 }
             }
             else
@@ -169,8 +185,11 @@ namespace AdinistrationApp_eNutre.Forms
                 try
                 {
                     XmlDocument actsDoc = JsonHandler.createXml(path);
-                    
-                    client.addActivityXML(actsDoc.ToString(), TOKEN);
+
+                    string file = actsDoc.OuterXml;
+                    file = file.Replace(@"\", "");
+
+                    client.addActivityXML(file, TOKEN);
 
                     lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
@@ -188,6 +207,11 @@ namespace AdinistrationApp_eNutre.Forms
             {
                 MessageBox.Show("Escolha um ficheiro primeiro");
             }
+        }
+
+        private string removeWhiteSpace(string input)
+        {
+            return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
         }
 
         // END TABING ACTIVITIES

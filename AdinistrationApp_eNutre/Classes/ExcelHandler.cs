@@ -25,10 +25,10 @@ namespace AdinistrationApp_eNutre.Classes
 
             try
             {
-                /*
-                 * XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
-                 * doc.AppendChild(dec);
-                */
+                
+                XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+                doc.AppendChild(dec);
+                
 
                 XmlElement root = doc.CreateElement("foods");
                 doc.AppendChild(root);
