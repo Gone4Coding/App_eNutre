@@ -518,10 +518,10 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
     public interface IServiceAppNutre {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/SignUp", ReplyAction="http://tempuri.org/IServiceAppNutre/SignUpResponse")]
-        void SignUp(AdinistrationApp_eNutre.ServiceAppNutre.User user, string token);
+        void SignUp(AdinistrationApp_eNutre.ServiceAppNutre.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/SignUp", ReplyAction="http://tempuri.org/IServiceAppNutre/SignUpResponse")]
-        System.Threading.Tasks.Task SignUpAsync(AdinistrationApp_eNutre.ServiceAppNutre.User user, string token);
+        System.Threading.Tasks.Task SignUpAsync(AdinistrationApp_eNutre.ServiceAppNutre.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/LogIn", ReplyAction="http://tempuri.org/IServiceAppNutre/LogInResponse")]
         string LogIn(string username, string password);
@@ -536,67 +536,40 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
         System.Threading.Tasks.Task LogOutAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addActivity", ReplyAction="http://tempuri.org/IServiceAppNutre/addActivityResponse")]
-        bool addActivity(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token);
+        void addActivity(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addActivity", ReplyAction="http://tempuri.org/IServiceAppNutre/addActivityResponse")]
-        System.Threading.Tasks.Task<bool> addActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token);
+        System.Threading.Tasks.Task addActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addActivityXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addActivityXMLResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.User))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Activity))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Plate))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Activity[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Plate[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
-        void addActivityXML(object[] activitiesXml, string token);
+        void addActivityXML(string activitiesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addActivityXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addActivityXMLResponse")]
-        System.Threading.Tasks.Task addActivityXMLAsync(object[] activitiesXml, string token);
+        System.Threading.Tasks.Task addActivityXMLAsync(string activitiesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurant", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantResponse")]
-        bool addRestaurant(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token);
+        void addRestaurant(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurant", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantResponse")]
-        System.Threading.Tasks.Task<bool> addRestaurantAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token);
+        System.Threading.Tasks.Task addRestaurantAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurantXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantXMLResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.User))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Activity))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Plate))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Activity[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Plate[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
-        void addRestaurantXML(object[] platesXml, string token);
+        void addRestaurantXML(string platesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addRestaurantXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addRestaurantXMLResponse")]
-        System.Threading.Tasks.Task addRestaurantXMLAsync(object[] platesXml, string token);
+        System.Threading.Tasks.Task addRestaurantXMLAsync(string platesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetable", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableResponse")]
-        bool addVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token);
+        void addVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetable", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableResponse")]
-        System.Threading.Tasks.Task<bool> addVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token);
+        System.Threading.Tasks.Task addVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetableXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableXMLResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.User))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Activity))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Plate))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Activity[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Plate[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
-        void addVegetableXML(object[] vegetablesXml, string token);
+        void addVegetableXML(string vegetablesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/addVegetableXML", ReplyAction="http://tempuri.org/IServiceAppNutre/addVegetableXMLResponse")]
-        System.Threading.Tasks.Task addVegetableXMLAsync(object[] vegetablesXml, string token);
+        System.Threading.Tasks.Task addVegetableXMLAsync(string vegetablesXml, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAppNutre/getActivitiesList", ReplyAction="http://tempuri.org/IServiceAppNutre/getActivitiesListResponse")]
         AdinistrationApp_eNutre.ServiceAppNutre.Activity[] getActivitiesList();
@@ -728,12 +701,12 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
                 base(binding, remoteAddress) {
         }
         
-        public void SignUp(AdinistrationApp_eNutre.ServiceAppNutre.User user, string token) {
-            base.Channel.SignUp(user, token);
+        public void SignUp(AdinistrationApp_eNutre.ServiceAppNutre.User user) {
+            base.Channel.SignUp(user);
         }
         
-        public System.Threading.Tasks.Task SignUpAsync(AdinistrationApp_eNutre.ServiceAppNutre.User user, string token) {
-            return base.Channel.SignUpAsync(user, token);
+        public System.Threading.Tasks.Task SignUpAsync(AdinistrationApp_eNutre.ServiceAppNutre.User user) {
+            return base.Channel.SignUpAsync(user);
         }
         
         public string LogIn(string username, string password) {
@@ -752,51 +725,51 @@ namespace AdinistrationApp_eNutre.ServiceAppNutre {
             return base.Channel.LogOutAsync(token);
         }
         
-        public bool addActivity(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token) {
-            return base.Channel.addActivity(activity, token);
+        public void addActivity(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token) {
+            base.Channel.addActivity(activity, token);
         }
         
-        public System.Threading.Tasks.Task<bool> addActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token) {
+        public System.Threading.Tasks.Task addActivityAsync(AdinistrationApp_eNutre.ServiceAppNutre.Activity activity, string token) {
             return base.Channel.addActivityAsync(activity, token);
         }
         
-        public void addActivityXML(object[] activitiesXml, string token) {
+        public void addActivityXML(string activitiesXml, string token) {
             base.Channel.addActivityXML(activitiesXml, token);
         }
         
-        public System.Threading.Tasks.Task addActivityXMLAsync(object[] activitiesXml, string token) {
+        public System.Threading.Tasks.Task addActivityXMLAsync(string activitiesXml, string token) {
             return base.Channel.addActivityXMLAsync(activitiesXml, token);
         }
         
-        public bool addRestaurant(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token) {
-            return base.Channel.addRestaurant(plate, token);
+        public void addRestaurant(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token) {
+            base.Channel.addRestaurant(plate, token);
         }
         
-        public System.Threading.Tasks.Task<bool> addRestaurantAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token) {
+        public System.Threading.Tasks.Task addRestaurantAsync(AdinistrationApp_eNutre.ServiceAppNutre.Plate plate, string token) {
             return base.Channel.addRestaurantAsync(plate, token);
         }
         
-        public void addRestaurantXML(object[] platesXml, string token) {
+        public void addRestaurantXML(string platesXml, string token) {
             base.Channel.addRestaurantXML(platesXml, token);
         }
         
-        public System.Threading.Tasks.Task addRestaurantXMLAsync(object[] platesXml, string token) {
+        public System.Threading.Tasks.Task addRestaurantXMLAsync(string platesXml, string token) {
             return base.Channel.addRestaurantXMLAsync(platesXml, token);
         }
         
-        public bool addVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token) {
-            return base.Channel.addVegetable(vegetable, token);
+        public void addVegetable(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token) {
+            base.Channel.addVegetable(vegetable, token);
         }
         
-        public System.Threading.Tasks.Task<bool> addVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token) {
+        public System.Threading.Tasks.Task addVegetableAsync(AdinistrationApp_eNutre.ServiceAppNutre.Vegetable vegetable, string token) {
             return base.Channel.addVegetableAsync(vegetable, token);
         }
         
-        public void addVegetableXML(object[] vegetablesXml, string token) {
+        public void addVegetableXML(string vegetablesXml, string token) {
             base.Channel.addVegetableXML(vegetablesXml, token);
         }
         
-        public System.Threading.Tasks.Task addVegetableXMLAsync(object[] vegetablesXml, string token) {
+        public System.Threading.Tasks.Task addVegetableXMLAsync(string vegetablesXml, string token) {
             return base.Channel.addVegetableXMLAsync(vegetablesXml, token);
         }
         

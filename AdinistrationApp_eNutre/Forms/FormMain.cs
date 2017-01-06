@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.ServiceModel;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.ServiceAppNutre;
 
@@ -191,7 +192,7 @@ namespace AdinistrationApp_eNutre.Forms
             {
                 client.LogOut(TOKEN); 
             }
-            catch (ArgumentException ex)
+            catch (FaultException ex)
             {
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }

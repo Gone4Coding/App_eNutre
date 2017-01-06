@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.ServiceAppNutre;
 
@@ -23,7 +24,7 @@ namespace AdinistrationApp_eNutre.Forms
                     main.ShowDialog();
                     Close();
                 }
-                catch (ArgumentException ex)
+                catch (FaultException ex)
                 {
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -32,13 +33,10 @@ namespace AdinistrationApp_eNutre.Forms
             if (username.Equals(""))
             {
                 MessageBox.Show("O Nome de Utilizador tem \nde ser preenchedo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
             }
             if (pass.Equals(""))
             {
-
                 MessageBox.Show("A Password tem \nde ser preencheda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
             }
         }
         

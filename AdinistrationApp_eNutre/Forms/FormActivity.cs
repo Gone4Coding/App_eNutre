@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.ServiceAppNutre;
@@ -15,9 +16,9 @@ namespace AdinistrationApp_eNutre.Forms
 
         public enum Funcao
         {
-            Abrir, 
+            Abrir,
             Editar
-        } 
+        }
 
         private void FillComboBox()
         {
@@ -43,23 +44,27 @@ namespace AdinistrationApp_eNutre.Forms
                     {
                         return true;
                     }
-                    MessageBox.Show("O MET tem de ser um valor númerico\n(e.g. 123.1, 1.0)", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("O MET tem de ser um valor númerico\n(e.g. 123.1, 1.0)", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
-                MessageBox.Show("As Calorias tem de ser um valor númerico\nSem pontos ou vírgulas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("As Calorias tem de ser um valor númerico\nSem pontos ou vírgulas", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             if (name.Equals(""))
                 MessageBox.Show("O Nome é Obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-              
+
 
             if (calorias.Equals(""))
-                MessageBox.Show("As Calorias são Obrigatórias", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-             
+                MessageBox.Show("As Calorias são Obrigatórias", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
 
             if (caloriasType.Equals(""))
-                MessageBox.Show("O Tipo de Caloria é Obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            
+                MessageBox.Show("O Tipo de Caloria é Obrigatório", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
 
             if (met.Equals(""))
                 MessageBox.Show("O MET é Obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -121,14 +126,20 @@ namespace AdinistrationApp_eNutre.Forms
                 activity.Met = met;
                 activity.MetName = "Metabolic Equivalent";
 
-                bool res = client.addActivity(activity, TOKEN);
-                if (res)
-                    MessageBox.Show("Atividade inserida com sucesso!", "Info", MessageBoxButtons.OK,
+                try
+                {
+                    client.addActivity(activity, TOKEN);
+                    MessageBox.Show("Atividade Inserida com sucesso!", "Info", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-                
-                Close();
-            }
 
+                    Close();
+                }
+                catch (FaultException ex)
+                {
+                    MessageBox.Show("Erro Inserir a Atividaden\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                }
+            }
         }
 
         private void bt_cancelar_Click(object sender, EventArgs e)

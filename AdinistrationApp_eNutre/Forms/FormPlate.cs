@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ServiceModel;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.ServiceAppNutre;
@@ -145,11 +146,18 @@ namespace AdinistrationApp_eNutre.Forms
                 plate.CaloriasUnit = caloriasType;
                 plate.RestaurantName = restaurant;
 
-                bool res = client.addRestaurant(plate, TOKEN);
-
-                if (res)
-                    MessageBox.Show("Prato inserido com sucesso!", "Info", MessageBoxButtons.OK,
+                try
+                {
+                    client.addRestaurant(plate, TOKEN);
+                    MessageBox.Show("Prato Inserido com sucesso!", "Info", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
+                    Close();
+                }
+                catch (FaultException ex)
+                {
+                    MessageBox.Show("Erro Inserir o Prato\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                }
             }
         }
 

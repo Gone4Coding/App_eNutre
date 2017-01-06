@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using AdinistrationApp_eNutre.ServiceAppNutre;
@@ -38,7 +39,7 @@ namespace AdinistrationApp_eNutre.Forms
             Regex valuesPatteen = new Regex("^[0-9]+$");
             Regex extraInfoPatterm = new Regex("^[A-Za-zÁáÀàÉéÍíÓóÚú]+(,[A-Za-zÁáÀàÉéÍíÓóÚú]+)*$");
 
-            if (!name.Equals("") && !calorias.Equals("") && !quantity.Equals("") 
+            if (!name.Equals("") && !calorias.Equals("") && !quantity.Equals("")
                 && !unit.Equals("") && !caloriasType.Equals(""))
             {
                 if (valuesPatteen.IsMatch(calorias))
@@ -53,7 +54,8 @@ namespace AdinistrationApp_eNutre.Forms
                             }
                             MessageBox.Show("A Informação extra tem de ser\n" +
                                             "separadara por vírgulas e não pode conter números\n" +
-                                            "(e.g. cozida, assada)", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                            "(e.g. cozida, assada)", "Aviso", MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
                             return false;
                         }
                         return true;
@@ -70,16 +72,19 @@ namespace AdinistrationApp_eNutre.Forms
                 MessageBox.Show("O Nome é Obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             if (calorias.Equals(""))
-                MessageBox.Show("As Calorias são Obrigatórias", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("As Calorias são Obrigatórias", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
 
             if (caloriasType.Equals(""))
-                MessageBox.Show("O Tipo de Caloria é Obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            
+                MessageBox.Show("O Tipo de Caloria é Obrigatório", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
             if (quantity.Equals(""))
                 MessageBox.Show("A Quantidade é Obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             if (unit.Equals(""))
-                MessageBox.Show("As Unidades são Obrigatórias", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("As Unidades são Obrigatórias", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
 
             return false;
         }
@@ -91,6 +96,7 @@ namespace AdinistrationApp_eNutre.Forms
             this.TOKEN = Token;
             client = new ServiceAppNutreClient();
         }
+
         public FormVegetable(string Token, int id)
         {
             InitializeComponent();
@@ -132,13 +138,17 @@ namespace AdinistrationApp_eNutre.Forms
                 veggie.CaloriesValue = int.Parse(calorias);
                 veggie.UnityCal = caloriasType;
 
-                bool res = client.addVegetable(veggie, TOKEN);
-                if (res)
-                    MessageBox.Show("Vegetal inserido com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // MESSAGEBOX
-
-                Close();
+                try
+                {
+                    client.addVegetable(veggie, TOKEN);
+                    MessageBox.Show("Vegetal Inserido com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                catch (FaultException ex)
+                {
+                    MessageBox.Show("Erro Inserir o Vegetal\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                }
             }
         }
 

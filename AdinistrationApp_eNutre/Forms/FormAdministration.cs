@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -60,19 +61,20 @@ namespace AdinistrationApp_eNutre.Forms
             {
                 try
                 {
-
                     XmlDocument vegiDocument = TxtHandler.createXml(path);
-
-                    string data = vegiDocument.ToString();
-                    object[] dataToSend = new[] { Encoding.UTF8.GetBytes(data) };
-
-                    client.addVegetableXML(dataToSend, TOKEN);
+                    
+                    client.addVegetableXML(vegiDocument.ToString(), TOKEN);
 
                     lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
-                catch (ArgumentException ex)
+                catch (FaultException ex)
                 {
                     MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (ProtocolException ex)
+                {
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
                 }
             }
             else
@@ -113,18 +115,20 @@ namespace AdinistrationApp_eNutre.Forms
                 try
                 {
                     XmlDocument platesDoc = ExcelHandler.createXml(path);
-
-                    string data = platesDoc.ToString();
-                    object[] dataToSend = new[] { Encoding.UTF8.GetBytes(data) };
-
-                    client.addRestaurantXML(dataToSend, TOKEN);
+                    
+                    client.addRestaurantXML(platesDoc.ToString(), TOKEN);
 
                     lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
-                catch (ArgumentException ex)
+                catch (FaultException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                }
+                catch (ProtocolException ex)
+                {
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
                 }
             }
             else
@@ -165,29 +169,25 @@ namespace AdinistrationApp_eNutre.Forms
                 try
                 {
                     XmlDocument actsDoc = JsonHandler.createXml(path);
-
-                    string data = actsDoc.ToString();
-                    object[] dataToSend = new[] { Encoding.UTF8.GetBytes(data) };
-
-                    client.addActivityXML(dataToSend, TOKEN);
+                    
+                    client.addActivityXML(actsDoc.ToString(), TOKEN);
 
                     lb_validacao.Text = "Ficheiro Adicionado Com Sucesso";
                 }
-                catch (ArgumentException ex)
+                catch (FaultException ex)
                 {
                     MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                }
+                catch (ProtocolException ex)
+                {
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
                 MessageBox.Show("Escolha um ficheiro primeiro");
             }
-        }
-
-        private void backgroundWorker_DoWork(DoWorkEventArgs e)
-        {
-            ExcelHandler.createXml(e.Argument.ToString());
         }
 
         // END TABING ACTIVITIES
