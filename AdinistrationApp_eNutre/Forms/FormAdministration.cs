@@ -122,11 +122,17 @@ namespace AdinistrationApp_eNutre.Forms
 
                 try
                 {
-                    XmlDocument platesDoc = ExcelHandler.createXml(path);
+                    //XmlDocument platesDoc = ExcelHandler.createXml(path);
 
-                    string file = platesDoc.OuterXml;
+                    //string file = platesDoc.OuterXml;
 
-                    file = removeWhiteSpace(file);
+                    string file = "<?xml version=\"1.0\" encoding=\"UTF - 8\"?><foods><restaurant name=\"h3\"><plate id=\"1\"><item>Hambúrguer bem Passado</item><quantity><value>1</value><dosage>dose</dosage><extraDosage>200g</extraDosage></quantity><calories><value>304</value><unity>kcal</unity></calories></plate></restaurant></foods>";
+
+                    Console.WriteLine("BEFORE: " + file);
+                    
+                    //file = file.Replace("\\\"","\"");
+
+                    Console.WriteLine("AFTER: " + file);
 
                     client.addRestaurantXML(file, TOKEN);
 
