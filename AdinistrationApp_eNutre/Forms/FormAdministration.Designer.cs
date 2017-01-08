@@ -427,7 +427,7 @@
             // lb_confirm
             // 
             this.lb_confirm.AutoSize = true;
-            this.lb_confirm.Location = new System.Drawing.Point(18, 78);
+            this.lb_confirm.Location = new System.Drawing.Point(48, 78);
             this.lb_confirm.Name = "lb_confirm";
             this.lb_confirm.Size = new System.Drawing.Size(66, 13);
             this.lb_confirm.TabIndex = 0;
@@ -444,7 +444,7 @@
             // lb_password
             // 
             this.lb_password.AutoSize = true;
-            this.lb_password.Location = new System.Drawing.Point(18, 52);
+            this.lb_password.Location = new System.Drawing.Point(61, 52);
             this.lb_password.Name = "lb_password";
             this.lb_password.Size = new System.Drawing.Size(53, 13);
             this.lb_password.TabIndex = 0;
