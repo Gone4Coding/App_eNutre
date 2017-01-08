@@ -25,6 +25,7 @@ namespace AdinistrationApp_eNutre.Forms
             InitializeComponent();
             this.TOKEN = Token;
             client = new ServiceAppNutreClient();
+            rb_no.Checked = true;
         }
 
         private void FormAdministration_Load(object sender, EventArgs e)
@@ -66,7 +67,6 @@ namespace AdinistrationApp_eNutre.Forms
 
                     string file = vegiDocument.OuterXml;
 
-
                     file = file.Replace(@"\", "");
 
                     client.addVegetableXML(file, TOKEN);
@@ -75,7 +75,8 @@ namespace AdinistrationApp_eNutre.Forms
                 }
                 catch (FaultException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
                 }
                 catch (ProtocolException ex)
                 {
@@ -122,17 +123,11 @@ namespace AdinistrationApp_eNutre.Forms
 
                 try
                 {
-                    //XmlDocument platesDoc = ExcelHandler.createXml(path);
+                    XmlDocument platesDoc = ExcelHandler.createXml(path);
 
-                    //string file = platesDoc.OuterXml;
+                    string file = platesDoc.OuterXml;
 
-                    string file = "<?xml version=\"1.0\" encoding=\"UTF - 8\"?><foods><restaurant name=\"h3\"><plate id=\"1\"><item>Hambúrguer bem Passado</item><quantity><value>1</value><dosage>dose</dosage><extraDosage>200g</extraDosage></quantity><calories><value>304</value><unity>kcal</unity></calories></plate></restaurant></foods>";
-
-                    Console.WriteLine("BEFORE: " + file);
-                    
-                    //file = file.Replace("\\\"","\"");
-
-                    Console.WriteLine("AFTER: " + file);
+                    file = file.Replace(@"\", "");
 
                     client.addRestaurantXML(file, TOKEN);
 
@@ -140,14 +135,14 @@ namespace AdinistrationApp_eNutre.Forms
                 }
                 catch (FaultException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex, "Aviso", MessageBoxButtons.OK,
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
 
                     lb_validacaoRestaurant.Text = "";
                 }
                 catch (ProtocolException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex, "Aviso", MessageBoxButtons.OK,
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
 
                     lb_validacaoRestaurant.Text = "";
@@ -193,6 +188,7 @@ namespace AdinistrationApp_eNutre.Forms
                     XmlDocument actsDoc = JsonHandler.createXml(path);
 
                     string file = actsDoc.OuterXml;
+
                     file = file.Replace(@"\", "");
 
                     client.addActivityXML(file, TOKEN);
@@ -201,7 +197,8 @@ namespace AdinistrationApp_eNutre.Forms
                 }
                 catch (FaultException ex)
                 {
-                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Erro ao Adicionar o Ficheiro\n" + ex.Message, "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
                 }
                 catch (ProtocolException ex)
                 {
@@ -215,11 +212,69 @@ namespace AdinistrationApp_eNutre.Forms
             }
         }
 
-        private string removeWhiteSpace(string input)
-        {
-            return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
-        }
 
         // END TABING ACTIVITIES
+
+        // TABING ACTIVITIES
+
+        private void bt_addNewUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string username = tb_username.Text.Trim();
+                string password = tb_password.Text.Trim();
+                string confirm = tb_confirm.Text.Trim();
+                bool isAdmin = (!rb_no.Checked);
+
+                if (!username.Equals("") || !password.Equals(""))
+                {
+                    if (confirm.Equals(password))
+                    {
+                        User user = new User();
+                        user.Username = username;
+                        user.Password = password;
+                        user.Admin = isAdmin;
+
+                        client.SignUp(user);
+
+                        MessageBox.Show("Novo Utlizador inserido com sucesso", "Info", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        return;
+                    }
+                    MessageBox.Show("A confirmação de password e password não correspondem", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (username.Equals(""))
+                    MessageBox.Show("Nome de Utilizador inválido", "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+
+                if(password.Equals(""))
+                MessageBox.Show("Nome de Utilizador inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            catch (FaultException ex)
+            {
+
+            }
+            catch (ProtocolException ex)
+            {
+                
+            }
+        }
+
+        private void tb_password_TextChanged(object sender, EventArgs e)
+        {
+            if (!tb_password.Text.Trim().Equals(""))
+            {
+                lb_confirm.Hide();
+                tb_confirm.Hide();
+            }
+            else
+            {
+                lb_confirm.Show();
+                tb_confirm.Show();
+            }
+        }
     }
 }

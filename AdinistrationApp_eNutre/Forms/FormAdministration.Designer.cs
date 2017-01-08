@@ -56,6 +56,17 @@
             this.bt_searchFileActivity = new System.Windows.Forms.Button();
             this.lb_infoActivities = new System.Windows.Forms.Label();
             this.lb_fileNameActivity = new System.Windows.Forms.Label();
+            this.tab_SignUp = new System.Windows.Forms.TabPage();
+            this.gb_administrator = new System.Windows.Forms.GroupBox();
+            this.rb_no = new System.Windows.Forms.RadioButton();
+            this.rb_yes = new System.Windows.Forms.RadioButton();
+            this.bt_addNewUser = new System.Windows.Forms.Button();
+            this.tb_confirm = new System.Windows.Forms.TextBox();
+            this.lb_confirm = new System.Windows.Forms.Label();
+            this.tb_password = new System.Windows.Forms.TextBox();
+            this.lb_password = new System.Windows.Forms.Label();
+            this.tb_username = new System.Windows.Forms.TextBox();
+            this.lb_username = new System.Windows.Forms.Label();
             this.tab_all.SuspendLayout();
             this.tabPage_vegetables.SuspendLayout();
             this.panel_vegetablesFullFile.SuspendLayout();
@@ -63,6 +74,8 @@
             this.panel_platesFullFile.SuspendLayout();
             this.tabPage_activities.SuspendLayout();
             this.panel_activitiesFullFile.SuspendLayout();
+            this.tab_SignUp.SuspendLayout();
+            this.gb_administrator.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_all
@@ -70,6 +83,7 @@
             this.tab_all.Controls.Add(this.tabPage_vegetables);
             this.tab_all.Controls.Add(this.tabPage_plates);
             this.tab_all.Controls.Add(this.tabPage_activities);
+            this.tab_all.Controls.Add(this.tab_SignUp);
             this.tab_all.Location = new System.Drawing.Point(12, 12);
             this.tab_all.Name = "tab_all";
             this.tab_all.SelectedIndex = 0;
@@ -343,6 +357,115 @@
             this.lb_fileNameActivity.TabIndex = 0;
             this.lb_fileNameActivity.Text = "Nome do \r\nficheiro";
             // 
+            // tab_SignUp
+            // 
+            this.tab_SignUp.Controls.Add(this.gb_administrator);
+            this.tab_SignUp.Controls.Add(this.bt_addNewUser);
+            this.tab_SignUp.Controls.Add(this.tb_confirm);
+            this.tab_SignUp.Controls.Add(this.lb_confirm);
+            this.tab_SignUp.Controls.Add(this.tb_password);
+            this.tab_SignUp.Controls.Add(this.lb_password);
+            this.tab_SignUp.Controls.Add(this.tb_username);
+            this.tab_SignUp.Controls.Add(this.lb_username);
+            this.tab_SignUp.Location = new System.Drawing.Point(4, 22);
+            this.tab_SignUp.Name = "tab_SignUp";
+            this.tab_SignUp.Size = new System.Drawing.Size(592, 169);
+            this.tab_SignUp.TabIndex = 3;
+            this.tab_SignUp.Text = "Novo Utilizador";
+            this.tab_SignUp.UseVisualStyleBackColor = true;
+            // 
+            // gb_administrator
+            // 
+            this.gb_administrator.Controls.Add(this.rb_no);
+            this.gb_administrator.Controls.Add(this.rb_yes);
+            this.gb_administrator.Location = new System.Drawing.Point(234, 23);
+            this.gb_administrator.Name = "gb_administrator";
+            this.gb_administrator.Size = new System.Drawing.Size(103, 72);
+            this.gb_administrator.TabIndex = 3;
+            this.gb_administrator.TabStop = false;
+            this.gb_administrator.Text = "Administrador";
+            // 
+            // rb_no
+            // 
+            this.rb_no.AutoSize = true;
+            this.rb_no.Location = new System.Drawing.Point(6, 42);
+            this.rb_no.Name = "rb_no";
+            this.rb_no.Size = new System.Drawing.Size(45, 17);
+            this.rb_no.TabIndex = 4;
+            this.rb_no.TabStop = true;
+            this.rb_no.Text = "Não";
+            this.rb_no.UseVisualStyleBackColor = true;
+            // 
+            // rb_yes
+            // 
+            this.rb_yes.AutoSize = true;
+            this.rb_yes.Location = new System.Drawing.Point(6, 19);
+            this.rb_yes.Name = "rb_yes";
+            this.rb_yes.Size = new System.Drawing.Size(42, 17);
+            this.rb_yes.TabIndex = 4;
+            this.rb_yes.TabStop = true;
+            this.rb_yes.Text = "Sim";
+            this.rb_yes.UseVisualStyleBackColor = true;
+            // 
+            // bt_addNewUser
+            // 
+            this.bt_addNewUser.Location = new System.Drawing.Point(15, 107);
+            this.bt_addNewUser.Name = "bt_addNewUser";
+            this.bt_addNewUser.Size = new System.Drawing.Size(75, 48);
+            this.bt_addNewUser.TabIndex = 2;
+            this.bt_addNewUser.Text = "Adicionar";
+            this.bt_addNewUser.UseVisualStyleBackColor = true;
+            this.bt_addNewUser.Click += new System.EventHandler(this.bt_addNewUser_Click);
+            // 
+            // tb_confirm
+            // 
+            this.tb_confirm.Location = new System.Drawing.Point(120, 75);
+            this.tb_confirm.Name = "tb_confirm";
+            this.tb_confirm.Size = new System.Drawing.Size(100, 20);
+            this.tb_confirm.TabIndex = 1;
+            // 
+            // lb_confirm
+            // 
+            this.lb_confirm.AutoSize = true;
+            this.lb_confirm.Location = new System.Drawing.Point(18, 78);
+            this.lb_confirm.Name = "lb_confirm";
+            this.lb_confirm.Size = new System.Drawing.Size(66, 13);
+            this.lb_confirm.TabIndex = 0;
+            this.lb_confirm.Text = "Confirmação";
+            // 
+            // tb_password
+            // 
+            this.tb_password.Location = new System.Drawing.Point(120, 49);
+            this.tb_password.Name = "tb_password";
+            this.tb_password.Size = new System.Drawing.Size(100, 20);
+            this.tb_password.TabIndex = 1;
+            this.tb_password.TextChanged += new System.EventHandler(this.tb_password_TextChanged);
+            // 
+            // lb_password
+            // 
+            this.lb_password.AutoSize = true;
+            this.lb_password.Location = new System.Drawing.Point(18, 52);
+            this.lb_password.Name = "lb_password";
+            this.lb_password.Size = new System.Drawing.Size(53, 13);
+            this.lb_password.TabIndex = 0;
+            this.lb_password.Text = "Password";
+            // 
+            // tb_username
+            // 
+            this.tb_username.Location = new System.Drawing.Point(120, 23);
+            this.tb_username.Name = "tb_username";
+            this.tb_username.Size = new System.Drawing.Size(100, 20);
+            this.tb_username.TabIndex = 1;
+            // 
+            // lb_username
+            // 
+            this.lb_username.AutoSize = true;
+            this.lb_username.Location = new System.Drawing.Point(18, 26);
+            this.lb_username.Name = "lb_username";
+            this.lb_username.Size = new System.Drawing.Size(96, 13);
+            this.lb_username.TabIndex = 0;
+            this.lb_username.Text = "Nome de Utilizador\r\n";
+            // 
             // FormAdministration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +488,10 @@
             this.tabPage_activities.ResumeLayout(false);
             this.panel_activitiesFullFile.ResumeLayout(false);
             this.panel_activitiesFullFile.PerformLayout();
+            this.tab_SignUp.ResumeLayout(false);
+            this.tab_SignUp.PerformLayout();
+            this.gb_administrator.ResumeLayout(false);
+            this.gb_administrator.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -399,5 +526,16 @@
         private System.Windows.Forms.Panel panel_activitiesFullFile;
         private System.Windows.Forms.Panel panel_platesFullFile;
         private System.Windows.Forms.Panel panel_vegetablesFullFile;
+        private System.Windows.Forms.TabPage tab_SignUp;
+        private System.Windows.Forms.GroupBox gb_administrator;
+        private System.Windows.Forms.RadioButton rb_no;
+        private System.Windows.Forms.RadioButton rb_yes;
+        private System.Windows.Forms.Button bt_addNewUser;
+        private System.Windows.Forms.TextBox tb_password;
+        private System.Windows.Forms.Label lb_password;
+        private System.Windows.Forms.TextBox tb_username;
+        private System.Windows.Forms.Label lb_username;
+        private System.Windows.Forms.TextBox tb_confirm;
+        private System.Windows.Forms.Label lb_confirm;
     }
 }
