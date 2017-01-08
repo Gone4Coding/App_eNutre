@@ -26,6 +26,8 @@ namespace AdinistrationApp_eNutre.Forms
             this.TOKEN = Token;
             client = new ServiceAppNutreClient();
             rb_no.Checked = true;
+            lb_confirm.Hide();
+            tb_confirm.Hide();
         }
 
         private void FormAdministration_Load(object sender, EventArgs e)
@@ -267,13 +269,13 @@ namespace AdinistrationApp_eNutre.Forms
         {
             if (!tb_password.Text.Trim().Equals(""))
             {
-                lb_confirm.Hide();
-                tb_confirm.Hide();
+                lb_confirm.Show();
+                tb_confirm.Show();
             }
             else
             {
-                lb_confirm.Show();
-                tb_confirm.Show();
+                lb_confirm.Hide();
+                tb_confirm.Hide();
             }
         }
     }
